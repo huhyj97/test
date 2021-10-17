@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+  <title>yujin--</title>
+  <link rel="stylesheet" href="style.css">
+  <style type="text/css"></style>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript"></script>
+  <style>
+    /* default */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0px solid silver;
+}
+
+img {
+  width: 100px;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1rem;
+  color: #999;
+  letter-spacing: 0.1px;
+}
+
+h1, h2, h3 {
+  font-family: 'Work Sans', sans-serif;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 4rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+h4, h5 {
+  font-family: 'Work Sans', serif;
+}
+
+h4 {
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+h5 {
+  font-size: 0.7rem;
+  line-height: 0.7rem;
+}
+
+a:link {
+  color: #666;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #666;
+}
+
+a:hover {
+  color: red;
+}
+
+a:active {
+  color: red;
+}
+
+button {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  border: 1px solid #ccc;
+  background: white;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: crimson;
+  color: white;
+  cursor: pointer;
+}
+
+/* start */
+
+header {
+  background: #000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10%;
+}
+
+header div {
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 4rem;
+}
+
+header nav {
+  font-size: 1.4rem;
+  line-height: 4rem;
+}
+
+main {
+  position: relative;
+  height: 600px;
+  background: url('https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FctPGHS%2FbtqV0DvG7u6%2F37LIP1ZxEKpTxDkIwAHuRk%2Fimg.jpg')no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 1.4rem;
+}
+
+main div {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.4);
+  width: 80%;
+  height: 350px;
+  margin: 0 10%;
+  text-align: center;
+  padding: 40px 10%;
+  bottom: 2rem;
+}
+
+main h2 {
+  margin-bottom: 2rem;
+}
+
+main button {
+  margin-top: 2rem;
+}
+
+.products {
+  padding: 6rem 0;
+  background: #eee;
+  text-align: center;
+}
+
+.products h2 {
+  margin-bottom: 2rem;
+}
+
+.products img {
+  width: 80%;
+}
+
+.products div {
+  margin-top: 2rem;
+}
+
+.products div a {
+  font-size: 3rem;
+  color: #aaa;
+}
+
+.thought {
+  padding: 6rem 0;
+}
+
+.thought h2 {
+  text-align: center;
+}
+
+.thought section {
+  margin: 4rem 0;
+  position: relative;
+}
+
+.thought section> :nth-child(1){
+  position: absolute;
+  background: rgba(255, 255, 255, 0.4);
+  width: 60%;
+  height: 150px;
+  text-align: center;
+  margin: 0 20%;
+  bottom: 0;
+  padding: 40px;
+}
+
+.thought> :nth-child(2)> :nth-child(2){
+  width: 80%;
+  height: 450px;
+  margin: 0 auto;
+  background: url('https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FRWTn2%2FbtqVV3hreTn%2FGPaIbEFKXJuUXNc6c7W990%2Fimg.jpg') no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+.thought> :nth-child(3)> :nth-child(2){
+  width: 80%;
+  height: 450px;
+  margin: 0 auto;
+  background: url('https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FtHkWK%2FbtqVTG7UbGb%2FScv7zsKbFY4cP39KizvdK0%2Fimg.jpg') no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+.thought> :nth-child(4)> :nth-child(2){
+  width: 80%;
+  height: 450px;
+  margin: 0 auto;
+  background: url('https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcXDeBc%2FbtqV2W2nD76%2FUS18iDWxFbJmrfQSepgbm1%2Fimg.jpg') no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+.icon {
+  padding: 3rem 10%;
+  background: #ccc;
+  display: flex;
+}
+
+.icon section {
+  width: 100%;
+  padding: 2rem 2%;
+  text-align: center;
+}
+
+.icon section img {
+  width: 80px;
+  opacity: 0.6;
+}
+
+.three {
+  background: #eee;
+  display: flex;
+  justify-content: space-around;
+}
+
+.three section {
+  width: 100%;
+  padding: 1.4rem 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+footer {
+  padding: 4rem 10%;
+  text-align: center;
+}
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <div>
+      RWD
+    </div>
+
+    <nav>
+      ☰
+    </nav>
+
+  </header>
+
+  <main>
+
+    <div>
+      <h2>Flagship store</h2>
+      <small>Fusce lobortis porta eros.</small>
+      <p> Donec accumsan gravida molestie. Suspendisse aliquet nulla vel varius volutpat.</p>
+      <button>Read more</button>
+    </div>
+
+  </main>
+
+
+  <article class="products">
+    <h2>Products</h2>
+    <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FAn8dt%2FbtqV0FmMHMv%2FkAjUPqa0jGkb33mldHiX41%2Fimg.jpg">
+    <div>
+      <a href="#">▬</a>
+      <a href="#">▬</a>
+      <a href="#">▬</a>
+      <a href="#">▬</a>
+      <a href="#">▬</a>
+    </div>
+  </article>
+
+
+  <article class="thought">
+
+    <h2>Thought of Lya</h2>
+
+    <section>
+
+      <div>
+        <h4>Nullam venenatis</h4>
+        <p>Morbi fermentum enim eget volutpat ornare.</p>
+      </div>
+
+      <div>
+      </div>
+
+    </section>
+
+    <section>
+
+      <div>
+        <h4>Mauris</h4>
+        <p>Suspendisse consequat neque at neque tincidunt porta.</p>
+      </div>
+
+      <div>
+      </div>
+
+    </section>
+
+    <section>
+
+      <div>
+        <h4>Sed in risus</h4>
+        <p>Nullam et porttitor lorem, ac lobortis sem. Etiam dignissim.</p>
+      </div>
+
+      <div>
+      </div>
+
+    </section>
+
+  </article>
+
+
+  <article class="icon">
+
+    <section>
+      <img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/56-apple-512.png"><br>
+      Infor
+    </section>
+
+    <section>
+      <img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/56-apple-512.png"><br>
+      Cs center
+    </section>
+
+    <section>
+      <img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/56-apple-512.png"><br>
+      About
+    </section>
+
+  </article>
+
+
+  <article class="three">
+
+    <section>
+      Infor
+    </section>
+
+    <section>
+      Cs center
+    </section>
+
+    <section>
+      About
+    </section>
+
+  </article>
+
+
+  <footer>
+    <h3>Lyanature co.</h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipiscing elit. <br>
+      Duis faucibus nulla quam, ut venenatis dui mollis non. Integer varius bibendum diam vehicula pellentesque.<br>
+      Suspendisse quis mattis nisi.<br>
+      Duis sed placerat dui<br>
+    </p>
+
+  </footer>
+
+</body>
+
+</html>

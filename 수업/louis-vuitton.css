@@ -1,0 +1,291 @@
+/* default */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0px solid silver;
+  outline: none;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.2rem;
+  letter-spacing: 0.1px;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 4.5rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  margin: 2rem 0;
+}
+
+h4 {
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+h5 {
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+small {
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+  color: #666;
+  cursor: pointer;
+}
+
+button {
+  background: #000;
+  color: #fff;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  border: 1.5px solid #000;
+  width: 90%;
+  padding: 1rem 0;
+  cursor: pointer;
+}
+
+/* start */
+
+header {
+  position: relative;
+  min-width: 360px;
+  background: #fff;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+header> :nth-child(1) img {
+  margin-top: 1.8rem;
+  margin-left: 2.5rem;
+  width: 25px;
+  cursor: pointer;
+}
+
+header h4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+header> :nth-child(3) img {
+  width: 25px;
+  margin: 1.8rem 0;
+  cursor: pointer;
+}
+
+header> :nth-child(3)> :nth-child(1) {
+  margin-right: 0.5rem;
+}
+
+#sidebar {
+  position: absolute;
+  width: 300px;
+  height: 100vh;
+  background: #fff;
+  left: -300px;
+  transition: .4s;
+  z-index: 99;
+}
+
+#sidebar.active {
+  left: 0;
+}
+
+#sidebar ul li a {
+  list-style: none;
+  display: flex;
+  color: #444;
+  font-size: 1rem;
+  margin: 0 20px;
+  padding: 20px 0px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#sidebar ul li a:hover {
+  background: #eee;
+}
+
+.toggle-btn {
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 330px;
+  cursor: pointer;
+}
+
+.toggle-btn span {
+  width: 25px;
+  height: 3px;
+  background: #000;
+  display: block;
+  margin-top: 4px;
+}
+
+.search {
+  margin: 1rem auto;
+  padding: 1rem 30px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.search input {
+  background: #f6f5f3;
+  background-image: url('https://img.icons8.com/ios-glyphs/30/000000/search--v1.png') no-repeat;
+  width: 100%;
+  height: 50px;
+  font-size: 1rem;
+  text-indent: 20px;
+  padding: 1rem 0;
+  border-radius: 5px;
+}
+
+main {
+  position: relative;
+  min-width: 360px;
+  text-align: center;
+  margin: 2rem auto;
+  box-sizing: border-box;
+  height: 800px;
+}
+
+main section {
+  overflow: hidden;
+}
+
+.slide-box {
+  width: 100%;
+  display: flex;
+}
+
+.slide {
+    width: 100%;
+    transition: 0.6s;
+}
+
+.slide> :nth-child(5) {
+  background: #fff;
+  color: #000;
+}
+
+.btnLeft,
+.btnRight {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 250px;
+    background: #fff;
+    color: #444;
+    border: 1px solid #ddd;
+    font-size: 2rem;
+    line-height: 3rem;
+    cursor: pointer;
+    transition: 0.3s
+}
+
+.btnLeft:hover,
+.btnRight:hover {
+  color: #000;
+}
+
+.btnLeft {
+    left: 0;
+}
+
+.btnRight {
+    right: 0;
+}
+
+.shopping {
+}
+
+.shopping section {
+  text-align: center;
+  padding: 2rem 40px;
+  border-top: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.shopping section img {
+  width: 100%;
+}
+
+footer {
+  background: #19110b;
+  text-align: center;
+  padding: 10px 30px;
+  padding-bottom: 100px;
+}
+
+footer h3 {
+  color: #fff;
+  padding: 1.5rem;
+  border-bottom: 0.1px solid #444;
+}
+
+footer nav {
+  color: #fff;
+}
+
+footer nav ul {
+  margin: 2rem 0;
+}
+
+footer nav ul li {
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+footer p {
+  font-size: 0.8rem;
+  color: #999;
+  padding-bottom: 2rem;
+  border-bottom: 0.1px solid #444;
+}
+
+footer div {
+  color: #fff;
+  margin: 2rem 0;
+  cursor: pointer;
+}
+
+footer div img {
+  width: 20px;
+}
+
+
+/* labtop start */
+@media screen and (min-width: 1000px) {
+  .shopping section img {
+    width: 1000px;
+  }
+}

@@ -1,0 +1,293 @@
+<!doctype html>
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+  <title>qna</title>
+  <link rel="stylesheet" href="css/qna.css">
+  <link rel="stylesheet" href="css/default.css">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript"></script>
+
+  <!--폰트어썸-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+</head>
+
+<body>
+  <header>
+    <article id="header">
+      <section>
+        <nav>
+          <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+              <li onclick="location.href='sub.html';">BRAND</li>
+              <li onclick="location.href='product.html';">PRODUCT</li>
+              <li onclick="location.href='qna.html';">Q&A</li>
+              <div class="solid">—</div>
+              <a href="login.html"><i class="fas fa-user-circle"></i> LOGIN</a>
+              <a href="join.html"><i class="fas fa-user-plus"></i> JOIN</a>
+              <a href="order.html"><i class="fas fa-shopping-cart"></i> ORDER</a>
+            </ul>
+          </div>
+        </nav>
+
+        <div onclick="window.location.href='index.html';">
+          <h2>YUNJAC</h2>
+        </div>
+
+        <div class="cl-effect-1" id="cl-effect-1">
+          <ul>
+            <li onclick="location.href='sub.html';">brand</li>
+            <li onclick="location.href='product.html';">product</li>
+            <li onclick="location.href='qna.html';">q&a</li>
+            <li onclick="location.href='login.html';">login</li>
+            <li onclick="location.href='join.html';">join</li>
+            <li onclick="location.href='order.html';">order</li>
+          </ul>
+        </div>
+
+        <div class="header-ic">
+          <i class="fas fa-search"></i>
+        </div>
+      </section>
+    </article>
+  </header>
+
+
+  <article class="faq-list">
+
+
+    <div class="hd">
+        <h1>Q&A</h1>
+        <div>
+          <input type="text" placeholder="허유진님, 무엇을 도와드릴까요?">
+          <button type="button"><img src="images/search-black.png" /></button>
+        </div>
+    </div>
+
+
+    <div class="category">
+      <table>
+        <tr>
+          <td>회원/멤버십</td>
+          <td>제품/쿠폰/이벤트</td>
+          <td>주문/결제</td>
+        </tr>
+
+        <tr>
+          <td>배송</td>
+          <td>취소/반품/교환</td>
+          <td>사이트이용문의</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="faq-title">
+      <h4>사용자들이 <span>운영정책</span> 관련<br>자주 묻는 질문을 확인해보세요.</h4>
+    </div>
+
+    <div id="faq_Accordion_wrap">
+      <div class="faq_que">
+        <span>리뷰 적립금 관련 정책 안내</span>
+      </div>
+      <div class="faq_anw">
+        <span>[연작 리뷰 적립금 정책 안내]<br>
+          -연작에서는 배송 완료일로부터 30일 이내,결제 금액 10000원 이상인 주문 건에 대해 포토 리뷰 작성 시 500원/텍스트 리뷰 작성시 300원의 적립금을 지급하고 있습니다.<br><br>
+          -해당 적립금은 리뷰 작성일로부터 영업일 기준 2~3일 이내 지급되며,<br>무의미한 단어의 반복/상품과 무관한 내용은 적립금 지급이 제한될 수 있습니다.</span>
+      </div>
+      <div class="faq_que">
+        <span>회원가입시 어떠한 혜택이 있나요?</span>
+      </div>
+      <div class="faq_anw">
+        <span>등급에 따라 항시 할인, 쿠폰, 그리고 적립금 등의 다양한 혜택을 받을 수 있습니다.</span>
+      </div>
+      <div class="faq_que">
+        <span>배송지연은 왜 발생하나요?</span>
+      </div>
+      <div class="faq_anw">
+        <span>고객님들께서 결제해주신 후 즉시 상품준비에 들어가지만<br>부득이하게 주문량이 폭주할 경우 배송지연안내를 따로 드리고 있습니다.</span>
+      </div>
+      <div class="faq_que">
+        <span>주문내역 확인은 어떻게 하죠?</span>
+      </div>
+      <div class="faq_anw">
+        <span>'ORDER' 카테고리에서 확인 가능합니다.</span>
+      </div>
+      <div class="faq_que">
+        <span>화장품의 유효기간은 어떻게 되나요?</span>
+      </div>
+      <div class="faq_anw">
+        <span>화장품의 유효기간은 제품의 성분, 제형, 보관상태 등에 따라 다르지만 일반적으로 개봉 하지 않은 화장품의 경우 2~3년이며, 대부분의 화장품은 개봉 후 6~12개월 이내에 사용해 주시는 것이 가장 좋습니다. 단 사용 기간이 명시되어 있는 제품의 경우 개봉여부와는 관계없이 제품의 유효기간이므로 기간내 모두 사용하여 주시기 바랍니다.</span>
+      </div>
+      <div class="faq_que">
+        <span>매장에서 구매한 제품도 쇼핑몰에서 교환/환불이 가능한가요?</span>
+      </div>
+      <div class="faq_anw">
+        <span>매장에서 구매한 제품은 일반적으로 구매한 매장에서만 교환/환불이 가능합니다.단, 매장에서 구매한 제품의 제품이상이나 사용 후 트러블로 인한 경우는 고객센터(080-080-4936)나 1:1 친절상담으로 문의해주시면 확인절차 후 처리해드립니다.</span>
+      </div>
+      <div class="faq_que">
+        <span>상품 사용 후 피부에 트러블이 생겼습니다.</span>
+      </div>
+      <div class="faq_anw">
+        <span>화장품은 다양한 성분으로 구성되어 있어 개인적 피부 특성과 맞지 않았을 때 따가움, 가려움, 붉어짐 등의 피부이상을 경험하실 수 있습니다, 염려되시겠지만 화장품이 맞지 않았을 경우 원인으로 추정되는 제품 사용만 중단한다면 본래의 피부상태로 모두 호전되오니 안심하여 주세요. 환불은 가능하오나 구매이력이 확인되지 않을 경우 정상적인 환불은 불가한다는 것을 양해 바랍니다. 트러블로 인한 보상 및 환불처리를 원하시는 경우 먼저
+          고객센터(080-080-4936)나 1:1문의를 통해 연락주세요.</span>
+      </div>
+      <div class="faq_que">
+        <span>상품에 대한 문의는 어떻게 하나요?</span>
+      </div>
+      <div class="faq_anw">
+        <span>상품에 대한 문의는 고객센터(☎1588-6084) 또는 이메일 문의 메뉴를 이용하시면 상세하게 답변을 드립니다.</span>
+      </div>
+      <div class="faq_que">
+        <span>결제가 취소되었는데, 어떤 이유가 있을 수 있나요?</span>
+      </div>
+      <div class="faq_anw">
+        <span>결제가 취소된 경우, 품목 재고가 없는 것일 수도 있고 결제 방법에 오류가 있는 것일 수도 있습니다.
+          가능한 결제 오류를 해결하려면 청구 주소가 결제 방법에 연결된 정보와 일치하는지 확인하세요. 그래도 결제가 취소되면 은행 또는 금융 기관에 도움을 요청하세요.</span>
+      </div>
+      <div class="faq_que">
+        <span>주문 확인 이메일을 받지 못했는데 어떻게 해야 하나요?</span>
+      </div>
+      <div class="faq_anw">
+        <span>고객 지원 팀에 연락하면 확인 메일에서 관련 정보를 다시 보내드릴 것입니다.</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="solution">
+    <section class="sol-wrap">
+      <div class="sol-inner">
+        <h4>그래도 해결이 안되시나요?</h4>
+        <h2>1:1 문의</h2>
+
+        <div id="content">
+          <div>
+            <h3>고객 정보</h3>
+          </div>
+
+          <div id="content-1" class="content-1">
+            <section>
+              <div>
+                <div><label for="name" class="label">이름</label><br>
+                  <input id="name" type="text" class="input" placeholder="성명을 입력해주세요">
+                </div>
+
+                <div>
+                  <label for="tel" class="label">핸드폰 번호
+                    <input id="tel" type="tel" class="input" data-type="password" placeholder="'-'없이 휴대폰 번호를 입력해 주세요.">
+                  </label><br>
+                </div>
+
+                <div><label for="email" class="label">이메일</label><br>
+                  <input id="email" type="email" class="input" placeholder="답변 받으실 이메일 주소를 입력해 주세요.">
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <div>
+            <h3>문의 정보</h3>
+          </div>
+
+          <div id="content-1" class="content-1">
+            <section>
+              <div>
+                <div><label for="name" class="label">제목</label><br>
+                  <input id="name" type="text" class="input" placeholder="제목을 입력해주세요">
+                </div>
+
+                <div>
+                  <label for="content" class="label">내용
+                    <textarea name="content" placeholder="간단한 키워드로 작성하시면 더 원활하게 답변을 드릴 수 있습니다."></textarea>
+                  </label><br>
+                  <small>내용은 최대 5,000bytes(한글 2,500자)까지 가능합니다.</small>
+                </div>
+
+                <div><label for="file" class="label">첨부파일</label><br>
+                  <input id="file" type="file" class="input">
+                </div>
+                <button type="button" class="save">SUBMIT</button>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+
+
+
+
+  <footer>
+    <h1>Contact<br>Yunjac.</h1>
+    <input type="search" placeholder="지역검색"></input>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.7520550164145!2d126.97880021480296!3d37.56090503220922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2f1587c7819%3A0xd74d3707fbcde464!2z7Iug7IS46rOE67Cx7ZmU7KCQIOuzuOygkA!5e0!3m2!1sko!2skr!4v1628578228833!5m2!1sko!2skr"
+      width="auto" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <div>
+      <li>이용안내</li>
+      <li>이용약관</li>
+      <li>구매안전서비스</li>
+    </div>
+
+    <ul>
+      <span>(주)신세계인터내셔날</span><br><br>
+      <span>대표이사: 장재영, 이길한, 손문국</span><br><br>
+      <span>주소 : 서울특별시 강남구 도산대로 449 (청담동)</span><br><br>
+      <span>대표전화 : 1644-4490</span><br><br>
+      <span>㈜신세계인터내셔날은 연작을 제외한 개별 판매자가 입점하여 등록한 상품에 대해서는 통신판매중개자로서 통신판매의 당사자가 아닙니다. 따라서 ㈜신세계인터내셔날을 제외한 개별 판매자가 입점하여 등록한 상품에 대한 상품정보 및 광고, 상품주문, 배송, 환불에 관한 책임은 각 입점 판매자가 부담하고 ㈜신세계인터내셔날은 책임을 지지 않습니다. 본 사이트의 컨텐츠는 저작권법의 보호를 받는 바 무단 전재, 복사, 배포 등을
+        금합니다.</span><br><br>
+      <span>© 2018 SHINSEGAE INTERNATIONAL. ALL RIGHTS RESERVED</span><br><br>
+    </ul>
+  </footer>
+
+  <script>
+    //faq
+    $(".faq_que").click(function() {
+      $(this).next(".faq_anw").stop().slideToggle(300);
+      $(this).toggleClass('on').siblings().removeClass('on');
+      $(this).next(".faq_anw").siblings(".faq_anw").slideUp(300); // 1개씩 펼치기
+    });
+
+    /*pc헤더 픽스*/
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("header").style.top = "0";
+      } else {
+        document.getElementById("header").style.top = "-80px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+
+    const trigger = new ScrollTrigger.default({
+      trigger: {
+        once: true,
+        offset: {
+          element: {
+            x: 0,
+            y: 0.5
+          },
+        }
+      }
+    });
+    trigger.add('[data-trigger]')
+
+
+    AOS.init({
+      easing: 'ease-out-back',
+      duration: 1000
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+  <title>yujin----</title>
+  <link rel="stylesheet" href="style.css">
+  <style type="text/css"></style>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript"></script>
+
+  <style>
+  /* default */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0px solid silver;
+}
+
+img {
+  width: 100px;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1rem;
+  color: #999;
+  letter-spacing: 0.1px;
+}
+
+h1, h2, h3 {
+  font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 4rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+}
+
+h4, h5 {
+  font-family: 'Playfair Display', serif;
+}
+
+h4 {
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+}
+
+h5 {
+  font-size: 0.7rem;
+  line-height: 0.7rem;
+}
+
+a:link {
+  color: #666;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #666;
+}
+
+a:hover {
+  color: red;
+}
+
+a:active {
+  color: red;
+}
+
+button {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  border: 1px solid #ccc;
+  background: white;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: crimson;
+  color: white;
+  cursor: pointer;
+}
+
+/* mobile start */
+main {
+  position: relative;
+  height: 600px;
+  background: url(https://www.wallpapertip.com/wmimgs/67-674029_avengers-endgame-wallpaper-phone.jpg)no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: white;
+}
+
+header {
+  position: relative;
+}
+
+header div a {
+  float: left;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 2rem 10%;
+}
+
+header div a:link, a:visited {
+  color: white;
+}
+
+header span {
+  float: right;
+  font-size: 3rem;
+  margin: 2rem 10%;
+  cursor: pointer;
+}
+
+header nav {
+  position: absolute;
+  width: 0%;
+  height: 100vh;
+  background: rgba(40, 0, 0, 0.8);
+  overflow-x: hidden;
+  z-index: 1;
+  transition: 0.3s;
+}
+
+nav :first-child {
+  float: right;
+  font-size: 2rem;
+  margin: 2rem 10%;
+  cursor: pointer;
+}
+
+nav a:link:first-child {
+  color: white;
+}
+
+nav a:not(:first-child) {
+  clear: both;
+  color: white;
+  display: block;
+  padding: 1.4rem;
+  text-align: center;
+}
+
+nav a:link {
+  color: white;
+}
+
+nav a:not(:first-child):hover {
+  background: crimson;
+  color: white;
+}
+
+main>div {
+  position: absolute;
+  background: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+main div p {
+  padding: 2rem;
+}
+
+.get-text {
+  padding: 5rem 10%;
+  text-align: center;
+}
+
+.get-text div img {
+  width: 80px;
+  filter: grayscale(100%);
+  opacity: 0.4;
+  margin: 0.1rem 2%;
+}
+
+.get-text div img:hover {
+  opacity: 1.0;
+}
+
+.get-text>:last-child {
+  margin-top: 2rem;
+}
+
+.get {
+  height: 500px;
+  background: url('https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/opS/image/eF2MyNcCteMIFUjCzkVQEvKTtR4.jpg') no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: white;
+}
+
+.get>div {
+  width: 50%;
+  height: 100%;
+  float: left;
+  background: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  padding: 5rem 10%;
+  transition: 0.8s;
+}
+
+.get>div:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.get div div {
+  display: none;
+}
+
+.bespoke-text {
+  padding: 5rem 10%;
+  text-align: center;
+}
+
+.bespoke section {
+  height: 500px;
+}
+
+.bespoke> :nth-child(1) {
+  background: url(https://mblogthumb-phinf.pstatic.net/20120501_217/kmut92_13358049265244Sl06_GIF/%C5%E4%B8%A3%BE%C6%C0%CC%BE%F0%B8%C7%C4%B8%C6%BE%BE%C6%B8%DE%B8%AE%C4%AB.gif?type=w2)no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.bespoke> :nth-child(2) {
+  background: url(https://blog.kakaocdn.net/dn/2vyTu/btqRAk06qfG/TrKf1AAHpaz2oar42LYzk0/img.gif)no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.bespoke> :nth-child(3) {
+  background: url(https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FTXwLd%2FbtqRI8yM3dl%2FVKkeempS4KRyLZdu0OOtm0%2Fimg.gif)no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.bespoke section div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: 0.8s;
+}
+
+.bespoke section div:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.bespoke section h3 {
+  color: white;
+  text-align: center;
+  padding: 4rem 0 0 0;
+}
+
+.bespoke section div button {
+  position: absolute;
+  background: none;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.design-text {
+  padding: 5rem 10%;
+  text-align: center;
+}
+
+.design section {
+  height: 200px;
+}
+
+.design> :nth-child(1) {
+  background: url(https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FyGMCV%2FbtqRxZwfFvB%2FBOKhlrDnJITmKd0MmdQhJK%2Fimg.gif) no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+.design> :nth-child(2) {
+  background: url(https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F9ScJC%2FbtqRL2yjEfa%2Fq27zrb2JT2ZSTfLUPjHky0%2Fimg.gif) no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+.design> :nth-child(3) {
+  background: url(https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FecS6iw%2FbtqRGqzKoiY%2F0uDee16SZhpOlczIv95FL0%2Fimg.gif) no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+.design> :nth-child(4) {
+  background: url(https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbzukd8%2FbtqRGp8ErtI%2FS0PknfkD0iB0maXnWDfzcK%2Fimg.gif) no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+.design section div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: 0.8s;
+}
+
+.design section div:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.design section div button {
+  position: absolute;
+  background: none;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.greetings {
+  position: relative;
+  padding: 5rem 10%;
+  text-align: center;
+}
+
+.greetings> :nth-child(1),
+.greetings> :nth-child(2) {
+  position: absolute;
+  font-size: 2rem;
+  padding: 0.8rem;
+  top 45%;
+  cursor: pointer;
+  transition: 0.6s;
+}
+
+.greetings> :nth-child(1) {
+  left: 10%;
+}
+
+.greetings> :nth-child(2) {
+  right: 10%;
+}
+
+.greetings> :nth-child(1):hover, .greetings> :nth-child(2):hover {
+  background: crimson;
+  color: white;
+}
+
+.greetings div img {
+  width: 80px;
+  opacity: 0.4;
+  margin: 0.1rem 2%;
+  transition: 0.8s;
+}
+
+.greetings div img:hover {
+  opacity: 1.0;
+}
+
+.event {
+  display: none;
+}
+
+footer {
+  padding: 5rem 10%;
+  background: #222;
+}
+
+footer h2 {
+  color: #aaa;
+}
+
+footer form div {
+  padding: 0.5rem 0;
+}
+
+footer form div label {
+  display: block;
+  line-height: 2.4rem;
+}
+
+footer form div input {
+  width: 240px;
+  padding: 0.6rem;
+}
+
+footer form div textarea {
+  width: 240px;
+  padding: 0.6rem;
+  height: 6rem;
+}
+
+footer form div button {
+  width: 240px;
+}
+
+address {
+  padding: 5rem 10%;
+  background: #333;
+}
+
+address h2 {
+  color: #aaa;
+}
+
+/* labtop start */
+@media screen and (min-width: 600px) {
+  main {
+    height: 800px;
+  }
+
+  .get {
+    height: 800px;
+  }
+
+  .get div div {
+    display: block;
+  }
+
+  .bespoke section {
+    height: 600px;
+    float: left;
+  }
+
+  .bespoke> :nth-child(1) {
+    width: 33%;
+  }
+
+  .bespoke> :nth-child(2) {
+    width: 34%;
+  }
+
+  .bespoke> :nth-child(3) {
+    width: 33%;
+  }
+
+  .design-text {
+    clear: both;
+  }
+
+  .design section {
+    height: 400px;
+    width: 50%;
+    float: left;
+  }
+
+  .greetings {
+    clear: both;
+  }
+
+  .event {
+    display: block;
+    background: #eee;
+    padding: 5rem 0;
+  }
+
+  .event h2 {
+    text-align: center;
+  }
+
+  .event table {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+    border-collapse: collapse;
+  }
+
+  .event tr:hover {
+    background: white;
+    cursor: pointer;
+  }
+
+  .event th, td {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+  }
+
+  footer div {
+    width: 1000px;
+    margin: 0 auto;
+  }
+
+  address div {
+    width: 1000px;
+    margin: 0 auto;
+  }
+}
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <header>
+      <div><a href="#">RWD AND AWD</a></div>
+      <span id="open" onclick="openNav()">≡</span>
+      <nav id="nav">
+        <a href="#" onclick="closeNav()">☓</a>
+        <a href="#">May</a>
+        <a href="#">June</a>
+        <a href="#">July</a>
+        <a href="#">August</a>
+      </nav>
+    </header>
+    <div>
+      <h1 class="white">Fruits</h1>
+      <p class="white">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+      <button>Read more</button>
+    </div>
+  </main>
+
+  <article class="get-text">
+    <h2>Get Choose twin train</h2>
+    <p>
+      It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages. <br>And more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+    <div>
+      <a href="#"><img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/56-apple-512.png"></a>
+      <a href="#"><img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/56-apple-512.png"></a>
+      <a href="#"><img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/56-apple-512.png"></a>
+      <a href="#"><img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/56-apple-512.png"></a>
+    </div>
+  </article>
+
+  <article class="get">
+    <div>
+      <h2>Get the storm</h2>
+      <p>
+        Vivamus turpis purus, fringilla id enim in, vehicula suscipit ex.<br>
+        Phasellus a augue posuere.<br>&nbsp;</br>
+      </p>
+      <div>
+        All the Lorem Ipsum generators on the Internet tend to repeat <br>
+        predefined chunks as necessary, making this the first true generator on the Internet.<br>
+        It uses a dictionary of over 200 Latin words, <br>&nbsp;</br>
+        combined with a handful of model sentence structures, <br>
+        to generate Lorem Ipsum which looks reasonable. <br>
+        The generated Lorem Ipsum is therefore always free from repetition, <br>
+        injected humour, or non-characteristic words etc.<p>
+          All the Lorem Ipsum generators on the Internet tend to repeat <br>&nbsp;</br>
+          predefined chunks as necessary, making this the first true generator on the Internet.<br>
+          It uses a dictionary of over 200 Latin words, <br>
+          combined with a handful of model sentence structures, <br>
+          to generate Lorem Ipsum which looks reasonable. <br>
+          The generated Lorem Ipsum is therefore always free from repetition, <br>
+          injected humour, or non-characteristic words etc.<br>&nbsp;</br>
+      </div>
+      <button>View</button>
+    </div>
+  </article>
+
+  <article class="bespoke-text">
+    <h2>Bespoke-building</h2>
+    <p>
+      Sed faucibus condimentum dictum. <br>Fusce sed orci suscipit, molestie nulla quis, sollicitudin dui.<br> Sed ante elit, molestie sit amet nulla id, malesuada porta libero. Mauris eu felis ornare, congue odio vel, dapibus odio. <br>Maecenas
+      laoreet
+      quam nec justo ultricies malesuada.<br> Vivamus et metus ut risus venenatis tempus vel ac arcu. Vestibulum ultricies mollis mauris.</p>
+  </article>
+
+  <article class="bespoke">
+    <section OnClick="location.href ='#'">
+      <div>
+        <h3>Donec quis</h3>
+        <button>January</button>
+      </div>
+    </section>
+    <section OnClick="location.href ='#'">
+      <div>
+        <h3>Laoreet</h3>
+        <button>February</button>
+      </div>
+    </section>
+    <section OnClick="location.href ='#'">
+      <div>
+        <h3>Posuere</h3>
+        <button>March</button>
+      </div>
+    </section>
+  </article>
+
+  <article class="design-text">
+    <h2>design-award-winner</h2>
+    <p>Suspendisse a blandit nibh. Praesent vel eros metus. <br>Fusce at orci nec nisi bibendum consectetur quis nec neque. <br>Aliquam mattis, ligula non fermentum dictum, nisl eros efficitur ex, quis faucibus turpis lacus sit amet velit.
+      <br>Vestibulum aliquet vehicula rhoncus. Integer ut commodo nunc. <br>Ut fringilla lectus a eros tristique, nec fermentum velit condimentum.</p>
+  </article>
+
+  <article class="design">
+    <section OnClick="location.href ='#'">
+      <div>
+        <button>First</button>
+      </div>
+    </section>
+    <section OnClick="location.href ='#'">
+      <div>
+        <button>Second</button>
+      </div>
+    </section>
+    <section OnClick="location.href ='#'">
+      <div>
+        <button>Third</button>
+      </div>
+    </section>
+    <section OnClick="location.href ='#'">
+      <div>
+        <button>Fourth</button>
+      </div>
+    </section>
+  </article>
+
+  <article class="greetings">
+    <div OnClick="location.href ='#'">⥢</div>
+    <div OnClick="location.href ='#'">⥤</div>
+    <h2>Greetings</h2>
+    <div>
+      <a href="#"><img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/56-apple-512.png"></a>
+      <a href="#"><img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/56-apple-512.png"></a>
+      <a href="#"><img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/56-apple-512.png"></a>
+      <a href="#"><img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/56-apple-512.png"></a>
+      <a href="#"><img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/56-apple-512.png"></a>
+      <a href="#"><img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/56-apple-512.png"></a>
+    </div>
+    <div>
+      It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages. <br>And more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </div>
+  </article>
+
+  <article class="event">
+    <h2>Event</h2>
+    <table>
+      <tr>
+        <th width="100px">No</th>
+        <th width="200px">Update</th>
+        <th width="700px">Title</th>
+      </tr>
+      <tr>
+        <td>31</td>
+        <td>MAR 2019</td>
+        <td>Nam ut fermentum nisl. Nunc sed purus sit amet nisi finibus faucibus nec dictum turpis.</td>
+      </tr>
+      <tr>
+        <td>01</td>
+        <td>SEP 2019</td>
+        <td>Duis consectetur et enim scelerisque gravida. Donec leo felis.</td>
+      </tr>
+      <tr>
+        <td>04</td>
+        <td>JAN 2018</td>
+        <td>Suspendisse maximus hendrerit erat, imperdiet cursus arcu ultrices non maximus.</td>
+      </tr>
+    </table>
+  </article>
+
+  <footer>
+    <div>
+      <h2>Join us</h2>
+      <p>
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.<br>
+        The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+      </p>
+      <form>
+        <div>
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name">
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email">
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea name="message" id="message"></textarea>
+        </div>
+        <div>
+          <button type="submit" name="submit" id="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </footer>
+
+  <address>
+    <div>
+      <h2>Contact us</h2>
+      <p>Where can I get some?<br>
+        Museum of London, 150 London Wall, Barbican, London EC2Y 5HN England<br>
+        010-0000-0000
+      </p>
+    </div>
+  </address>
+
+</body>
+
+</html>

@@ -1,0 +1,408 @@
+<!doctype html>
+<head>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+	<title>UX DEVELOPMENT KIT</title>
+
+  <!--폰트어썸-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+
+  <style>
+    /* default */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0px solid silver;
+  }
+
+ body {
+   text-align: center;
+   font-size: 1rem;
+   font-family: 'Noto Sans KR', serif;
+ }
+
+ h1, h2, h3, h4, h5 {
+  text-transform:uppercase;
+  line-height: 5rem;
+ }
+
+ img {
+  width: 100%;
+ }
+
+ button {
+ cursor: pointer;
+ font-size: 1rem;
+ width: 100%;
+ margin: 10px 0;
+ padding: 15px 0;
+ border: none;
+ }
+
+button[disabled], select[disabled] {
+ cursor: not-allowed;
+}
+
+
+/*~~ux-kit start~~*/
+
+/* 공통 */
+.one, .two, .three, .four, .five, .dropdown, .put, .sel-op {
+  margin: 80px 0;
+  padding: 40px 10%;
+  border-top: 2px solid #000;
+}
+
+
+/* one */
+.one button {
+  border-radius: 30px;
+}
+
+.one .one-d {
+  background: #00592d;
+  color: #fff;
+}
+
+.one .one-d:hover, .one-t {
+  background: #006633;
+  color: #fff;
+}
+
+.one .one-x {
+  background: #ACBFAA;
+}
+
+/* two */
+
+.two button {
+  border-radius: 30px;
+}
+
+.two .two-d {
+  background: none;
+  border: 1.5px solid #00592d;
+  color: #00592d;
+}
+
+.two .two-d:hover, .two .two-t {
+  background: #00592d;
+  color: #fff;
+}
+
+.two .two-x {
+  border: 1.5px solid #ACBFAA;
+  color: #ACBFAA;
+}
+
+/* three */
+
+.three button {
+  border-radius: 30px;
+}
+
+.three .three-d {
+  background: #7D9C7A;
+  border: 1.5px solid #00592d;
+}
+
+.three .three-d:hover, .three .three-t {
+  background: none;
+  border: 1.5px solid #00592d;
+}
+
+.three .three-x {
+  background: #ACBFAA;
+}
+
+/* four */
+
+.four button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.four-1, .four-2 {
+  background: rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+.four-1:hover, .four-2:hover,.four-3:hover, .four-4:hover {
+  color: #333;
+}
+
+.four-3, .four-4 {
+  background: none;
+  border: 1.5px solid #00592d;
+  color: #999;
+}
+
+
+/* five */
+.five .switch {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 34px;
+  text-align: center;
+}
+
+.five .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.five .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 30px;
+  transition: .4s;
+}
+
+.five .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: .4s;
+}
+
+.five input:checked + .slider {
+  background-color:#00592d;
+}
+
+.five input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.five input:checked + .slider:before {
+  transform: translateX(35px);
+}
+
+/* dropdown */
+.dropbtn {
+  background-color: #00592d;
+  color: #fff;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.dropdown button {
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 80%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #00592d;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #006633;}
+
+/* put */
+.put input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 15px 5px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  outline: none;
+}
+
+.put .put-1 {
+  border: 2.5px solid #00592d;
+}
+
+.put .put-2 {
+  border: 2.5px solid #cc0000;
+}
+
+.put .put-2:hover {
+  background:#FADBD8;
+}
+
+.put .put-3 {
+  background: #00592d;
+  color: #fff;
+  border: 2.5px solid #00592d;
+}
+
+.put .put-3::placeholder {
+  color: #fff;
+}
+
+/* sel-op */
+
+.sel-op select {
+  width: 100%;
+  padding: 15px 5px;
+  margin: 10px 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* footer */
+
+footer {
+  background: #00592d;
+  color: #fff;
+  padding: 10%;
+}
+
+
+  </style>
+</head>
+
+<body>
+
+
+  <main>
+  <h1>UX DEVELOMENT KIT</h1>
+  <h2>for Starbucks</h2>
+  <h3>by yujin, heo</h3>
+  </main>
+
+
+  <article class="one">
+    <h1>Button 1</h1>
+    <img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/07/[9200000003655]_20210731121305012.jpg">
+    <h2>루프탑 그레이 라떼</h2>
+    <button class="one-d">주문하기(default)</button>
+    <button class="one-t">주문하기(tab)</button>
+    <button class="one-x" disabled>Sold Out(disabled)</button>
+  </article>
+
+
+  <article class="two">
+    <h1>Button 2</h1>
+    <img src="https://image.istarbucks.co.kr/upload/store/skuimg/2020/09/[9200000002088]_20200921171733536.jpg">
+    <h2>제주 까망 크림 프라푸치노</h2>
+    <button class="two-d">ICE(default)</button>
+    <button class="two-t">ICE(tab)</button>
+    <button class="two-x" disabled>Only Ice(disabled)</button>
+  </article>
+
+
+  <article class="three">
+    <h1>Button 3</h1>
+    <img src="https://image.istarbucks.co.kr/cardImg/20210617/008188_WEB.png">
+    <h2>스타벅스 Gift Item</h2>
+    <h4>전송수단</h4>
+    <button class="three-d"><i class="fas fa-comments"></i> 카카오톡(default)</button>
+    <button class="three-t"><i class="fas fa-comments"></i> 카카오톡(tab)</button>
+    <button class="three-x" disabled>포인트이용 불가(disabled)</button>
+  </article>
+
+
+  <article class="four">
+    <h1>Button slide</h1>
+    <button class="four-1"> < </button>
+    <button class="four-2"> > </button>
+    <button class="four-3"> — </button>
+    <button class="four-4"> + </button>
+    <button class="four-5" disabled> < </button>
+    <button class="four-6" disabled> > </button>
+  </article>
+
+
+  <article class="five">
+    <h1>Button toggle</h1>
+    <label class="switch">
+    <input type="checkbox">
+    <span class="slider"></span>
+    </label>
+  </article>
+
+
+  <article class="dropdown">
+    <h1>menu dropdown</h1>
+    <button class="dropbtn"><i class="fas fa-map-marker-alt"></i> 매장을 선택해주세요</button>
+      <div class="dropdown-content">
+        <a href="#">쌍문역</a>
+        <a href="#">노원역</a>
+        <a href="#">노원KT</a>
+    </div>
+  </article>
+
+
+  <article class="put">
+    <h1>INPUT</h1>
+    <img src="https://image.istarbucks.co.kr/common/img/util/mem/icon_find_sally.png">
+    <input class="put-1" type="text" placeholder="비밀번호 (default)"></input>
+    <input class="put-2" type="text" placeholder="비밀번호 (error)"></input>
+    <input class="put-3" type="text" placeholder="로그인 (success)"></input>
+  </article>
+
+
+  <article class="sel-op">
+    <h1>select</h1>
+    <h4>퍼스널옵션</h4>
+    <select>
+      <option checked>시럽</option>
+      <option>바닐라 시럽</option>
+      <option>헤이즐넛 시럽</option>
+      <option>카라멜 시럽</option>
+    </select>
+
+    <select disabled>
+      <option checked>커스텀 불가 음료</option>
+    </select>
+  </article>
+
+
+  <footer>
+   <h3>aims</h3>
+    스타벅스 사이렌 오더의 구성에서 벗어나지 않게 구현.
+
+   <h3>summary</h3>
+    기존 스타벅스의 대표 색인 딥그린을 사용. 직관적인 이름으로 알아보기 편리하게 구현.
+
+   <h3>reference</h3>
+   <h3>my opinion about ux trend</h3>
+스타벅스 사이렌 오더를 레퍼런스로 참고하여 설계하였는데 왜 완벽한 UI/UX 어플로 유명한지 또 한번 느끼게 되었다. 적당한 너비와 높이의 버튼, 사용자를 배려하는 섬세한 퍼스널옵션, 직관적인 버튼 이름들이 너무 좋았다.<br><br>나이키와 스타벅스의 구성이 개인적으로 비슷하다 느꼈는데 그 이유는 브랜드 로고색을 이용하고 화려하지 않으며 전연령층의 사용자를 배려하는 요소들때문인 것 같다.
+
+  <h4>end</h4>
+</footer>
+
+
+</body>
+</html>

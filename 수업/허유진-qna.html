@@ -1,0 +1,1135 @@
+<!doctype html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+  <title>qna</title>
+  <link rel="stylesheet" href="hc-08.css">
+  <style type="text/css"></style>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript"></script>
+</head>
+
+<style>
+/* default */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0px solid silver;
+}
+
+img {
+  width: 100px;
+}
+
+body {
+  font-size: 0.9rem;
+  line-height: 1rem;
+  letter-spacing: 0.1px;
+}
+
+h1 {
+  font-size: 3.3rem;
+  line-height: 3.3rem;
+  margin: 1rem 0;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+}
+
+h3 {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+}
+
+small {
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+  color: #666;
+}
+
+a:link {
+  color: #333333;
+  text-decoration: none;
+}
+
+/* start */
+
+.write {
+  border: 1px solid #333333;
+  margin: 8rem auto;
+}
+
+.write> :nth-child(1) {
+  padding: 25px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.write> :nth-child(1) img {
+  width: 38px;
+}
+
+.write> :nth-child(1) div {
+  display: flex;
+  font-size: 2rem;
+  line-height: 2.1rem;
+}
+
+.write> :nth-child(1) div> :nth-child(1) {
+  margin-right: 0.5rem;
+}
+
+.write> :nth-child(2) {
+  padding: 1rem 0;
+  border-top: 1px solid #ddd;
+}
+
+.write> :nth-child(2)> :nth-child(1) {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.write> :nth-child(2)> :nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.8rem;
+}
+
+.write> :nth-child(2)> :nth-child(1)> :nth-child(2) {
+  display: flex;
+}
+
+.write> :nth-child(2)> :nth-child(1)> :nth-child(2) h4 {
+  margin-right: 1.5rem;
+  margin-top: 0.3rem;
+}
+
+.write> :nth-child(2)> :nth-child(1)> :nth-child(2) button{
+  width: 50px;
+  padding: 0.5rem;
+  background: #cfffe5;
+  color: #009100;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.write> :nth-child(2)> :nth-child(2) {
+  width: 100%;
+  padding: 0 20px;
+  border-top: 1px solid #ddd;
+}
+
+.write> :nth-child(2) select {
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 1.1rem;
+  font-size: 1.1rem;
+}
+
+.write> :nth-child(2)> :nth-child(3) {
+  display: flex;
+  padding: 0 20px;
+  border-top: 1px solid #ddd;
+}
+
+.write> :nth-child(2)> :nth-child(3) img {
+  width: 30px;
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+}
+
+.write table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.write tr {
+  border-top: 1px solid #ddd;
+}
+
+.write th, .write td {
+  padding: 1.3rem 20px;
+  font-size: 1rem;
+}
+
+.write th {
+  text-align: left;
+}
+
+.write td {
+  text-align: right;
+}
+
+.write table img {
+  width: 40px;
+  padding-right: 0.5rem;
+}
+
+.write> :nth-child(3) {
+  border-top: 1px solid #ddd;
+  height: 400px;
+}
+
+.write p {
+  padding: 1rem;
+  font-size: 1rem;
+  color: #999;
+}
+
+.write> :nth-child(4) {
+  border-bottom: 1px solid #ddd;
+}
+
+.write> :nth-child(5) {
+  padding: 30px 20px;
+}
+
+.write> :nth-child(5) div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.write> :nth-child(5) div div {
+  font-size: 1rem;
+  display: contents;
+  line-height: 4rem;
+}
+
+.write> :nth-child(5)> :nth-child(1) {
+  border-bottom: 1px solid #ddd;
+}
+
+.write> :nth-child(5) div img {
+  width: 60px;
+  cursor: pointer;
+}
+
+.write> :nth-child(5) button {
+  width: 100%;
+  margin: 1.5rem 0;
+  padding: 1rem 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.write> :nth-child(5) button a {
+  font-size: 1rem;
+}
+
+.write> :nth-child(6) {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.write> :nth-child(6) button {
+  width: 48%;
+  padding: 0.8rem 0;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.write> :nth-child(6)> :nth-child(2) {
+  background: #cfffe5;
+}
+
+.write> :nth-child(6)> :nth-child(2) a {
+  color: #009100;
+}
+
+.write> :nth-child(7) {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.full-view {
+  border: 1px solid #333333;
+  margin-bottom: 8rem;
+}
+
+.full-view> :nth-child(1) {
+  padding: 25px 20px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+}
+
+.full-view> :nth-child(1) img {
+  width: 38px;
+  cursor: pointer;
+}
+
+.full-view> :nth-child(1) div {
+  display: flex;
+  font-size: 2rem;
+  line-height: 2.1rem;
+  cursor: pointer;
+}
+
+.full-view> :nth-child(1) div> :nth-child(1) {
+  margin-right: 0.5rem;
+}
+
+.full-view> :nth-child(2) {
+  padding: 0 20px;
+}
+
+.full-view> :nth-child(2)> :nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+}
+
+.full-view> :nth-child(2)> :nth-child(1) div {
+  color: #009100;
+  font-weight: bold;
+  padding: 3rem 0;
+  cursor: pointer;
+}
+
+.full-view> :nth-child(2)> :nth-child(1) button {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8%;
+  margin: 2rem 0;
+  padding: 0 0.5rem;
+  cursor: pointer;
+}
+
+.full-view> :nth-child(2)> :nth-child(1) button img {
+  width: 20px;
+}
+
+.full-view> :nth-child(2)> :nth-child(3) {
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.full-view> :nth-child(2)> :nth-child(3) {
+  padding: 2rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.full-view> :nth-child(2)> :nth-child(3)> :nth-child(1) {
+  display: flex;
+}
+
+.full-view> :nth-child(2)> :nth-child(3)> :nth-child(1) img {
+  width: 40px;
+  margin-right: 0.7rem;
+  cursor: pointer;
+}
+
+.full-view> :nth-child(2)> :nth-child(3)> :nth-child(2) button {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+}
+
+.full-view> :nth-child(3) {
+  padding: 30px 20px;
+  text-align: justify;
+  line-height: 2rem;
+}
+
+.full-view> :nth-child(3)> :nth-child(1) {
+  font-size: 1.5rem;
+  line-height: 3rem;
+  font-weight: bold;
+}
+
+.full-view> :nth-child(4) {
+  padding: 10px 20px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.full-view> :nth-child(4)> :first-child {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.full-view> :nth-child(4)> :first-child> :nth-child(1) {
+  padding-top: 0.5rem;
+  font-weight: bold;
+}
+
+.full-view> :nth-child(4)> :first-child> :nth-child(2) {
+  display: flex;
+}
+
+.full-view> :nth-child(4)> :first-child> :nth-child(2) p {
+  padding: 0.5rem 0;
+}
+
+.full-view> :nth-child(4)> :first-child img {
+  display: inherit;
+  width: 30px;
+  cursor: pointer;
+}
+
+.full-view> :nth-child(4)> :last-child {
+  display: flex;
+}
+
+.full-view> :nth-child(4)> :last-child img {
+  width: 45px;
+  margin-right: 0.6rem;
+  cursor: pointer;
+}
+
+.full-view> :nth-child(4)> :last-child span {
+  display: block;
+  padding-top: 0.8rem;
+  color: #999;
+}
+
+.full-view> :nth-child(5) {
+  padding: 30px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.full-view> :nth-child(5)> :first-child {
+  width: 60%;
+}
+
+.full-view> :nth-child(5)> :first-child h3 {
+  padding-bottom: 1rem;
+  line-height: 2rem;
+}
+
+.full-view> :nth-child(5)> :first-child h4 {
+  padding-bottom: 1rem;
+  color: #999;
+}
+
+.full-view> :nth-child(5)> :first-child p {
+  color: #009100;
+  cursor: pointer;
+}
+
+.full-view> :nth-child(5)> :last-child img {
+  width: 80px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.full-view> :nth-child(6) {
+  padding: 30px 20px;
+  border-top: 8px solid #ddd;
+  border-bottom: 8px solid #ddd;
+}
+
+.full-view> :nth-child(6) h4 {
+  margin-bottom: 0.7rem;
+  cursor: pointer;
+}
+
+.full-v-list {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.full-v-list> :nth-child(1) {
+  margin: 0.5rem;
+}
+
+.full-v-list h4 {
+  padding-bottom: 0.4rem;
+}
+
+.full-v-list small {
+  margin-right: 0.6rem;
+}
+
+.full-v-list img {
+  width: 90px;
+  border: 1px solid #999;
+}
+
+.full-view> :nth-child(6) span {
+  display: block;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.full-view> :nth-child(7) {
+  padding: 30px 20px;
+}
+
+.full-view> :nth-child(7) h4 {
+  margin-bottom: 0.7rem;
+  cursor: pointer;
+}
+
+.full-view> :nth-child(7) span {
+  display: block;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.full-view> :nth-child(8) {
+  padding: 10px 20px;
+}
+
+.full-view> :nth-child(8)> :nth-child(1) {
+  padding: 1.5rem 0;
+  display: flex;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.full-view> :nth-child(8)> :nth-child(1) img {
+  width: 40px;
+}
+
+.full-view> :nth-child(8)> :nth-child(1) p {
+  padding-top: 0.3rem;
+  padding-left: 0.5rem;
+  font-weight: bold;
+}
+
+.full-view> :nth-child(8)> :nth-child(2) {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.full-view> :nth-child(8)> :nth-child(3) {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  color: #333333;
+  cursor: pointer;
+  padding-bottom: 3rem;
+}
+
+.preview {
+  border: 1px solid #333333;
+  margin-bottom: 8rem;
+}
+
+.preview> :nth-child(1) {
+  padding: 25px 20px;
+  padding-bottom: 0px;
+}
+
+.preview> :nth-child(1)> :first-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.preview> :nth-child(1)> :first-child img {
+  width: 38px;
+  cursor: pointer;
+}
+
+.preview> :nth-child(1)> :first-child nav {
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.preview> :nth-child(1)> :first-child div {
+  display: flex;
+  font-size: 2rem;
+  line-height: 2.1rem;
+  cursor: pointer;
+}
+
+.preview> :nth-child(1)> :last-child {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+}
+
+.preview> :nth-child(1)> :last-child div {
+  display: flex;
+  cursor: pointer;
+}
+
+.preview> :nth-child(1)> :last-child div h4{
+  margin-right: 2rem;
+}
+
+.preview> :nth-child(1)> :last-child> :nth-child(1)> :nth-child(1){
+  padding-bottom: 1rem;
+  border-bottom: 3px solid #000;
+}
+
+.preview> :nth-child(1)> :last-child img {
+  width: 38px;
+  cursor: pointer;
+}
+
+.preview> :nth-child(2) {
+  padding: 0 20px;
+}
+
+.pre-list {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.pre-list> :nth-child(1) {
+  margin: 0.5rem;
+}
+
+.pre-list h4 {
+  padding-bottom: 0.4rem;
+}
+
+.pre-list> :nth-child(2) {
+  width: 40px;
+  padding: 0.5rem 0;
+  background: #ddd;
+  border-radius: 10%;
+  text-align: center;
+}
+
+.preview> :nth-child(3) {
+  padding: 0 20px;
+}
+
+.preview> :nth-child(3)> :nth-child(1) {
+  padding: 1.5rem 0;
+  display: flex;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.preview> :nth-child(3)> :nth-child(1) img {
+  width: 40px;
+}
+
+.preview> :nth-child(3)> :nth-child(1) p {
+  padding-top: 0.3rem;
+  padding-left: 0.5rem;
+  font-weight: bold;
+}
+
+.preview> :nth-child(3)> :nth-child(2) {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+
+
+
+
+
+
+
+/* laptop */
+@media (min-width: 360px) {}
+
+</style>
+
+<body>
+
+  <article class="write">
+    <section>
+      <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=http%3A%2F%2Fcfile8.uf.tistory.com%2Fimage%2F99AD46345B35DB5F060314">
+      <h3>JJINS</h3>
+      <div>
+        <img src="https://img.icons8.com/ios-glyphs/30/000000/search-more.png" />
+        <nav>☰</nav>
+      </div>
+    </section>
+
+    <section>
+      <div>
+        <h3>x</h3>
+
+        <div>
+          <h4>임시 0</h4>
+          <h4>임시등록</h4>
+          <button>등록</button>
+        </div>
+
+      </div>
+
+      <div>
+        <select>
+          <option>research</option>
+          <option>portfolio</option>
+          <option>test</option>
+          <option>hell-coding</option>
+        </select>
+      </div>
+
+      <div>
+        <img src="https://img.icons8.com/material-outlined/24/000000/image-gallery.png" /><img src="https://img.icons8.com/ios-glyphs/30/000000/happy--v1.png" /><img src="https://img.icons8.com/material-outlined/24/000000/text.png" /><img
+          src="https://img.icons8.com/ios-glyphs/30/000000/happy--v1.png" /><img src="https://img.icons8.com/material-outlined/24/000000/image-gallery.png" /><img src="https://img.icons8.com/material-outlined/24/000000/text.png" /><img
+            src="https://img.icons8.com/ios-glyphs/30/000000/happy--v1.png" /><img src="https://img.icons8.com/material-outlined/24/000000/image-gallery.png" /><img src="https://img.icons8.com/material-outlined/24/000000/text.png" />
+      </div>
+
+    </section>
+
+    <!-- <table>
+      <tr>
+        <th>✕</th>
+        <td>임시 0&nbsp;&nbsp;&nbsp;임시등록&nbsp;&nbsp;&nbsp;<button>등록</button></td>
+      </tr>
+
+      <tr>
+        <th>research</th>
+        <td>▾</td>
+      </tr>
+
+      <tr>
+        <th>제목</th>
+      </tr>
+
+      <tr>
+        <th><img src="https://img.icons8.com/material-outlined/24/000000/image-gallery.png" /><img src="https://img.icons8.com/ios-glyphs/30/000000/happy--v1.png" /><img src="https://img.icons8.com/material-outlined/24/000000/text.png" /><img
+            src="https://img.icons8.com/ios-glyphs/30/000000/happy--v1.png" /><img src="https://img.icons8.com/material-outlined/24/000000/image-gallery.png" /></th>
+      </tr>
+    </table> -->
+
+    <section>
+      <p>내용을 입력하세요.</p>
+    </section>
+
+    <table>
+      <tr>
+        <th>#태그 입력(#으로 구분, 최대 10개)</th>
+      </tr>
+    </table>
+
+    <section>
+      <div>
+        <div>댓글 허용</div>
+        <div><img src="https://img.icons8.com/ios-filled/50/26e07f/toggle-on.png" /></div>
+      </div>
+
+      <div>
+        <div>블로그 · 카페공유 허용</div>
+        <div><img src="https://img.icons8.com/ios-filled/50/26e07f/toggle-on.png" /></div>
+      </div>
+
+      <button><a href="#">상세설정 펼치기 ▾ </a></button>
+
+    </section>
+
+    <div>
+      <button><a href="#">취소</a></button>
+      <button><a href="#">등록</a></button>
+    </div>
+
+    <p><a href="#top">⤒ 맨위로</a></p>
+  </article>
+
+
+
+  <article class="full-view">
+    <section>
+      <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=http%3A%2F%2Fcfile8.uf.tistory.com%2Fimage%2F99AD46345B35DB5F060314">
+      <h3>JJINS</h3>
+      <div>
+        <img src="https://img.icons8.com/ios-glyphs/30/000000/search-more.png" />
+        <nav>☰</nav>
+      </div>
+    </section>
+
+    <section>
+      <div>
+        <div onclick="location.href='#'">research ›</div>
+        <button><img src="https://img.icons8.com/material-rounded/24/26e07f/cafe--v1.png" />앱 열기</button>
+      </div>
+
+      <div>
+        <h3>Twice Alcohol-Free</h3>
+      </div>
+
+      <div>
+        <div>
+          <img src="https://img.icons8.com/ios-filled/50/000000/cat-profile.png" />
+          <div>
+            <h4>허유진</h4>
+            <small>2021.07.01. 17:323 조회 0</small>
+          </div>
+        </div>
+
+        <div>
+          <button>📈통계</button>
+          <span>…</span>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section>
+      <p>Twice Alcohol-Free</p>
+      <p>나는 alcohol-free 근데 취해 (취해, 취해) 마신 게 하나도 없는데 (없는데)너와 있을 때마다 이래 (이래, 이래) 날 보는 네 눈빛 때문에 너는 눈으로 마시는 내 champagne, 내 wine 내 tequila, margarita Mojito with lime Sweet mimosa, piña colada I'm drunk in you (I'm drunk in you) I'm drunk in you (I'm
+        drunk in you) 너는 정말 특별해 전혀 독하지 않은데 (yeah) 낮에 별이 뜨게 해 한 모금 마셨는데 자꾸 마법에 걸려 (걸려) 밤을 새워도 안 졸려 (졸려) 다른 생각 지워져 심장 소리는 커져 사랑이 참 쉬워져 그래서 빠지고 빠져 점점 너에게</p>
+    </section>
+
+    <section>
+      <div>
+        <div>댓글 0 ></div>
+        <div>
+          <p>댓글알림</p><img src="https://img.icons8.com/ios/30/000000/toggle-off.png" />
+        </div>
+      </div>
+
+      <div>
+        <img src="https://img.icons8.com/ios-filled/50/000000/cat-profile.png" />
+        <span>첫 댓글을 남겨보세요</span>
+      </div>
+    </section>
+
+    <section>
+      <div>
+        <h4>파워컨텐츠</h4>
+        <h3>공기업 현직자가 직접알려주는 NCS,자료해석 공부법</h3>
+        <h4>공기업길잡이</h4>
+        <p>블로그 글 보기</p>
+      </div>
+
+      <div><img src="https://img.icons8.com/flat-round/64/000000/bookmark-corner.png" /></div>
+    </section>
+
+    <section>
+      <h4>전체글 보기 ></h4>
+
+      <div class="full-v-list">
+        <div>
+          <h4>What is Lorem Ipsum?</h4>
+          <small>허유진</small><small>17:23</small><small>💬3</small>
+        </div>
+
+        <div>
+          <img src="http://img.etoday.co.kr/pto_db/2020/08/700/20200814141314_1497997_480_337.jpg">
+        </div>
+      </div>
+
+      <div class="full-v-list">
+        <div>
+          <h4>What is Lorem Ipsum?</h4>
+          <small>허유진</small><small>17:23</small><small>💬3</small>
+        </div>
+
+        <div>
+          <img src="http://img.etoday.co.kr/pto_db/2020/08/700/20200814141314_1497997_480_337.jpg">
+        </div>
+      </div>
+
+      <div class="full-v-list">
+        <div>
+          <h4>What is Lorem Ipsum?</h4>
+          <small>허유진</small><small>17:23</small><small>💬3</small>
+        </div>
+
+        <div>
+          <img src="http://img.etoday.co.kr/pto_db/2020/08/700/20200814141314_1497997_480_337.jpg">
+        </div>
+      </div>
+
+      <div class="full-v-list">
+        <div>
+          <h4>What is Lorem Ipsum?</h4>
+          <small>허유진</small><small>17:23</small><small>💬3</small>
+        </div>
+
+        <div>
+          <img src="http://img.etoday.co.kr/pto_db/2020/08/700/20200814141314_1497997_480_337.jpg">
+        </div>
+      </div>
+
+      <div class="full-v-list">
+        <div>
+          <h4>What is Lorem Ipsum?</h4>
+          <small>허유진</small><small>17:23</small><small>💬3</small>
+        </div>
+
+        <div>
+          <img src="http://img.etoday.co.kr/pto_db/2020/08/700/20200814141314_1497997_480_337.jpg">
+        </div>
+      </div>
+
+      <span>●○○</span>
+
+
+    </section>
+
+    <section>
+      <h4>이 카페 인기글 ></h4>
+
+      <div class="full-v-list">
+        <div>
+          <h4>What is Lorem Ipsum?</h4>
+          <small>허유진</small><small>17:23</small><small>💬3</small>
+        </div>
+
+        <div>
+          <img src="https://images.unsplash.com/photo-1598452963314-b09f397a5c48?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=501&q=80">
+        </div>
+      </div>
+
+      <div class="full-v-list">
+        <div>
+          <h4>What is Lorem Ipsum?</h4>
+          <small>허유진</small><small>17:23</small><small>💬3</small>
+        </div>
+
+        <div>
+          <img src="https://images.unsplash.com/photo-1598452963314-b09f397a5c48?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=501&q=80">
+        </div>
+      </div>
+
+      <div class="full-v-list">
+        <div>
+          <h4>What is Lorem Ipsum?</h4>
+          <small>허유진</small><small>17:23</small><small>💬3</small>
+        </div>
+
+        <div>
+          <img src="https://images.unsplash.com/photo-1598452963314-b09f397a5c48?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=501&q=80">
+        </div>
+      </div>
+
+      <div class="full-v-list">
+        <div>
+          <h4>What is Lorem Ipsum?</h4>
+          <small>허유진</small><small>17:23</small><small>💬3</small>
+        </div>
+
+        <div>
+          <img src="https://images.unsplash.com/photo-1598452963314-b09f397a5c48?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=501&q=80">
+        </div>
+      </div>
+
+      <div class="full-v-list">
+        <div>
+          <h4>What is Lorem Ipsum?</h4>
+          <small>허유진</small><small>17:23</small><small>💬3</small>
+        </div>
+
+        <div>
+          <img src="https://images.unsplash.com/photo-1598452963314-b09f397a5c48?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=501&q=80">
+        </div>
+      </div>
+
+      <span>●○○</span>
+    </section>
+
+
+    <section>
+      <div>
+        <img src="https://img.icons8.com/material-rounded/24/26e07f/cafe--v1.png" />
+        <p>카페 앱으로 보기<br>알림으로 바로 확인하는 내 카페 소식!</p>
+      </div>
+
+      <div><a href="#top">⤒ 맨위로</a></div>
+
+      <div>
+        <div>☰ 목록으로</div>
+        <div>❤️️0 &nbsp;&nbsp;💬3 &nbsp;&nbsp;📤</div>
+      </div>
+    </section>
+
+
+  </article>
+
+
+
+  <article class="preview">
+
+
+    <section>
+
+      <div>
+        <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=http%3A%2F%2Fcfile8.uf.tistory.com%2Fimage%2F99AD46345B35DB5F060314">
+        <h3>JJINS</h3>
+
+        <div>
+          <img src="https://img.icons8.com/ios-glyphs/30/000000/search-more.png" />
+          <nav>☰</nav>
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <h4>research</h4>
+          <h4>공지</h4>
+        </div>
+
+        <div><img src="https://img.icons8.com/ios/64/000000/pencil--v1.png"></div>
+      </div>
+
+    </section>
+
+    <section>
+
+      <div class="pre-list">
+        <div>
+          <h4>What is Lorem Ipsum?</h4>
+          <small>허유진 &nbsp;</small><small>17:23 &nbsp;</small><small>조회 38</small>
+        </div>
+
+        <div>
+          <p>12</p>
+          <small>댓글</small>
+        </div>
+      </div>
+
+      <div class="pre-list">
+        <div>
+          <h4>What is Lorem Ipsum?</h4>
+          <small>허유진 &nbsp;</small><small>17:23 &nbsp;</small><small>조회 38</small>
+        </div>
+
+        <div>
+          <p>12</p>
+          <small>댓글</small>
+        </div>
+      </div>
+
+      <div class="pre-list">
+        <div>
+          <h4>What is Lorem Ipsum?</h4>
+          <small>허유진 &nbsp;</small><small>17:23 &nbsp;</small><small>조회 38</small>
+        </div>
+
+        <div>
+          <p>12</p>
+          <small>댓글</small>
+        </div>
+      </div>
+
+      <div class="pre-list">
+        <div>
+          <h4>What is Lorem Ipsum?</h4>
+          <small>허유진 &nbsp;</small><small>17:23 &nbsp;</small><small>조회 38</small>
+        </div>
+
+        <div>
+          <p>12</p>
+          <small>댓글</small>
+        </div>
+      </div>
+
+      <div class="pre-list">
+        <div>
+          <h4>What is Lorem Ipsum?</h4>
+          <small>허유진 &nbsp;</small><small>17:23 &nbsp;</small><small>조회 38</small>
+        </div>
+
+        <div>
+          <p>12</p>
+          <small>댓글</small>
+        </div>
+      </div>
+
+      <div class="pre-list">
+        <div>
+          <h4>What is Lorem Ipsum?</h4>
+          <small>허유진 &nbsp;</small><small>17:23 &nbsp;</small><small>조회 38</small>
+        </div>
+
+        <div>
+          <p>12</p>
+          <small>댓글</small>
+        </div>
+      </div>
+
+      <div class="pre-list">
+        <div>
+          <h4>What is Lorem Ipsum?</h4>
+          <small>허유진 &nbsp;</small><small>17:23 &nbsp;</small><small>조회 38</small>
+        </div>
+
+        <div>
+          <p>12</p>
+          <small>댓글</small>
+        </div>
+      </div>
+
+      <div class="pre-list">
+        <div>
+          <h4>What is Lorem Ipsum?</h4>
+          <small>허유진 &nbsp;</small><small>17:23 &nbsp;</small><small>조회 38</small>
+        </div>
+
+        <div>
+          <p>12</p>
+          <small>댓글</small>
+        </div>
+      </div>
+
+      <div class="pre-list">
+        <div>
+          <h4>What is Lorem Ipsum?</h4>
+          <small>허유진 &nbsp;</small><small>17:23 &nbsp;</small><small>조회 38</small>
+        </div>
+
+        <div>
+          <p>12</p>
+          <small>댓글</small>
+        </div>
+      </div>
+
+      <div class="pre-list">
+        <div>
+          <h4>What is Lorem Ipsum?</h4>
+          <small>허유진 &nbsp;</small><small>17:23 &nbsp;</small><small>조회 38</small>
+        </div>
+
+        <div>
+          <p>12</p>
+          <small>댓글</small>
+        </div>
+      </div>
+
+
+    </section>
+
+    <section>
+      <div>
+        <img src="https://img.icons8.com/material-rounded/24/26e07f/cafe--v1.png" />
+        <p>카페 앱으로 보기<br>알림으로 바로 확인하는 내 카페 소식!</p>
+      </div>
+
+      <div><a href="#top">⤒ 맨위로</a></div>
+    </section>
+
+
+  </article>
+
+
+
+
+
+</body>
+
+</html>

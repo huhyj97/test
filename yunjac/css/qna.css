@@ -1,0 +1,280 @@
+/* hd */
+
+.hd {
+  background: url('https://images.unsplash.com/photo-1604882356818-9100fce260a7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80') no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 450px;
+  text-align: center;
+  color: #fff;
+  padding: 120px 0;
+}
+
+.hd h1 {
+  padding-bottom: 50px;
+}
+
+.hd div {
+  position: relative;
+  margin: 20px 5%;
+}
+
+.hd div input {
+  width: 100%;
+  padding: 1.5rem 1rem;
+  border: 5px solid #fff;
+  background: rgba(255, 255, 255, 0.3);
+  color: #eee;
+  font-size: 1rem;
+}
+
+.hd div input::placeholder {
+  color: #eee;
+}
+
+.hd div button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  cursor: pointer;
+}
+
+.hd div img {
+  width: 40px;
+  background: #fff;
+  border-radius: 50%;
+  padding: 0.3rem;
+}
+
+/* category */
+
+.category table {
+  width: 100%;
+  border-top: 8px solid #eee;
+  border-bottom: 8px solid #eee;
+  border-collapse: collapse;
+  text-align: center;
+  background: #fff;
+}
+
+.category table td {
+  width: 33%;
+  font-size: 1rem;
+  color: #333333;
+  padding: 50px 0;
+  border: 1.5px solid #eee;
+  cursor: pointer;
+}
+
+.category table td:hover {
+  background: rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
+
+/* faq-title */
+.faq-title {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 50px 5%;
+}
+
+.faq-title span {
+  color:  #9f8870;
+}
+
+.faq_que {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  padding: 27px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.faq_que::before {
+  display: inline-block;
+  content: 'Q.';
+  font-size: 14px;
+  color: #333;
+  margin-right: 5px;
+}
+
+.faq_que.on>span {
+  font-weight: bold;
+  color: #333;
+}
+
+.faq_anw {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: none;
+  overflow: hidden;
+  font-size: 15px;
+  background-color: #333;
+  padding: 27px 20px;
+  color: #ddd;
+  line-height: 20px;
+}
+
+.faq_anw::before {
+  display: inline-block;
+  content: 'A.';
+  font-size: 15px;
+  color: #ddd;
+  margin-left: 5px;
+}
+
+/* solution */
+.solution {
+  padding: 120px 0;
+  margin-top: 50px;
+  background: #ddd;
+}
+
+.solution h2, .solution h3, .solution h4 {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.solution button {
+  background: #777;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  width: 100%;
+  padding: 20px 0;
+  margin: 2rem auto;
+  font-weight: bold;
+  letter-spacing: 2px;
+  transition: .3s;
+}
+
+.solution button:hover {
+ background: #000;
+}
+
+#content {
+  min-height: 40rem;
+  position: relative;
+  width: 100%;
+  z-index: 5;
+  padding: 40px 5%;
+}
+
+#content>:first-child {
+  position: relative;
+}
+
+#content>:first-child h3 {
+  font-size: 1.2rem;
+}
+
+#content>:first-child::after {
+  position: absolute;
+  bottom: -15px;
+  content: '';
+  width: 100%;
+  border-bottom: 2px solid black;
+}
+
+#content>:nth-child(3) {
+  position: relative;
+}
+
+#content>:nth-child(3) h3 {
+  font-size: 1.2rem;
+}
+
+#content>:nth-child(3)::after {
+  position: absolute;
+  bottom: -15px;
+  content: '';
+  width: 100%;
+  border-bottom: 2px solid black;
+}
+
+.content-1 {
+  width: 100%;
+  clear: both;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.content-1>:first-child div {
+  padding: 1rem 0;
+}
+
+.content-1>:first-child input {
+  width: 100%;
+  height: 50px;
+  padding: 0 1rem;
+  margin-bottom: 0.7rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+textarea{
+  font-family: inherit;
+  width: 100%;
+  height: 150px;
+  background: #fff;
+  font-size: 0.9rem;
+  color: #666;
+  padding: 10px 1rem;
+  resize: none;
+}
+
+
+.label {
+  font-size: 1rem;
+  margin: 5px 1rem;
+  line-height: 2rem;
+}
+
+.save{
+  text-align: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+
+/*~~~labtop start~~~*/
+@media screen and (min-width: 1200px) {
+  .hd div {
+    width: 1200px;
+    margin: 20px auto;
+  }
+
+  .category {
+    background: #ddd;
+    padding: 50px 0;
+  }
+
+  .category table {
+    width: 1200px;
+    background: #fff;
+    margin: 0 auto;
+  }
+
+  .solution {
+    margin: 50px auto;
+    margin-bottom: 0;
+  }
+
+  .sol-wrap {
+    width: 1200px;
+    background: rgba(255, 255, 255, 0.4);
+    margin: 0 auto;
+    padding-top: 80px;
+  }
+
+  .sol-inner {
+    width: 600px;
+    margin: 0 auto;
+  }
+
+}

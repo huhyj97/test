@@ -1,0 +1,779 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0px solid silver;
+  outline: none;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+img {
+  width: 100px;
+}
+
+body {
+  font-size: 0.9rem;
+  letter-spacing: 0.1px;
+}
+
+h1 {
+  font-size: 2.8rem;
+  line-height: 2.8rem;
+  font-weight: bolder;
+  color: #fff;
+}
+
+h2 {
+  font-size: 2.3rem;
+  line-height: 2.3rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  font-weight: bolder;
+  color: #333;
+}
+
+h4 {
+  font-size: 1.3rem;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: #333;
+}
+
+h5 {
+  font-size: 1rem;
+  line-height: 1.4rem;
+  text-transform: uppercase;
+}
+
+h6 {
+  font-size: 0.85rem;
+  color: black;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+}
+
+span {
+  font-size: 0.9rem;
+}
+
+a:link {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  text-transform: uppercase;
+}
+
+a:active {
+  color: white;
+  text-transform: uppercase;
+}
+
+a:hover {
+  color: white;
+  text-transform: uppercase;
+}
+
+small {
+  font-size: 0.7rem;
+  line-height: 0.9rem;
+  color: #999;
+}
+
+li {
+  list-style: none;
+}
+
+/*~~~~mobile start~~~~*/
+
+/* main */
+main {
+  position: relative;
+  min-width: 360px;
+  background: #e8dcca;
+}
+
+main header {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  z-index: 99;
+  width: 100%;
+  padding: 0 5%;
+  padding-top: 30px;
+  margin: 0 auto;
+}
+
+main header .toggle-btn1 {
+  color: #222;
+  display: inline-block;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+main header> :nth-child(1)> :nth-child(2) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-55%, 20%);
+  width: 140px;
+}
+
+main header> :nth-child(1)> :nth-child(3) ul{
+  display: none;
+}
+
+main header> :nth-child(2) img {
+  width: 35px;
+  cursor: pointer;
+}
+
+main header> :nth-child(2)> :nth-child(2){
+  background: #cfb997;
+  padding: 0.3rem;
+  border-radius: 8px;
+}
+
+main header #sidebar {
+  cear: both;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  top: 70px;
+  left: -100vw;
+  transition: .4s;
+  z-index: 99;
+}
+
+main header #sidebar.active {
+  left: 0;
+}
+
+main header #sidebar ul {
+  list-style: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 20px 0;
+  text-decoration: none;
+}
+
+main header #sidebar ul li a{
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2rem 24px;
+}
+
+main header #sidebar ul li a:hover {
+  background: #cfb997;
+}
+
+/* main.slide(배경 자동슬라이드)*/
+main .slide {
+  position: relative;
+  overflow: hidden;
+}
+
+main .panel {
+  width: 300%;
+  height: 800px;
+}
+
+main .panel:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+main .panel>li {
+  width: 33.333%;
+  height: 800px;
+  float: left;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+}
+
+main .panel>li:nth-of-type(1) {
+  background: url('https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FCKup9%2FbtqB8aT80zF%2Fj372BWv2XecYwtXhUSmbEk%2Fimg.jpg');
+  background-size: cover;
+  background-position: 80% 50%;
+  cursor: pointer;
+}
+
+main .panel>li:nth-of-type(2) {
+  background: url('https://m.giordano.co.kr/_data/attach/202103/24/2d362af7edebc055a697f3ddd3b47496.jpg') no-repeat;
+  background-size: cover;
+  background-position: top center;
+  cursor: pointer;
+}
+
+main .panel>li:nth-of-type(3) {
+  background: url('https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbrIBvW%2FbtqB9w3dLB9%2FrcagbzUtWiR2WbN6TZp531%2Fimg.jpg') no-repeat;
+  background-size: cover;
+  background-position: 30%;
+  cursor: pointer;
+}
+
+main .opa {
+  position: relative;
+  background: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100%;
+}
+
+main .opa section {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  color: #fff;
+}
+
+main .opa section h3, main .opa section h4 {
+  color: #fff;
+}
+
+main .opa section h4 {
+  margin: 1rem 0;
+}
+
+main .opa section button {
+  background: none;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 0.2rem 0.5rem;
+  font-size: 1.1rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+main .dot:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+main .dot {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translateX(-50%);
+}
+
+main .dot>li {
+  float: left;
+  background: #ebd3b0;
+  width: 50px;
+  height: 12px;
+  border-radius: 50px;
+  margin-right: 8px;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+
+main .dot>li.on {
+  background: #fff;
+  width: 30px;
+  height: 12px;
+}
+
+
+/* best */
+.best {
+    margin: 3rem auto;
+    text-align: center;
+  }
+
+.best section {
+  display: none;
+}
+
+.btnLeft, .btnRight {
+  display: none;
+}
+
+.best .mob-best {
+  position: relative;
+  display: block;
+  min-width: 360px;
+  margin: 20px 0;
+}
+
+.best .mob-best img {
+  display: block;
+  width: 100%;
+}
+
+.best .mob-best button {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: #fff;
+  font-size: 1.3rem;
+  color: #222;
+  border: 2px solid #ebd3b0;
+  padding: 0.2rem 1rem;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.best .mob-best button:hover {
+  background: #ebd3b0;
+}
+
+/*gender */
+.gender {
+  min-width: 360px;
+  background: #fff;
+  margin: 30px 0px;
+  padding: 0 20px;
+}
+
+.gender h1 {
+  padding: 10px 20px;
+  text-decoration: underline;
+}
+
+.gender> :first-child {
+  width: 100%;
+  height: 500px;
+  background-image: url('https://www.giordano.co.kr/_data/attach/202005/04/ab652f449295fbf91d1f1913385ba3d3.jpg#addimg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.gender> :last-child {
+  width: 100%;
+}
+
+.gender> :last-child> :first-child {
+  height: 500px;
+  background-image: url('https://www.giordano.co.kr/_data/attach/202104/20/8014f21b8d27217bc7b85afa2a73faff.jpg#addimg');
+  background-size: cover;
+  background-position: 10% 0;
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.gender> :last-child> :last-child {
+  height: 500px;
+  background-image: url('https://www.giordano.co.kr/_data/attach/202103/10/c281ded91f6eab72a5a74ba4ede3d54b.jpg#addimg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+/* sns */
+.sns {
+  min-width: 360px;
+  margin: 50px 0;
+}
+
+.sns iframe {
+  display: none;
+}
+
+.sns div {
+  width: 100%;
+  height: 350px;
+  text-align: center;
+  padding-top: 70px;
+  border: 5px solid #cfb997;
+}
+
+.sns div h3 {
+  margin: 20px 0;
+  line-height: 2.3rem;
+}
+
+.sns div h5 {
+  color: #cfb997;
+}
+
+.sns div img {
+  width: 40px;
+  cursor: pointer;
+}
+
+/* new */
+
+.new> :nth-child(1){
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.new-flex {
+  margin-bottom: 100px;
+}
+
+.new-flex h3 {
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.new-flex button {
+  color: #fff;
+  background: none;
+  font-size: 1.5rem;
+  margin-left: 72%;
+  margin-top: 250px;
+  cursor: pointer;
+}
+
+.new-flex div section {
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  width: 100%;
+  height: 350px;
+  transition: .3s;
+}
+
+.new-flex div section:hover {
+  background: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  width: 100%;
+  height: 350px;
+}
+
+.new-flex> :nth-child(1) {
+  width: 100%;
+  background: url('https://www.giordano.co.kr/_data/banner/03a4d197f26f9b92efc9adab7f9af9ae.jpg');
+  background-size: cover;
+  background-position: top center;
+}
+
+.new-flex> :nth-child(2) {
+  width: 100%;
+  background: url('https://www.giordano.co.kr/_data/banner/a1106b6938fbc149aac9bee447f0eec0.jpg');
+  background-size: cover;
+  background-position: top center;
+}
+
+
+
+
+
+
+
+/* footer */
+footer {
+  background: #222;
+  color: #fff;
+  padding: 30px 20px;
+  padding-bottom: 100px;
+}
+
+footer> :nth-child(1) div {
+  margin-bottom: 30px;
+}
+
+footer> :nth-child(1) div h3 {
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+footer> :nth-child(1) div h4 {
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+footer> :nth-child(1) div a {
+  color: #999;
+  display: block;
+  margin-top: 20px;
+}
+
+footer> :nth-child(2) {
+  margin-top: 30px;
+}
+
+footer> :nth-child(2) img {
+  width: 30px;
+}
+
+footer> :nth-child(2) p {
+  margin: 15px 0;
+}
+
+footer> :nth-child(2) span {
+  margin-right: 15px;
+}
+
+
+/*~~~~labtop start~~~~*/
+@media screen and (min-width: 1000px) {
+
+  /* labtop main */
+ main header .toggle-btn1 {
+  display: none;
+}
+
+   main header> :nth-child(1) {
+  display: flex;
+}
+
+  main header> :nth-child(1)> :nth-child(2) {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, 30%);
+  width: 160px;
+}
+
+main header> :nth-child(1)> :nth-child(3) ul{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  display: flex;
+}
+
+main header> :nth-child(1)> :nth-child(3) ul li {
+  color: #222;
+  font-size: 0.95rem;
+  margin: 0 1.5rem;
+  line-height: 2.5rem;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+  main header> :nth-child(1)> :nth-child(3) ul li:hover {
+  transform: translateY(-10%);
+  border-bottom: 1px solid #222;
+}
+
+  main .opa section {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 800px;
+  color: #fff;
+}
+
+ main .opa section h3{
+  font-size: 2.4rem;
+  line-height: 3rem;
+}
+
+main .opa section h4 {
+  font-size: 1.5rem;
+  margin: 2rem 0;
+}
+
+
+ main .panel>li:nth-of-type(1) {
+  background: url('https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FCKup9%2FbtqB8aT80zF%2Fj372BWv2XecYwtXhUSmbEk%2Fimg.jpg') no-repeat;
+  background-size: cover;
+  background-position: 20%;
+  cursor: pointer;
+}
+
+main .panel>li:nth-of-type(2) {
+  background: url('https://m.giordano.co.kr/_data/attach/202103/24/2d362af7edebc055a697f3ddd3b47496.jpg') no-repeat;
+  background-size: 40%;
+  background-position: 80%;
+  cursor: pointer;
+}
+
+main .panel>li:nth-of-type(3) {
+  background: url('https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbrIBvW%2FbtqB9w3dLB9%2FrcagbzUtWiR2WbN6TZp531%2Fimg.jpg') no-repeat;
+  background-size: 70%;
+  background-position: 80%;
+  cursor: pointer;
+}
+
+  /* labtop best */
+ .best {
+    position: relative;
+    margin: 100px 0;
+  }
+
+ .best section {
+   display: block;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+    margin: 30px auto;
+}
+
+.slide-box {
+    width: 3200px;
+    display: flex;
+}
+
+.slide-in {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    transition: 0.6s;
+}
+
+.slide-in div {
+    width: 180px;
+    padding: 2.5rem 0;
+  }
+
+ .slide-in img {
+   width: 100%;
+}
+
+ .slide-in span {
+    color: #760c0c;
+  }
+
+ .slide-in small {
+    text-decoration: line-through;
+  }
+
+  .btnLeft,
+.btnRight {
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 400px;
+    top: 0;
+    color: #666;
+    font-size: 3rem;
+    line-height: 35rem;
+    cursor: pointer;
+    transition: 0.3s
+}
+
+  .btnLeft:hover,
+    .btnRight:hover {
+      transform:scale(1.1);
+    }
+
+.btnLeft {
+    left: 0;
+}
+
+.btnRight {
+    right: 0;
+}
+
+  .best .mob-best {
+  display: none;
+}
+
+  /* labtop-gender */
+.gender {
+  min-width: 360px;
+  height: 500px;
+  background: #fff;
+  display: flex;
+  margin: 0px 50px;
+}
+
+.gender h1 {
+  padding: 10px 20px;
+  text-decoration: underline;
+}
+
+.gender> :first-child {
+  width: 40%;
+  height: 500px;
+  background-image: url('https://www.giordano.co.kr/_data/attach/202005/04/ab652f449295fbf91d1f1913385ba3d3.jpg#addimg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+
+.gender> :last-child {
+  width: 60%;
+}
+
+.gender> :last-child> :first-child {
+  height: 250px;
+  background-image: url('https://www.giordano.co.kr/_data/attach/202104/20/8014f21b8d27217bc7b85afa2a73faff.jpg#addimg');
+  background-size: cover;
+  background-position: 0 5%;
+  background-repeat: no-repeat;
+  margin-bottom: 10px;
+}
+
+.gender> :last-child> :last-child {
+  height: 240px;
+  background-image: url('https://www.giordano.co.kr/_data/attach/202103/10/c281ded91f6eab72a5a74ba4ede3d54b.jpg#addimg');
+  background-size: cover;
+  background-position: 0 8%;
+  background-repeat: no-repeat;
+}
+
+/* labtop-sns */
+  .sns {
+  display: flex;
+  margin: 150px 0;
+}
+
+ .sns iframe {
+  display: block;
+}
+
+.sns div {
+  width: 50%;
+  height: 350px;
+  text-align: center;
+  padding-top: 80px;
+  border: 0
+}
+
+ /* labtop-new */
+  .new-flex {
+  display: flex;
+  margin-bottom: 100px;
+}
+
+  .new-flex> :nth-child(1) {
+  width: 50%;
+  background: url('https://www.giordano.co.kr/_data/banner/03a4d197f26f9b92efc9adab7f9af9ae.jpg');
+  background-size: cover;
+  background-position: top center;
+}
+
+.new-flex> :nth-child(2) {
+  width: 50%;
+  background: url('https://www.giordano.co.kr/_data/banner/a1106b6938fbc149aac9bee447f0eec0.jpg');
+  background-size: cover;
+  background-position: top center;
+}
+
+
+
+
+
+/* labtop-footer */
+  footer {
+    padding: 30px 40px;
+    padding-bottom: 100px;
+  }
+
+  footer> :nth-child(1) {
+    display: flex;
+  }
+
+  footer> :nth-child(1) div {
+    width: 220px;
+    margin-right: 50px;
+  }
+}

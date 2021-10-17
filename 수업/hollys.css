@@ -1,0 +1,347 @@
+/* default */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0px solid silver;
+}
+
+img {
+  width: 100px;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1rem;
+  letter-spacing: 0.1px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  margin-bottom: 0.6rem;
+}
+
+h5 {
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+}
+
+a:link {
+  color: #000;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #000;
+}
+
+a:hover {
+  color: #000;
+}
+
+a:active {
+  color: #760c0c;
+}
+
+small {
+  color: #666;
+  font-weight: bold;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline;
+  font-size: 1.1rem;
+}
+
+nav ul li a {
+  padding: 0.8rem 1rem;
+  transition: 0.4s;
+}
+
+nav ul li a:hover {
+  background: #ba000c;
+  color: #fff;
+}
+
+/* start */
+
+header {
+  position: relative;
+  width: 1000px;
+  height: 140px;
+  margin: 0 auto 1rem auto;
+}
+
+header img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  width: 70px;
+}
+
+header> :nth-child(2) {
+  display: flex;
+  float: left;
+}
+
+header> :nth-child(2) div {
+  font-size: 0.9rem;
+  padding: 0 1rem;
+  line-height: 3rem;
+}
+
+header> :nth-child(3) {
+  display: flex;
+  float: right;
+  line-height: 3rem;
+}
+
+header> :nth-child(3) div {
+  font-size: 0.7rem;
+  padding: 0 0.5rem;
+  line-height: 3rem;
+}
+
+header nav {
+  clear: both;
+  position: absolute;
+  bottom: 10%;
+  left: 12%;
+}
+
+aside {
+  position: absolute;
+  position: fixed;
+  z-index: 999;
+  top: 7%;
+  right: 2%;
+  cursor: pointer;
+}
+
+main {
+  position: relative;
+  height: 480px;
+  background: url('https://admin.hollys.co.kr/upload/main/banner/mainBanner_202104230431043650.jpg') no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-top: 2px solid #ba000c;
+  margin-bottom: 2rem;
+}
+
+main section {
+  position: absolute;
+  bottom: 3%;
+  left: 45%;
+  display: flex;
+}
+
+main div {
+  color: #fff;
+  padding: 0 0.4rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+main section> :nth-child(3) {
+  color: #ba000c;
+}
+
+.store {
+  width: 1000px;
+  height: 350px;
+  margin: 0 auto;
+}
+
+.store span {
+  border: 1px dotted #ccc;
+}
+
+.store> :nth-child(1) {
+  float: left;
+}
+
+.store> :nth-child(3) {
+  float: right;
+}
+
+.store> :nth-child(1), .store> :nth-child(3) {
+  position: relative;
+  width: 225px;
+  cursor: pointer;
+}
+
+.store> :nth-child(1) h3, .store> :nth-child(3) h3 {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+.store> :nth-child(1) img, .store> :nth-child(3) img {
+  width: 225px;
+  height: 350px;
+}
+
+.store> :nth-child(2) {
+  position: relative;
+  float: left;
+  width: 500px;
+  cursor: pointer;
+}
+
+.store> :nth-child(2)> :nth-child(1) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-75%, 20%);
+  width: 300px;
+}
+
+.store> :nth-child(2) h3 {
+  color: #ba000c;
+  padding: 1rem 0;
+}
+
+.store> :nth-child(2) p {
+  font-size: 0.8rem;
+}
+
+.store> :nth-child(2)> :nth-child(2) {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, 90%);
+  width: 150px;
+  display: flex;
+  text-align: center;
+  padding: 0 2.7rem;
+}
+
+.store> :nth-child(2) img {
+  width: 150px;
+}
+
+.cardnews {
+  clear: both;
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.cardnews img {
+  width: 490px;
+  cursor: pointer;
+}
+
+.notice {
+  width: 1000px;
+  height: 150px;
+  margin: 2rem auto;
+}
+
+.notice> :first-child {
+  float: left;
+  display: flex;
+  cursor: pointer;
+}
+
+.notice> :first-child section {
+  padding: 0 3.5rem 0 0;
+  font-size: 0.8rem;
+}
+
+.notice> :first-child section p {
+  padding: 0 0 1rem 0;
+}
+
+.notice> :first-child section button {
+  background: #ba000c;
+  color: #fff;
+  cursor: pointer;
+}
+
+.notice> :first-child> :nth-child(3)> :nth-child(2) {
+  display: flex;
+}
+
+.notice> :last-child {
+  float: right;
+  display: flex;
+  text-align: center;
+}
+
+.notice> :last-child img {
+  width: 40px;
+  cursor: pointer;
+}
+
+.notice> :last-child p {
+  font-size: 0.8rem;
+  padding: 1rem 0;
+}
+
+.notice> :last-child span {
+  border: 1px dotted #ccc;
+  margin: 0 1rem;
+}
+
+.sns {
+  clear: both;
+  width: 1000px;
+  display: flex;
+  margin: 2rem auto;
+  padding: 3rem 0;
+  border-top: 2px solid #ba000c;
+}
+
+.sns div {
+  margin: 0 1rem;
+}
+
+.sns div img {
+  width: 30px;
+  padding: 0.7rem 0;
+}
+
+footer {
+  position: relative;
+  background: #ba000c;
+  color: #fff;
+  height: 200px;
+}
+
+footer section {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 0;
+  text-align: left;
+}
+
+footer section div {
+  font-size: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+footer section div a:link {
+  color: #fff;
+}
+
+footer section p {
+  font-size: 0.7rem;
+}

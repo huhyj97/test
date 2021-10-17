@@ -1,0 +1,539 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0px solid silver;
+  outline: none;
+}
+
+img {
+  width: 100px;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.1px;
+  color: #333;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  padding-bottom: 20px;
+  font-weight: bolder;
+}
+
+h2 {
+  font-size: 2.3rem;
+  line-height: 3rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+  font-size: 1.3em;
+  font-weight: bolder;
+}
+
+h5 {
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+
+h6 {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  color: #cfb997;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  font-family: 'Noto Sans KR', serif;
+}
+
+/*~~~~start~~~~*/
+/* header */
+header {
+  padding: 20px 5%;
+  font-weight: 700;
+}
+
+header section {
+  display: flex;
+  justify-content: space-between;
+}
+
+header section img {
+  width: 150px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.pc-header, .pc-header2 {
+  display: none;
+}
+
+/* main */
+main {
+  min-width: 360px;
+  height: 100vh;
+}
+
+.container {
+  border-radius: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  width: 500%;
+  height: 100vh;
+  transition: all 0.25s ease-in;
+  transform: translateX(0);
+}
+
+.slider .box {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider .box .bg {
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, .2);
+  width: 55%;
+  transform: skewX(7deg);
+  position: absolute;
+  height: 100%;
+  left: -10%;
+  padding-left: 20rem;
+  transform-origin: 0 100%;
+}
+
+.slider .box .bg::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: inherit;
+  pointer-events: none;
+  transform: skewX(10deg);
+}
+
+.slider .box .details {
+  text-align: center;
+  transform: translateY(-5rem);
+  color: #fff;
+}
+
+.slider .box .details h1 {
+  font-weight: 500;
+}
+
+.slider .box .details p {
+  font-size: 1.3rem;
+  padding: 20px 0;
+  padding-bottom: 40px;
+}
+
+.slider .box .details button {
+  padding: 1rem 3rem;
+  background: #002c5e;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.slider .box .details button:hover,
+.slider .box .details button:active {
+  background: #000;
+}
+
+.slider .box1 {
+  background: url('https://www.hyundai.com/contents/repn-car/key-visual/homepage/pc/avante-n-21lc-w.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.slider .box2 {
+  background: url('https://www.hyundai.com/contents/repn-car/key-visual/homepage/pc/kona-n-w.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.slider .box3 {
+  background: url('https://www.hyundai.com/contents/repn-car/key-visual/homepage/pc/sonata-n-line-21my-w.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.slider .box4 {
+  background: url('https://casper.hyundai.com/_nuxt/img/interior-gallary_05.d347524.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.slider .box5 {
+  background: url('https://www.genesis.com/content/dam/genesis-p2/kr/assets/main/g80-sport/g80-sport-image-launching-2-pc-1920x1080-kr.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.trail {
+  position: absolute;
+  bottom: 13%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.trail div {
+  padding: 1rem;
+  border-top: 3px solid #fff;
+  cursor: pointer;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+.trail div:hover {
+  opacity: 0.6;
+}
+
+.active {
+  opacity: 1 !important;
+}
+
+.prev,
+.next {
+  display: none;
+}
+
+/* new */
+.new {
+  margin: 100px 0;
+  padding: 100px 0;
+}
+
+.new> :nth-child(1) {
+  background: #ccc;
+}
+
+.new> :nth-child(1)> :nth-child(1){
+  top: 50%;
+  display: flex;
+
+}
+
+.new> :nth-child(1)> :nth-child(1)> :first-child {
+  width: 40%;
+  height: 60%;
+}
+
+.new> :nth-child(1)> :nth-child(1)> :last-child {
+  width: 60%;
+}
+
+/* best */
+.best {
+  padding: 0 5%;
+  margin: 150px auto;
+}
+
+.best h1 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.last-slider .single {
+  width: 100%;
+  height: 400px;
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.last-slider .single img {
+  width: 110%;
+  height: 60%;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+  content: '';
+  width: 100%;
+}
+
+.slick-arrow {
+  background-color: transparent;
+  color: transparent;
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  display: block;
+  top: 48%;
+  margin-top: -10px;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 0;
+  z-index: 5;
+  border-top: 3px solid #ccc;
+  border-right: 3px solid #ccc;
+  transition: 0.8s;
+}
+
+.slick-arrow:hover {
+  transition: 0.8s;
+}
+
+.slick-prev {
+  left: 0%;
+  transform: rotate(225deg);
+}
+
+.slick-next {
+  right: 0%;
+  transform: rotate(45deg);
+}
+
+/* smart-search */
+.smart-search {
+  background: url('https://images.unsplash.com/photo-1589539027938-35266cbbf280?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80') no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+}
+
+.search-bg {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 150px 5%;
+}
+.smart-search section {
+  margin: 50px 0;
+}
+
+.smart-search section> :nth-child(1) {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.smart-search section> :nth-child(1) .row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.smart-search section> :nth-child(1) .row div {
+  width: 30%;
+  padding: 1rem;
+  background: #111;
+  cursor: pointer;
+}
+
+.smart-search section> :nth-child(1) .row span {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content .container-fluid {
+  width: 100%;
+}
+
+.tab-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.left-content {
+  max-width: 1200px;
+  padding: 4rem 0;
+  text-align: center;
+  background:  #111;
+  font-size: 3.75rem;
+}
+
+.left-content table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  color: #fff;
+}
+
+.left-content table td {
+  border: 1px solid #fff;
+}
+
+
+
+/* footer */
+footer {
+  padding: 50px 5%;
+  background: #000;
+  color: #ccc;
+}
+
+footer button {
+  background: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.foot-1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.foot-1 div ul {
+  display: flex;
+}
+
+.foot-1 div ul li {
+  padding: 0 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 1000px) {
+
+  /* header */
+  header section img {
+    margin-top: 10px;
+  }
+
+  .pc-header, .pc-header2 {
+    display: flex;
+  }
+
+  .pc-header li, .pc-header2 li {
+    font-size: 1rem;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  /* main */
+  .slider .box .details {
+    padding: 5rem;
+    padding-left: 10rem;
+    z-index: 100;
+    grid-column: 1 / span 1;
+    grid-row: -1;
+  }
+
+  .prev,
+  .next,
+  .trail {
+    z-index: 10000;
+    position: absolute;
+  }
+
+  .prev,
+  .next {
+    display: block;
+    width: 4rem;
+    cursor: pointer;
+    opacity: 0.2;
+    transition: all 0.3s ease;
+  }
+
+  .prev:hover,
+  .next:hover {
+    opacity: 1;
+  }
+
+  .prev {
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+  }
+
+  .next {
+    top: 50%;
+    right: 2%;
+    transform: translateY(-50%);
+  }
+
+  .trail {
+    width: 60%;
+    font-size: 1.5rem;
+  }
+
+  /* best */
+  .last-slider .single img {
+    width: 100%;
+    height: 300px;
+    transition: .3s;
+  }
+
+  .last-slider .single img:hover {
+    transform: scale(1.1);
+  }
+
+  .slick-arrow {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* labtop-smart-search */
+  .smart-search section> :nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* footer */
+  .foot-2> :nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .foot-2 .foot-left,
+  .foot-2 .foot-right {
+    width: 50%;
+  }
+}

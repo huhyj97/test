@@ -1,0 +1,476 @@
+<!doctype html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+  <title>faq</title>
+  <link rel="stylesheet" href="faq.css">
+  <style type="text/css"></style>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript"></script>
+</head>
+
+<style>
+/* default */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0px solid silver;
+  outline: none;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 0.9rem;
+  color: #999;
+  line-height: 1rem;
+  letter-spacing: 0.1px;
+}
+
+h1, h2, h3 {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #444;
+}
+
+h4, h5 {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #444;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 4.5rem;
+  color: white;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+}
+
+h5 {
+  font-size: 0.9rem;
+  line-height: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  border: 1px solid #ccc;
+  color: #444;
+  background: white;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* start */
+.hd {
+  position: relative;
+  width: 100%;
+  margin: 2rem 0;
+  padding: 1rem 2rem;
+}
+
+.hd> :nth-child(1) {
+  float: left;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hd h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  clear: both;
+}
+
+.hd> :nth-child(3) {
+  float: right;
+  width: 30px;
+  cursor: pointer;
+}
+
+.search {
+  background: #ff7f00;
+  padding: 1rem 1.5rem;
+}
+
+.search input {
+  width: 100%;
+  padding: 1.5rem 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.category table {
+  width: 100%;
+  border-top: 8px solid #eee;
+  border-bottom: 8px solid #eee;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.category table td {
+  width: 33%;
+  font-size: 1rem;
+  color: #333333;
+  padding: 1.5rem 0;
+  border: 1.5px solid #eee;
+  cursor: pointer;
+}
+
+.category table td:hover {
+  color: #ff7f00;
+  font-weight: bold;
+}
+
+.often {
+  padding: 1.5rem 0rem;
+}
+
+.often h4 {
+  padding: 0 1rem;
+  padding-bottom: 2rem;
+  color: #999;
+}
+
+.often span {
+  color: #666;
+}
+
+.often table {
+  width: 100%;
+  border-collapse: collapse;
+  border-bottom: 8px solid #eee;
+  text-align: left;
+}
+
+.often table td {
+  font-size: 1rem;
+  color: #333333;
+  padding: 1.5rem 1rem;
+  border-bottom: 1.5px solid #eee;
+  cursor: pointer;
+}
+
+.often table td:hover {
+  color: #ff7f00;
+  font-weight: bold;
+}
+
+.solution {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.solution> :nth-child(3) {
+  color: #0abab5;
+  cursor: pointer;
+}
+
+.ft {
+  background: #eee;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.ft h4 {
+  text-decoration: underline;
+  margin-bottom: 1rem;
+  color: #666;
+  cursor: pointer;
+}
+
+.ft> :nth-child(3) {
+  text-decoration: none;
+}
+
+.answer {
+  margin-top: 5rem;
+  padding: 1rem 0;
+}
+
+.tit {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.ct {
+  padding: 2rem 1.5rem;
+}
+
+.ct div {
+  margin: 3rem 0;
+}
+
+.ct div p {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  padding: 1rem 0;
+}
+
+.yon {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border-top: 1px solid #eee;
+  border-bottom: 8px solid #eee;
+}
+
+.yon div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.yon button {
+  width: 48%;
+  padding: 0.8rem 0;
+  margin-top: 1.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.yon button:hover {
+  background: #ff7f00;
+  color: #fff;
+}
+
+.answer> :nth-child(5) table {
+  border-bottom: none;
+}
+
+.ct-full {
+  padding: 1rem 0;
+  border-bottom: 150px solid #eee;
+  text-align: center;
+}
+
+.ct-full h3 {
+  text-decoration: underline;
+  color: #999;
+  cursor: pointer;
+}
+
+.ct-full span {
+  color: #666;
+}
+
+</style>
+
+<body>
+
+  <article class="faq-list">
+
+
+    <div class="hd">
+      <img src="https://img.icons8.com/ios-glyphs/24/000000/arrow-pointing-left--v2.png" />
+      <h3>고객센터</h3>
+      <img src="https://img.icons8.com/material-outlined/24/000000/share-3.png" />
+    </div>
+
+    <div class="search">
+      <input type="text" placeholder="나는야냥냥님, 무엇을 도와드릴까요?">
+    </div>
+
+    <div class="category">
+      <table>
+        <tr>
+          <td>운영정책</td>
+          <td>계정/인증</td>
+          <td>구매/판매</td>
+        </tr>
+
+        <tr>
+          <td>거래 품목</td>
+          <td>거래 매너</td>
+          <td>이벤트/초대</td>
+        </tr>
+
+        <tr>
+          <td>이용 제재</td>
+          <td>기타</td>
+          <td>비즈프로필</td>
+        </tr>
+
+        <tr>
+          <td>동네생활</td>
+          <td>지역 광고</td>
+          <td>쿠폰</td>
+        </tr>
+
+        <tr>
+          <td>당근채팅</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="often">
+      <h4>사용자들이 <span>운영정책</span> 관련 자주 묻는 질문을 확인해보세요.</h4>
+      <table>
+        <tr>
+          <td>Q. 당근마켓에서 믿고 거래하세요 🥕</td>
+        </tr>
+
+        <tr>
+          <td>Q. 커뮤니티 가이드라인</td>
+        </tr>
+
+        <tr>
+          <td>Q. 당근마켓 운영정책</td>
+        </tr>
+
+        <tr>
+          <td>Q. 당근마켓 지역광고 운영정책</td>
+        </tr>
+
+        <tr>
+          <td>Q. 신고는 어떻게 하나요?</td>
+        </tr>
+
+        <tr>
+          <td>Q. 동네생활 운영정책</td>
+        </tr>
+
+        <tr>
+          <td>Q. 중고거래 게시판 거래 및 환불 정책</td>
+        </tr>
+
+        <tr>
+          <td>Q. 판매금지 물품</td>
+        </tr>
+
+        <tr>
+          <td>Q. 직접 기르거나 채취한 농수산물 판매해도 되나요?</td>
+        </tr>
+
+        <tr>
+          <td>Q. 종량제봉투를 거래해도 되나요?</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="solution">
+      <h4>그래도 해결이 안되시나요?</h4>
+      <br>
+      <h4>고객센터에 문의하기</h4>
+    </div>
+
+    <div class="ft">
+      <h4>이용약관</h4>
+      <h4>개인정보처리방침</h4>
+      <h4>직업정보제공사업 신고번호 : J1200020200016
+    </div>
+
+
+  </article>
+
+
+
+  <article class="answer">
+
+
+    <div class="hd">
+      <img src="https://img.icons8.com/ios-glyphs/24/000000/arrow-pointing-left--v2.png" />
+      <h3>자주 묻는 질문</h3>
+      <img src="https://img.icons8.com/material-outlined/24/000000/share-3.png" />
+    </div>
+
+    <div class="tit">
+      <h5>구매/판매</h5>
+      <h2>당근마켓에서 믿고 거래하세요 🥕</h2>
+    </div>
+
+    <div class="ct">
+      <h3>당근마켓은 믿을 수 있어요!</h3>
+
+      <div>
+        <h4>🏠 동네인증한 사용자만 거래해요</h4>
+        <p>우리 동네에서 거래하려면 동네인증이 필요해요. 동네인증은 해당 동네에 있어야만 할 수 있어요. GPS로 우리 동네를 인증한 당신 근처의 이웃들과 거래해요. 거래하려는 상대방의 인증 횟수를 보면 얼마나 자주 이 동네에서 사용했는지 알 수 있어요.</p>
+      </div>
+
+      <div>
+        <h4>💬 1:1 당근채팅으로 거래해요</h4>
+        <p>당근마켓 내의 채팅을 통해 거래하는게 가장 안전해요. 당근채팅에서는 안전한 거래를 위해 대화 내용에 따라 다양한 안내 및 경고 메시지들을 보내고 있어요. 교묘해지는 사기 케이스들을 모니터링하고, 이를 막기 위한 시스템을 고도화하고 있어요. 일부 사용자들을 실시간으로 제재하여 거랙 진행되지 않도록 채팅을 막기도 해요. 1년 365일 24시간 안전하게 지켜지는 당근 채팅으로 믿고 거래하세요!</p>
+      </div>
+
+      <div>
+        <h4>🥕 당신 근처에서 만나요</h4>
+        <p>중고거래 사기의 대부분은 택배거래에서 발생한다는 사실, 알고 계셨나요? 근처 이웃들과 사고 파는 당근마켓에서는 직거래를 권장하고 있어요. 직거래할 때는 누구나 찾기 쉽고 안전한 공공장소가 좋아요. 이웃과 따뜻하게 거래하세요.</p>
+      </div>
+
+      <div>
+        <h4>🧡 매너온도를 확인하세요</h4>
+        <p>거래하기 전 매너온도를 확인하세요. 매너온도는 당근마켓 내의 다양한 활동을 종합하여 만든 지표예요. 온도는 36.5도에서 시작해서 99도까지 올라갈 수 있어요. 신뢰할 수 있는 이웃은 매너온도도 높답니다. 매너온도가 유난히 낮은 사용자를 발견한다면, 프로필의 가입일, 인증횟수, 재거래희망률, 후기 등을 꼼꼼히 확인해보세요.</p>
+      </div>
+    </div>
+
+    <div class="yon">
+      <h3>이 답변이 도움이 되었나요?</h3>
+      <div>
+        <button>아니요</button>
+        <button>네</button>
+      </div>
+    </div>
+
+    <div class="often">
+      <h4><span>구매/판매</span> 관련 자주 묻는 질문</h4>
+      <table>
+        <tr>
+          <td>Q. 중고거래 게시판 거래 및 환불 정책</td>
+        </tr>
+
+        <tr>
+          <td>Q. 채팅방에 이모티콘을 보내고 싶어요.</td>
+        </tr>
+
+        <tr>
+          <td>Q. 채팅방에 사진을 보내고 싶어요. (채팅방에 사진 보내는 방법)</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="ct-full">
+      <h3><span>구매/판매</span> 관련 질문 모두 보기</h3>
+    </div>
+
+
+  </article>
+
+
+
+</body>
+
+</html>

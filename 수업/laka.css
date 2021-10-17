@@ -1,0 +1,447 @@
+/* default */
+/* 영문폰트
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+*/
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 1px solid silver;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  width: 100px;
+}
+
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1rem;
+  color: #403c38;
+  letter-spacing: 0.1px;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+}
+
+
+h4 {
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+}
+
+h5 {
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+}
+
+a:link {
+  color: #403C38;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #403C38;
+}
+
+a:hover {
+  color: #403C38;
+}
+
+a:active {
+  color: red;
+}
+
+/* start */
+
+header {
+  position: relative;
+  min-width: 1000px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+header>div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+header nav {
+  padding: 2.5rem 1rem;
+}
+
+header nav div {
+  position: relative;
+  padding: 0 10px;
+  font-size: 1.2rem;
+}
+
+header nav div a:hover {
+  width: 100%;
+  border-bottom: 2px solid #403c38;
+}
+
+header nav ul> :nth-child(1) {
+  float: left;
+  display: flex;
+}
+
+header nav ul> :nth-child(2) {
+  float: right;
+  display: flex;
+}
+
+main {
+  clear: both;
+  min-width: 1000px;
+  height: 600px;
+  margin: 0 auto;
+  background: url(https://laka.co.kr/laka_skin/images/pc/main_svl1.jpg) no-repeat;
+  background-size: cover;
+  background-position: top left;
+}
+
+.set {
+  min-width: 1000px;
+  padding: 5rem 2rem;
+  margin: 0 auto;
+}
+
+.set> :nth-child(1) {
+  font-size: 5rem;
+  font-weight: bold;
+  line-height: 2rem;
+}
+
+.set> :nth-child(2) {
+  font-size: 2rem;
+  line-height: 3rem;
+  padding: 3rem 0 2rem 0;
+}
+
+.set button {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 1rem 0;
+}
+
+.beauty-text {
+  width: 1000px;
+  padding: 0 2rem;
+}
+
+.beauty {
+  min-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem 5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.beauty section {
+  position: relative;
+  width: 550px;
+}
+
+.beauty section img {
+  width: 550px;
+  height: 0 auto;
+}
+
+.beauty section div img {
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.beauty section> :nth-child(3) {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 2.2rem;
+  padding: 150px 0 25px 0;
+}
+
+.beauty section> :nth-child(4) {
+  font-size: 1rem;
+  text-align: center;
+  line-height: 2.2rem;
+  padding: 0 0 25px 0;
+}
+
+.beauty button {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 1rem 0;
+  margin: 0 50%;
+  transform: translate(-50%, 0%);
+}
+
+.cushion {
+  min-width: 1000px;
+  padding: 5rem 2rem;
+}
+
+.cushion section img {
+  width: 700px;
+  margin: 0 50%;
+  transform: translate(-50%, 0%);
+}
+
+.cushion section> :nth-child(2) {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 5rem;
+  padding: 2rem 0;
+  float: left;
+}
+
+.cushion section> :nth-child(3) {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding: 0 0 2rem 0;
+  float: right;
+}
+
+.makeup {
+  clear: both;
+  min-width: 1000px;
+  padding: 5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.makeup section {
+  position: relative;
+  width: 550px;
+}
+
+.makeup section img {
+  width: 550px;
+  height: 0 auto;
+}
+
+.makeup section div img {
+  position: absolute;
+  width: 350px;
+  height: 400px;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 30%);
+}
+
+.makeup section> :nth-child(3) {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 2.2rem;
+  padding: 150px 0 25px 0;
+}
+
+.makeup section> :nth-child(4) {
+  font-size: 1rem;
+  text-align: center;
+  line-height: 2.2rem;
+  padding: 0 0 25px 0;
+}
+
+.makeup button {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 1rem 0;
+  margin: 0 50%;
+  transform: translate(-50%, 0%);
+}
+
+.bestnew-text {
+  width: 1000px;
+  padding: 0 2rem;
+}
+
+.bestnew-text ul {
+  display: flex;
+}
+
+.bestnew-text ul li {
+  font-size: 4rem;
+  line-height: 5rem;
+  list-style: none;
+  padding: 0 2rem 0 0;
+}
+
+.bestnew-text ul li a:link{
+  color: #403C38;
+}
+
+.bestnew {
+  min-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem 5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bestnew section {
+  position: relative;
+  width: 400px;
+}
+
+.bestnew section> :nth-child(1) {
+  position: absolute;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  line-height: 5rem;
+  color: #fff;
+  background: #000;
+  left: 70%;
+  transform: translate(30%, 50%);
+  cursor: pointer;
+}
+
+.bestnew section> :nth-child(2) {
+  position: absolute;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  line-height: 5rem;
+  color: #000;
+  background: #fff;
+  left: 70%;
+  transform: translate(30%, 160%);
+  cursor: pointer;
+}
+
+.bestnew section> :nth-child(3) {
+  width: 400px;
+  height: 0 auto;
+}
+
+
+/* .bestnew section> :nth-child(4) {
+  text-align: center;
+} */
+
+footer {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  padding: 0 2rem;
+  background: #403C38;
+  color: #fff;
+}
+
+footer h2 {
+  padding: 1rem 0;
+}
+
+footer> :nth-child(2) {
+  position: absolute;
+  left: 60%;
+}
+
+footer section ul li {
+  font-size: 5rem;
+  line-height: 5rem;
+  list-style: none;
+}
+
+footer section ul li a:link, a:visited {
+  color: #fff;
+}
+
+footer> :nth-child(3) {
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  display: flex;
+  cursor: pointer;
+}
+
+footer> :nth-child(3) div {
+  line-height: 2.5rem;
+  padding: 0 20px 0 0;
+  cursor: pointer;
+}
+
+footer:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+address {
+  position: relative;
+  height: 200px;
+  background: #403C38;
+  padding: 0 2rem;
+  color: #fff;
+}
+
+address> :nth-child(1) {
+  position: absolute;
+  bottom: 10%;
+  line-height: 3rem;
+  font-style: normal;
+}
+
+address> :nth-child(2) {
+  position: absolute;
+  left: 60%;
+  bottom: 10%;
+  font-style: normal;
+}
+
+address> :nth-child(1) a {
+  color: #fff;
+  font-size: 3rem;
+}
+
+address> :nth-child(2) p {
+  font-size: 0.8rem;
+  padding: 2rem 0;
+}
+
+address section {
+  /* padding: 6rem 0 0 0; */
+}

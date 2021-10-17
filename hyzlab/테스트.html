@@ -1,0 +1,423 @@
+<!doctype html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>허유진/01050923865</title>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+
+
+/* default */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0px solid silver;
+}
+
+body {
+  font-family: 'Gowun Batang', serif;
+}
+
+
+body {
+  overflow-x: hidden;
+  font-weight: 500;
+}
+
+h1, h2 {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+h1 {
+  font-size: 6rem;
+  line-height: 8rem;
+}
+
+h2 {
+  font-size: 4rem;
+  line-height: 5rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+b {
+  color: #FFF;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #FFF;
+  background: #666;
+  padding-left: 5px;
+}
+
+/* header */
+header {
+  font-family: 'Ubuntu', sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  width: calc(100% - 40px);
+  height: 50px;
+  padding: 5px 20px;
+  display: flex;
+  align-items: flex-end;
+  align-content: flex-end;
+}
+
+header .logo {
+  flex: 1 1 100px;
+}
+
+.im-a-hamburger {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  z-index: 300;
+  flex: 0 0 20px;
+  width: 50px;
+  fill: #666;
+  cursor: pointer;
+}
+
+.navigation {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 205;
+}
+
+.navigation.open {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.8);
+  transition: 0.6s ease-in-out;
+}
+
+.navigation.click {
+  transition: 0.6s ease-in-out;
+}
+
+.navigation .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+.navigation #navigation-background {
+  width: 180vw;
+  height: 170vh;
+  position: fixed;
+  top: -70vh;
+  left: -50vw;
+  z-index: 210;
+}
+
+.navigation #navigation-background .morph-path {
+  fill: rgba(111, 125, 143, 0.5);
+  transition: fill 0.5s ease-in-out;
+}
+
+.navigation nav {
+  display: none;
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  z-index: 220;
+}
+
+.navigation nav.open {
+  display: block;
+}
+
+.navigation nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation nav ul li {
+  padding: 5px 50px;
+  line-height: 60px;
+  font-size: 40px;
+  margin: 20px 0;
+}
+
+.navigation nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navigation nav ul li a:hover {
+  background-image: linear-gradient(180deg, transparent 90%, rgba(218, 214, 245, 0.5) 0);
+}
+
+
+/* main */
+main {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+}
+
+.main-txt {
+  padding-top: 10%;
+  color: #000;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding-left: 8%;
+  z-index: 1;
+}
+
+.main-txt h1 {
+  /* background: linear-gradient(to right top, #861657, #ffa69e);
+  color: transparent;
+  -webkit-background-clip: text; */
+  color: #000;
+}
+
+.main-txt h2 {
+  color: #fff;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #666;
+  border-bottom: 5px solid #008080;
+}
+
+.main-txt p {
+  letter-spacing: 5px;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  padding-top: 3rem;
+}
+
+.blob {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: move 20s ease-in-out infinite;
+  width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    background: linear-gradient(to right top, #861657, #ffa69e);
+}
+
+.blob2{
+   position: absolute;
+  top: 0;
+  right: 50%;
+   width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    background: linear-gradient(to right top, #861657, #ffa69e);
+  animation: moving 20s ease-in-out infinite;
+}
+
+#header-shape-gradient {
+  --color-stop: #a9f296;
+  --color-bot: #64e6c1;
+}
+
+.blob3{
+   position: absolute;
+  top: 0;
+  right: 0;
+  animation: mymove 20s ease-in-out infinite;
+  width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    background: linear-gradient(to right top, #861657, #ffa69e);
+}
+
+
+@keyframes move {
+  0% {
+    transform: scale(1.5) translate(0, 100px) rotate(-20deg);
+  }
+
+
+  50% {
+    transform: scale(1.8) translate(0, 200px) rotate(-40deg);
+  }
+
+
+  100% {
+    transform: scale(1.5) translate(0, 100px) rotate(-20deg);
+  }
+}
+
+@keyframes moving {
+
+  0% {
+   transform: scale(1) translate(50px, 30px);
+  }
+
+  50% {
+     transform: scale(1.5) translate(0vw,50vh) rotate(40deg);
+  }
+
+   100% {
+   transform: scale(1) translate(50px, 30px);
+  }
+  
+ @keyframes mymove {
+
+  0% {
+   transform: scale(1) translate(100px, 100px);
+  }
+
+  50% {
+     transform: scale(1.5) translate(0vw,50vh) rotate(40deg);
+  }
+
+   100% {
+   transform: scale(1) translate(50px, 30px);
+  }
+}
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <svg viewBox="0 0 100 80" class="im-a-hamburger">
+      <rect width="100" height="10"></rect>
+      <rect y="30" width="80" height="10"></rect>
+      <rect y="60" width="60" height="10"></rect>
+    </svg>
+
+    <div class="navigation">
+      <div class="overlay"></div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" id="navigation-background">
+        <path class="a morph-path"
+          d="M1694.17,69.11c-21.15,46.26-57.31,104.06-118,123-36,11.22-57.7,1.67-115-2-89.29-5.71-118,12.26-213,21-104.64,9.63-124.51-7.14-234-8-98.87-.77-238-1.86-366,60-154.3,74.55-131.59,162.75-270,216-133.46,51.34-315.11,31.11-364-60-39.85-74.25,18.49-176.94,35-206C234-112.21,1335,19.57,1694.17,69.11Z" />
+      </svg>
+      <nav>
+        <ul>
+          <li data-item="home"><a href="#0">Home</a></li>
+          <li data-item="about"><a href="#0">Portfolio</a></li>
+          <li data-item="contact"><a href="#0">Profile</a></li>
+          <li data-item="dance"><a href="#0">Contact me</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+    <div class="blob">
+    </div>
+
+    <div class="blob2">
+      </svg>
+    </div>
+
+    <div class="blob3">
+    </div>
+
+    <div class="main-txt">
+      <h1>STEP BY STEP!</h1>
+      <h2>heo-yujin portfolio</h2>
+    </div>
+  </main>
+
+  <article class="one">
+    <h2>안녕하세요</h2>
+  </article>
+
+
+  <script>
+    //물결모양 nav
+    let shapes = [{
+        d: "M1694.17,69.11c-21.15,46.26-57.31,104.06-118,123-36,11.22-57.7,1.67-115-2-89.29-5.71-118,12.26-213,21-104.64,9.63-124.51-7.14-234-8-98.87-.77-238-1.86-366,60-154.3,74.55-131.59,162.75-270,216-133.46,51.34-315.11,31.11-364-60-39.85-74.25,18.49-176.94,35-206C234-112.21,1335,19.57,1694.17,69.11Z"
+      },
+      {
+        d: "M1737.24,215.24c-34.74,37.5-67.35,51.35-91,57-57.8,13.8-91.82-14.3-144,6-33.08,12.86-45.33,34.24-67,56-70.1,70.36-173.64,79.18-242,85-177.57,15.11-211.26-83.88-316-64-186.56,35.39-153.7,363.51-372,456-142.82,60.5-344.26-.55-439-129-108-146.45-65.7-364.73,4-474C255.28-81.85,922.75-57.54,1737.24,215.24Z"
+      },
+      {
+        d: "M2103.58,312.15c-177.1,79.56-276.61,94.56-336,90-5.83-.45-22.23-1.93-45-2,0,0-102.23-.34-186,31-132.83,49.68-105.49,192.42-235,261-99.66,52.76-150.92-13.18-271,25-135.26,43-179.58,161.4-273,288-150.43,203.84-432.33,434.57-571,387-193.12-66.25-291.42-735-15-1087C478.21-85.35,1271.73-118.86,2103.58,312.15Z"
+      }
+    ]
+
+    var morph = anime({
+      targets: '.morph-path',
+      d: [{
+          value: shapes[0].d
+        },
+        {
+          value: shapes[2].d
+        }
+      ],
+      delay: 0,
+      duration: 1200,
+      autoplay: false,
+      loop: false,
+      complete: (anim) => {
+        console.log(anim.reversed);
+        if (anim.reversed) {
+          document.querySelector(".navigation").classList.toggle("open");
+          morph.completed = false;
+          morph.progress = 0;
+          morph.reverse();
+        } else {
+          document.querySelector(".navigation nav").classList.toggle("open")
+          document.querySelectorAll(".navigation nav ul li").forEach((el) => {
+            const pageColor = {
+              "home": "rgba(111, 125, 143, 1.0)",
+              "about": "hsla(185,37%,35%,0.65)",
+              "contact": "hsla(319,99%,21%,0.65)",
+              "dance": "hsla(170,100%,35%,0.65)"
+            }
+            el.addEventListener("mouseover", (e) => {
+              document.querySelector(".morph-path").style.fill = pageColor[el.getAttribute("data-item")];
+            })
+
+            el.addEventListener("click", (e) => {
+              document.querySelector(".navigation nav").classList.toggle("open");
+              document.querySelector(".navigation").classList.toggle("open");
+              morph.reverse();
+            })
+          })
+        }
+      }
+    });
+
+    //hamburger
+    document.querySelector(".im-a-hamburger").addEventListener("click", (e) => {
+      if (!document.querySelector(".navigation").classList.contains("open")) {
+        document.querySelector(".navigation").classList.toggle("open")
+        morph.play();
+      } else {
+        document.querySelector(".navigation nav").classList.toggle("open");
+        morph.completed = false;
+        morph.progress = 0;
+        morph.reverse();
+        morph.play();
+      }
+    })
+  </script>
+</body>
+
+</html>

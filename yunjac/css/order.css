@@ -1,0 +1,221 @@
+/*~~order페이지 공통사항~~*/
+
+main {
+  padding: 50px 5%;
+  margin: 0 auto;
+  border: 1px solid none;
+}
+
+.one, .two {
+  min-width: 360px;
+  margin: 4rem 0;
+  border: 1px solid none;
+}
+
+.one button,
+.two button {
+  background: #777;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  width: 100%;
+  padding: 20px 0;
+  margin: 2rem auto;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.one button:hover,
+.two button:hover {
+  background: #000;
+}
+
+main h2 {
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 80px;
+  padding-bottom: 30px;
+  color: #555;
+}
+
+.order-wrap {
+  border-top: 3px solid #ccc;
+  margin: 0 5%;
+}
+
+/*
+ 주문표공통사항입니다
+ */
+.order-sheet {
+  margin: 0 auto;
+  padding: 20px 0;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.order-info {
+  margin: 1.5rem 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.order-info> :nth-child(1) {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.order-info> :nth-child(1) img {
+  width: 120px;
+  height: 120px;
+}
+
+.order-info> :nth-child(1)> :nth-child(2) {
+  margin-left: 1rem;
+}
+
+.order-info> :nth-child(1)> :nth-child(2) p {
+  padding: 1.2rem 0;
+}
+
+.order-info> :nth-child(2) {
+  border-top: 1px solid #ccc;
+}
+
+.order-info> :nth-child(2) div {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.order-info> :nth-child(2) div span {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.order-info> :nth-child(2)> :nth-child(5) {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.order-info> :nth-child(2) li {
+  color: #666;
+  font-size: 0.8rem;
+  text-align: justify;
+}
+
+.order-info> :nth-child(2) p {
+  padding-top: 1rem;
+  font-weight: bold;
+  line-height: 1.2rem;
+}
+
+
+/*~~start~~*/
+/* one */
+main {
+  min-width: 360px;
+  padding: 5rem 0;
+  padding-bottom: 0;
+}
+
+.cs-infor {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.cs-infor> :nth-child(1) div {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1.5rem;
+}
+
+.cs-infor textarea {
+  width: 100%;
+  border: 1px solid #ddd;
+  margin-top: 0.6rem;
+  padding: 0.5rem 1.5rem;
+  resize: none;
+}
+
+.cs-infor> :nth-child(5) {
+  margin: 2rem 0;
+}
+
+
+
+/* two */
+
+.two h4 {
+  text-align: center;
+}
+
+.cs-infor-2, .cs-infor-3 {
+  margin: 2rem auto;
+  border-top: 1px solid #ccc;
+  text-align: center;
+}
+
+.cs-infor-2 div {
+  margin: 2rem 0;
+}
+
+.cs-infor-2 label {
+  float: left;
+  margin: 0 1.5rem;
+  display: block;
+  font-weight: bold;
+}
+
+.cs-infor-2 input, .cs-infor-2 select {
+  clear: both;
+  background: #fff;
+  width: 100%;
+  height: 50px;
+  padding: 0.8rem 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.cs-infor-2> :nth-child(2) span {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cs-infor-2> :nth-child(2) span input,
+.cs-infor-2> :nth-child(2) span select {
+  width: 32%;
+}
+
+.cs-infor-2> :nth-child(3) div {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.cs-infor-2> :nth-child(3) div input {
+  width: 70%;
+}
+
+.cs-infor-2> :nth-child(3) div button {
+  width: 28%;
+  height: 50px;
+  padding: 0;
+  margin-top: 0.5rem;
+  margin-right: 0;
+}
+
+.cs-infor-2> :nth-child(3)> :nth-child(3) {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .one, .two {
+    width: 550px;
+    margin: 4rem 0;
+  }
+
+  .order-wrap {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+}

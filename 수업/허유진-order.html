@@ -1,0 +1,428 @@
+<!doctype html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+  <title>acebed-order</title>
+  <link rel="stylesheet" href="order.css">
+  <style type="text/css"></style>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript"></script>
+
+  <style>
+  /* default */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0px solid silver;
+  outline: none;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.2rem;
+  letter-spacing: 0.1px;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 4.5rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  margin-bottom: 0.7rem;
+}
+
+h5 {
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+  padding: 1rem 0;
+  color: #666;
+}
+
+button {
+  height: 40px;
+  background: #fff;
+  border: 1px solid #000;
+  color: #000;
+  cursor: pointer;
+}
+
+small {
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+  color: #666;
+  cursor: pointer;
+}
+
+b {
+  font-size: 1.1rem;
+  line-height: 1.3rem;
+}
+
+span {
+  color: #00a3d2;
+}
+
+
+/* start */
+
+.as {
+  width: 420px;
+  margin: 4rem auto;
+  border: 1px solid #eee;
+}
+
+header {
+  position: relative;
+  padding: 2rem 30px;
+}
+
+header div {
+  display: flex;
+  justify-content: space-between;
+}
+
+header div img {
+  width: 38px;
+}
+
+header> :nth-child(2) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+}
+
+main {
+  text-align: center;
+  margin-top: 2rem;
+
+}
+
+main nav ul {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 2px solid #eee;
+}
+
+main nav ul li {
+ list-style: none;
+ padding: 1rem 0;
+ font-size: 1rem;
+ font-weight: bold;
+ cursor: pointer;
+}
+
+main nav ul li:hover {
+ border-bottom: 2px solid #00a3d2;
+}
+
+section {
+  padding: 1rem 30px;
+  padding-bottom: 100px;
+}
+
+section div {
+  margin: 2rem 0;
+}
+
+section div form {
+}
+
+section div input {
+  width: 100%;
+  height: 40px;
+  padding: 0.8rem 0.5rem;
+  border: 1px solid #ddd;
+}
+
+section div select {
+  width: 100%;
+  height: 40px;
+  padding: 0 0.5rem;
+  border: 1px solid #ddd;
+}
+
+section> :nth-child(3) form {
+  margin-bottom: 0.5rem;
+}
+
+section> :nth-child(3) input {
+  width: 60%;
+}
+
+section> :nth-child(3) button {
+  width: 39%;
+}
+
+section> :nth-child(4) input {
+  width: 70%;
+}
+
+section> :nth-child(4) button {
+  width: 29%;
+}
+
+section> :nth-child(6) textarea {
+  width: 100%;
+  height: 300px;
+  padding: 0.8rem 0.5rem;
+  border: 1px solid #ddd;
+}
+
+section> :nth-child(9) input {
+  margin: 0.4rem 0;
+  background: #eee;
+}
+
+section> :nth-child(9) form> :nth-child(1){
+  width: 65%;
+}
+
+section> :nth-child(9) form> :nth-child(4){
+  background: #fff;
+}
+
+section> :nth-child(9) button {
+  width: 34%;
+}
+
+section> :nth-child(12) {
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #ddd;
+}
+
+section> :nth-child(13) button {
+  width: 100%;
+  font-weight: bold;
+  font-size:1rem;
+  padding: 0.5rem 0;
+}
+
+section> :nth-child(13) button:hover {
+  background: #000;
+  color: #fff;
+}
+
+section> :nth-child(14){
+  text-align: center;
+}
+
+section> :nth-child(14) a {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #00a3d2;
+  text-decoration: none;
+}
+
+.done {
+  width: 420px;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  padding: 0 20px;
+  padding-bottom: 100px;
+  border: 1px solid #eee;
+  text-align: center;
+}
+
+.done> :first-child {
+  width: 120px;
+  text-align: center;
+}
+
+.done div p {
+  margin: 4rem 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.done div button {
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: bold;
+  background: #000;
+  color: #fff;
+}
+
+  </style>
+</head>
+
+<body>
+
+  <article class="as">
+    <header>
+
+      <div>
+        <img src="https://img.icons8.com/ios/50/000000/bed.png" />
+        <img src="https://img.icons8.com/ios/48/000000/menu--v1.png" />
+      </div>
+
+      <img src="https://mblogthumb-phinf.pstatic.net/20160902_25/ppanppane_1472800858016xkg0k_PNG/%BF%A1%C0%CC%BD%BA%C4%A7%B4%EB_%B7%CE%B0%ED_%282%29.png?type=w800">
+
+    </header>
+
+    <main>
+      <h2>AS 및 상담</h2>
+      <nav>
+        <ul>
+          <li>1:1상담</li>
+          <li>A/S신청</li>
+        </ul>
+      </nav>
+    </main>
+
+    <section>
+      <div>
+        <h3>A/S 정보 입력</h3>
+        <h5><span>*</span> 표시 항목은 필수 입력 사항입니다.</h5>
+      </div>
+
+      <div>
+        <h4>A/S 요청품목 <span>*</span></h4>
+        <form>
+          <select>
+            <option checked>선택</option>
+            <option>매트리스</option>
+            <option>프레임</option>
+          </select>
+        </form>
+        <span>보상항목 및 기준 보기</span>
+      </div>
+
+      <div>
+        <h4>모델명 <span>*</span></h4>
+        <form>
+          <input type="text" placeholder="제품명 직접 입력 또는 구매내역">
+          <button>구매 내역 불러오기</button>
+        </form>
+        <small>※ 미구매인증 고객은 제품명을 직접 작성해주세요</small>
+      </div>
+
+
+      <div>
+        <h4>구매 매장</h4>
+        <form>
+          <input type="text" placeholder="매장명 또는 지역명 검색">
+          <button>검색</button>
+        </form>
+      </div>
+
+      <div>
+        <h4>배송일</h4>
+        <form>
+          <input type="date">
+        </form>
+      </div>
+
+      <div>
+        <h4>서비스 요청사항 <span>*</span></h4>
+        <form>
+          <textarea placeholder="원하는 서비스사항이 있으신가요?" maxlength="200"></textarea>
+        </form>
+      </div>
+
+      <div>
+        <h4>이름 <span>*</span></h4>
+        <form>
+          <input type="text">
+        </form>
+      </div>
+
+      <div>
+        <h4>이메일 <span>*</span></h4>
+        <form>
+          <input type="mail">
+        </form>
+      </div>
+
+      <div>
+        <h4>주소 <span>*</span></h4>
+        <form>
+          <input type="text" readonly>
+          <button>우편번호 찾기</button>
+          <input type="text" readonly>
+          <input type="text">
+        </form>
+      </div>
+
+      <div>
+        <h4>전화번호</h4>
+        <form>
+          <input type="tel">
+        </form>
+      </div>
+
+      <div>
+        <h4>휴대폰 번호 <span>*</span></h4>
+        <form>
+          <input type="tel">
+        </form>
+      </div>
+
+      <div>
+        <h4>연락가능시간 <span>*</span></h4>
+        <form>
+          <select>
+            <option checked>선택</option>
+            <option>10시~11시</option>
+            <option>11시~12시</option>
+            <option>12시~13시</option>
+            <option>13시~14시</option>
+            <option>14시~15시</option>
+            <option>15시~16시</option>
+            <option>16시~17시</option>
+            <option>17시~18시</option>
+          </select>
+        </form>
+      </div>
+
+      <div><button>등록</button></div>
+
+      <div><a href="#top">⤒ TOP</a></div>
+
+
+    </section>
+
+  </article>
+
+
+
+  <article class="done">
+    <img src="https://mblogthumb-phinf.pstatic.net/20160902_25/ppanppane_1472800858016xkg0k_PNG/%BF%A1%C0%CC%BD%BA%C4%A7%B4%EB_%B7%CE%B0%ED_%282%29.png?type=w800">
+
+    <div>
+      <img src="https://img.icons8.com/nolan/96/client-management.png"/>
+      <p>신청이 완료되었습니다.</p>
+      <button>내역 확인하기</button>
+    </div>
+  </article>
+
+</body>
+
+</html>

@@ -1,0 +1,468 @@
+/* default */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0px solid silver;
+  outline: none;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1rem;
+  letter-spacing: 0.1px;
+}
+
+h1, h2, h3, h4 {
+  color: #444;
+}
+
+h5 {
+  color: #444;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+
+h5 {
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+small {
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+  color: #999;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font-size: 1rem;
+  background: none;
+}
+
+
+/* mobile start */
+
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  transition: top 0.8s;
+  line-height: 4.5rem;
+  padding: 0px 5%;
+  z-index: 10;
+}
+
+.navb {
+  position: fixed;
+  right: 5%;
+}
+
+.navb a {
+  float: left;
+  display: block;
+  color: #ddd;
+  text-decoration: none;
+  margin: 0 1.5rem;
+  font-size: 1rem;
+}
+
+.navb a:hover {
+  color: #fff;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 250px;
+  height: 70px;
+  cursor: pointer;
+  padding-top: 0.5rem;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 0px;
+}
+
+.sidenav a {
+  padding: 5px 30px 10px 10px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.sidenav a:hover {
+  color: #fff;
+}
+
+.slideBtn {
+  transition: .8s;
+  position: fixed;
+  right: 0;
+  font-size: 30px;
+  cursor: pointer;
+  margin-right: 5%;
+  color: #ddd;
+}
+
+.close {
+  width: 50px;
+  float: right;
+  line-height: 1rem;
+  padding: 20px 10px;
+  margin: 10px 5%;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.menu {
+  padding-top: 20px;
+  width: 300px;
+  position: absolute;
+  left: 5%;
+}
+
+.menua:hover {
+  opacity: 1;
+}
+
+.menu p {
+  color: #888;
+  font-weight: lighter;
+}
+
+.menu p:hover {
+  color: #fff;
+}
+
+.menu a {
+  padding: 20px 30px 0px 20px;
+  line-height: 2rem;
+}
+
+.menu>:nth-child(2), .menu>:nth-child(3), .menu>:nth-child(4), .menu>:nth-child(5), .menu>:nth-child(7), .menu>:nth-child(8), .menu>:nth-child(9) {
+  padding: 5px 30px;
+}
+
+main {
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+}
+
+.slider-container {
+  position: relative;
+  height: 100%;
+  user-select: none;
+  cursor: pointer;
+}
+
+.slider-control {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  width: 12%;
+  height: 100%;
+  opacity: 0;
+}
+
+.slider-control.inactive:hover {
+  cursor: auto;
+}
+
+.slider-control:not(.inactive):hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.slider-control.left {
+  left: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.slider-control.right {
+  right: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.18) 100%);
+}
+
+.slider-pagi {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  bottom: 2rem;
+  transform: translateX(-50%);
+  font-size: 0;
+  list-style-type: none;
+}
+
+.slider-pagi__elem {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 2.7rem;
+  height: 0.5rem;
+  margin: 0 0.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+
+.slider-pagi__elem:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 2.7rem;
+  height: 0.5rem;
+  background: rgba(255, 255, 255, 0.6);
+  transition: transform 0.3s;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.slider-pagi__elem.active:before, .slider-pagi__elem:hover:before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.slider {
+  z-index: 1;
+  position: relative;
+  height: 100%;
+}
+
+.slider.animating {
+  transition: transform 0.5s;
+  will-change: transform;
+}
+
+.slider.animating .slide__bg {
+  transition: transform 0.5s;
+  will-change: transform;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slide.active .slide__text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide__bg {
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  will-change: transform;
+}
+
+.slide:nth-child(1) {
+  left: 0;
+}
+
+.slide:nth-child(1) .slide__bg {
+  left: 0;
+  background-image: url("https://9to5mac.com/wp-content/uploads/sites/6/2019/01/Untitled_2.0.png.jpeg?quality=82&strip=all&w=1600");
+  background-size: cover;
+  background-position: left center;
+  filter:brightness(85%);
+}
+
+
+.slide:nth-child(2) {
+  left: 100%;
+}
+
+.slide:nth-child(2) .slide__bg {
+  left: -50%;
+  background-image: url("https://sonnydickson.com/wp-content/uploads/2019/02/33557426178_78d70f8f54_k.jpg");
+  background-size: cover;
+  background-position: center;
+  filter:brightness(85%);
+}
+
+.slide:nth-child(3) {
+  left: 200%;
+}
+
+.slide:nth-child(3) .slide__bg {
+  left: -100%;
+  background-image: url("https://images.ctfassets.net/8cd2csgvqd3m/3FRD06OHCjzy88nW1k7kyM/c0c29a52bae1eb6a8a8331bb33406970/E8_3rdgen_Test.jpg");
+  background-size: cover;
+  background-position: left center;
+  filter:brightness(80%);
+}
+
+.slide:nth-child(4) {
+  left: 300%;
+}
+
+.slide:nth-child(4) .slide__bg {
+  left: -150%;
+  background-image: url("https://www.scandinaviastandard.com/wp-content/uploads/2020/01/contrast-collection-Bang-Olufsen-and-Norm-Architects%E2%80%99s-Contrast-Collection-Scandinavia-Standard.jpg");
+  background-size: cover;
+  background-position: left center;
+}
+
+.slide:nth-child(5) {
+  left: 400%;
+}
+
+.slide:nth-child(5) .slide__bg {
+  left: -200%;
+  background-image: url("https://images.ctfassets.net/8cd2csgvqd3m/2KYpNX9BUwk5phzmafvL9P/72cb109dffb44cc7342acb4a1e178cb8/Contrast_Edge.jpg");
+  background-size: cover;
+  background-position: left center;
+}
+
+.slide:nth-child(6) {
+  left: 500%;
+}
+
+.slide:nth-child(6) .slide__bg {
+  left: -250%;
+  background-image: url("https://henritibosch.com/wp-content/uploads/2017/11/BSoE-14BH-Me02-kopie-e1511599933285.jpg");
+  background-size: cover;
+  background-position: left center;
+  filter:brightness(80%);
+}
+
+
+
+.slide__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.slide__text {
+  position: absolute;
+  width: 20%;
+  top: 38%;
+  left: 15%;
+  color: #ddd;
+  transition: transform 0.5s 0.8s, opacity 0.5s 0.8s;
+  will-change: transform, opacity;
+  transform: translateY(-50%);
+  opacity: 0;
+}
+
+a.slide__text-link:hover {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.slide__text-heading {
+  width: 600px;
+  line-height: 4.5rem;
+  margin-bottom: 1.7rem;
+  color: #fff;
+}
+
+.slide__text-desc {
+  width: 600px;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #fff;
+}
+
+.butt {
+  width: 200px;
+  color: #fff;
+  border: 1px solid #fff;
+  margin-top: 1rem;
+}
+
+.butt:hover {
+  color: #ccc;
+  border: 1px solid #333;
+  background: #333;
+}
+
+.slide__text-link {
+  z-index: 5;
+  display: inline-block;
+  position: relative;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 2.3rem;
+  perspective: 1000px;
+}
+
+.slide__text-link:before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  transform-origin: 50% 100%;
+  transform: rotateX(-85deg);
+  transition: transform 0.3s;
+  will-change: transform;
+}
+
+.slide__text-link:hover:before {
+  transform: rotateX(0);
+}
+
+/* labtop start */
+@media screen and (min-width: 1000px) {
+
+}

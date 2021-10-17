@@ -1,0 +1,637 @@
+/* default */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0px solid silver;
+}
+
+img {
+  width: 100px;
+}
+
+body {
+  font-size: 0.9rem;
+  line-height: 1rem;
+  letter-spacing: 0.1px;
+}
+
+h1 {
+  font-size: 3.3rem;
+  line-height: 3.3rem;
+  margin: 1rem 0;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+}
+
+h3 {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+}
+
+small {
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+  color: #666;
+}
+
+a:link {
+  color: #333333;
+  text-decoration: none;
+}
+
+/* start */
+
+.write {
+  border: 1px solid #333333;
+  margin: 8rem auto;
+}
+
+.write> :nth-child(1) {
+  padding: 25px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.write> :nth-child(1) img {
+  width: 38px;
+}
+
+.write> :nth-child(1) div {
+  display: flex;
+  font-size: 2rem;
+  line-height: 2.1rem;
+}
+
+.write> :nth-child(1) div> :nth-child(1) {
+  margin-right: 0.5rem;
+}
+
+.write> :nth-child(2) {
+  padding: 1rem 0;
+  border-top: 1px solid #ddd;
+}
+
+.write> :nth-child(2)> :nth-child(1) {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.write> :nth-child(2)> :nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.8rem;
+}
+
+.write> :nth-child(2)> :nth-child(1)> :nth-child(2) {
+  display: flex;
+}
+
+.write> :nth-child(2)> :nth-child(1)> :nth-child(2) h4 {
+  margin-right: 1.5rem;
+  margin-top: 0.3rem;
+}
+
+.write> :nth-child(2)> :nth-child(1)> :nth-child(2) button{
+  width: 50px;
+  padding: 0.5rem;
+  background: #cfffe5;
+  color: #009100;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.write> :nth-child(2)> :nth-child(2) {
+  width: 100%;
+  padding: 0 20px;
+  border-top: 1px solid #ddd;
+}
+
+.write> :nth-child(2) select {
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 1.1rem;
+  font-size: 1.1rem;
+}
+
+.write> :nth-child(2)> :nth-child(3) {
+  display: flex;
+  padding: 0 20px;
+  border-top: 1px solid #ddd;
+}
+
+.write> :nth-child(2)> :nth-child(3) img {
+  width: 30px;
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+}
+
+.write table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.write tr {
+  border-top: 1px solid #ddd;
+}
+
+.write th, .write td {
+  padding: 1.3rem 20px;
+  font-size: 1rem;
+}
+
+.write th {
+  text-align: left;
+}
+
+.write td {
+  text-align: right;
+}
+
+.write table img {
+  width: 40px;
+  padding-right: 0.5rem;
+}
+
+.write> :nth-child(3) {
+  border-top: 1px solid #ddd;
+  height: 400px;
+}
+
+.write p {
+  padding: 1rem;
+  font-size: 1rem;
+  color: #999;
+}
+
+.write> :nth-child(4) {
+  border-bottom: 1px solid #ddd;
+}
+
+.write> :nth-child(5) {
+  padding: 30px 20px;
+}
+
+.write> :nth-child(5) div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.write> :nth-child(5) div div {
+  font-size: 1rem;
+  display: contents;
+  line-height: 4rem;
+}
+
+.write> :nth-child(5)> :nth-child(1) {
+  border-bottom: 1px solid #ddd;
+}
+
+.write> :nth-child(5) div img {
+  width: 60px;
+  cursor: pointer;
+}
+
+.write> :nth-child(5) button {
+  width: 100%;
+  margin: 1.5rem 0;
+  padding: 1rem 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.write> :nth-child(5) button a {
+  font-size: 1rem;
+}
+
+.write> :nth-child(6) {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.write> :nth-child(6) button {
+  width: 48%;
+  padding: 0.8rem 0;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.write> :nth-child(6)> :nth-child(2) {
+  background: #cfffe5;
+}
+
+.write> :nth-child(6)> :nth-child(2) a {
+  color: #009100;
+}
+
+.write> :nth-child(7) {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.full-view {
+  border: 1px solid #333333;
+  margin-bottom: 8rem;
+}
+
+.full-view> :nth-child(1) {
+  padding: 25px 20px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+}
+
+.full-view> :nth-child(1) img {
+  width: 38px;
+  cursor: pointer;
+}
+
+.full-view> :nth-child(1) div {
+  display: flex;
+  font-size: 2rem;
+  line-height: 2.1rem;
+  cursor: pointer;
+}
+
+.full-view> :nth-child(1) div> :nth-child(1) {
+  margin-right: 0.5rem;
+}
+
+.full-view> :nth-child(2) {
+  padding: 0 20px;
+}
+
+.full-view> :nth-child(2)> :nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+}
+
+.full-view> :nth-child(2)> :nth-child(1) div {
+  color: #009100;
+  font-weight: bold;
+  padding: 3rem 0;
+  cursor: pointer;
+}
+
+.full-view> :nth-child(2)> :nth-child(1) button {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8%;
+  margin: 2rem 0;
+  padding: 0 0.5rem;
+  cursor: pointer;
+}
+
+.full-view> :nth-child(2)> :nth-child(1) button img {
+  width: 20px;
+}
+
+.full-view> :nth-child(2)> :nth-child(3) {
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.full-view> :nth-child(2)> :nth-child(3) {
+  padding: 2rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.full-view> :nth-child(2)> :nth-child(3)> :nth-child(1) {
+  display: flex;
+}
+
+.full-view> :nth-child(2)> :nth-child(3)> :nth-child(1) img {
+  width: 40px;
+  margin-right: 0.7rem;
+  cursor: pointer;
+}
+
+.full-view> :nth-child(2)> :nth-child(3)> :nth-child(2) button {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+}
+
+.full-view> :nth-child(3) {
+  padding: 30px 20px;
+  text-align: justify;
+  line-height: 2rem;
+}
+
+.full-view> :nth-child(3)> :nth-child(1) {
+  font-size: 1.5rem;
+  line-height: 3rem;
+  font-weight: bold;
+}
+
+.full-view> :nth-child(4) {
+  padding: 10px 20px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.full-view> :nth-child(4)> :first-child {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.full-view> :nth-child(4)> :first-child> :nth-child(1) {
+  padding-top: 0.5rem;
+  font-weight: bold;
+}
+
+.full-view> :nth-child(4)> :first-child> :nth-child(2) {
+  display: flex;
+}
+
+.full-view> :nth-child(4)> :first-child> :nth-child(2) p {
+  padding: 0.5rem 0;
+}
+
+.full-view> :nth-child(4)> :first-child img {
+  display: inherit;
+  width: 30px;
+  cursor: pointer;
+}
+
+.full-view> :nth-child(4)> :last-child {
+  display: flex;
+}
+
+.full-view> :nth-child(4)> :last-child img {
+  width: 45px;
+  margin-right: 0.6rem;
+  cursor: pointer;
+}
+
+.full-view> :nth-child(4)> :last-child span {
+  display: block;
+  padding-top: 0.8rem;
+  color: #999;
+}
+
+.full-view> :nth-child(5) {
+  padding: 30px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.full-view> :nth-child(5)> :first-child {
+  width: 60%;
+}
+
+.full-view> :nth-child(5)> :first-child h3 {
+  padding-bottom: 1rem;
+  line-height: 2rem;
+}
+
+.full-view> :nth-child(5)> :first-child h4 {
+  padding-bottom: 1rem;
+  color: #999;
+}
+
+.full-view> :nth-child(5)> :first-child p {
+  color: #009100;
+  cursor: pointer;
+}
+
+.full-view> :nth-child(5)> :last-child img {
+  width: 80px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.full-view> :nth-child(6) {
+  padding: 30px 20px;
+  border-top: 8px solid #ddd;
+  border-bottom: 8px solid #ddd;
+}
+
+.full-view> :nth-child(6) h4 {
+  margin-bottom: 0.7rem;
+  cursor: pointer;
+}
+
+.full-v-list {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.full-v-list> :nth-child(1) {
+  margin: 0.5rem;
+}
+
+.full-v-list h4 {
+  padding-bottom: 0.4rem;
+}
+
+.full-v-list small {
+  margin-right: 0.6rem;
+}
+
+.full-v-list img {
+  width: 90px;
+  border: 1px solid #999;
+}
+
+.full-view> :nth-child(6) span {
+  display: block;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.full-view> :nth-child(7) {
+  padding: 30px 20px;
+}
+
+.full-view> :nth-child(7) h4 {
+  margin-bottom: 0.7rem;
+  cursor: pointer;
+}
+
+.full-view> :nth-child(7) span {
+  display: block;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.full-view> :nth-child(8) {
+  padding: 10px 20px;
+}
+
+.full-view> :nth-child(8)> :nth-child(1) {
+  padding: 1.5rem 0;
+  display: flex;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.full-view> :nth-child(8)> :nth-child(1) img {
+  width: 40px;
+}
+
+.full-view> :nth-child(8)> :nth-child(1) p {
+  padding-top: 0.3rem;
+  padding-left: 0.5rem;
+  font-weight: bold;
+}
+
+.full-view> :nth-child(8)> :nth-child(2) {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.full-view> :nth-child(8)> :nth-child(3) {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  color: #333333;
+  cursor: pointer;
+  padding-bottom: 3rem;
+}
+
+.preview {
+  border: 1px solid #333333;
+  margin-bottom: 8rem;
+}
+
+.preview> :nth-child(1) {
+  padding: 25px 20px;
+  padding-bottom: 0px;
+}
+
+.preview> :nth-child(1)> :first-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.preview> :nth-child(1)> :first-child img {
+  width: 38px;
+  cursor: pointer;
+}
+
+.preview> :nth-child(1)> :first-child nav {
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.preview> :nth-child(1)> :first-child div {
+  display: flex;
+  font-size: 2rem;
+  line-height: 2.1rem;
+  cursor: pointer;
+}
+
+.preview> :nth-child(1)> :last-child {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+}
+
+.preview> :nth-child(1)> :last-child div {
+  display: flex;
+  cursor: pointer;
+}
+
+.preview> :nth-child(1)> :last-child div h4{
+  margin-right: 2rem;
+}
+
+.preview> :nth-child(1)> :last-child> :nth-child(1)> :nth-child(1){
+  padding-bottom: 1rem;
+  border-bottom: 3px solid #000;
+}
+
+.preview> :nth-child(1)> :last-child img {
+  width: 38px;
+  cursor: pointer;
+}
+
+.preview> :nth-child(2) {
+  padding: 0 20px;
+}
+
+.pre-list {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.pre-list> :nth-child(1) {
+  margin: 0.5rem;
+}
+
+.pre-list h4 {
+  padding-bottom: 0.4rem;
+}
+
+.pre-list> :nth-child(2) {
+  width: 40px;
+  padding: 0.5rem 0;
+  background: #ddd;
+  border-radius: 10%;
+  text-align: center;
+}
+
+.preview> :nth-child(3) {
+  padding: 0 20px;
+}
+
+.preview> :nth-child(3)> :nth-child(1) {
+  padding: 1.5rem 0;
+  display: flex;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.preview> :nth-child(3)> :nth-child(1) img {
+  width: 40px;
+}
+
+.preview> :nth-child(3)> :nth-child(1) p {
+  padding-top: 0.3rem;
+  padding-left: 0.5rem;
+  font-weight: bold;
+}
+
+.preview> :nth-child(3)> :nth-child(2) {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+
+
+
+
+
+
+
+/* laptop */
+@media (min-width: 360px) {}

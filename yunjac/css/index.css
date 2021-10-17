@@ -1,0 +1,749 @@
+/* main */
+main {
+  position: relative;
+  min-width: 360px;
+}
+
+/*main slide*/
+.container .icon {
+  display: none;
+}
+
+.mainSlide_box {
+  width: 100%;
+  height: 640px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mainSlide_panel {
+  width: 100%;
+  height: 100%;
+}
+
+.mainSlide_panel button {
+  background: #9f8870;
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  margin-right: 25px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.mainSlide_panel button:hover,
+.mainSlide_panel button:active {
+  background: #372f2d;
+  color: #fff;
+}
+
+.mainSlide_panel li {
+  display: none;
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 106%;
+  height: 620px;
+  z-index: 10;
+  list-style: none;
+}
+
+.mainSlide_panel li .background-scale {
+  position: absolute;
+  width: 108%;
+  height: 690px;
+  z-index: 11;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: 50% 0;
+  overflow: hidden;
+  animation: mainScale 2s 1 ease-in-out;
+}
+
+@keyframes mainScale {
+  0% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1.0);
+  }
+}
+
+.list01 {
+  background: url('https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcqYeAy%2FbtqTJTmfZNQ%2Fre5QkOhcAFcLSIvwWQAEh1%2Fimg.jpg');
+  background-position: top;
+}
+
+.list02 {
+  background: url('https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbfGy3B%2FbtqTKMtCpgL%2FZ7Lbv1eD7wOEXlFahmwhpk%2Fimg.jpg') no-repeat;
+  background-size: cover;
+}
+
+.list03 {
+  background-image: url('https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FlGvS7%2FbtqTDJ6j6fZ%2FkV9D0kfEGUBMzNvnUT9JdK%2Fimg.jpg');
+  background-size: cover;
+  background-position: 50% 0;
+}
+
+.mainSlide_panel li:first-child {
+  display: block;
+}
+
+.mainSlide_panel li section {
+  position: absolute;
+  top: 400px;
+  right: 2%;
+  width: 220px;
+  padding: 10px 0;
+  z-index: 12;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.4);
+  border-top-left-radius: 50px;
+  text-align: right;
+}
+
+.title_headline1 {
+  margin-bottom: 30px;
+  transform: scale(1.0) !important;
+}
+
+.title_headline2 {
+  transform: scale(1.0) !important;
+}
+
+.headline_title {
+  color: #444;
+  letter-spacing: 3.5px;
+  padding-top: 5px;
+  padding-right: 20px;
+  animation: titleUp 1.5s 1 ease-in-out normal;
+  margin: 0;
+  text-align: right;
+}
+
+
+@keyframes titleUp {
+  0% {
+    margin-top: 44px;
+    opacity: 0;
+    filter: opacity(0);
+  }
+
+  100% {
+    margin-top: 0px;
+    opacity: 1;
+    filter: opacity(100);
+  }
+}
+
+.headline_explain {
+  opacity: 0;
+  animation: explainUp 1.5s 1s ease-in-out forwards;
+}
+
+@keyframes explainUp {
+  0% {
+    opacity: 0;
+    filter: opacity(0);
+  }
+
+  100% {
+    margin-top: 0px;
+    opacity: 1;
+    filter: opacity(100);
+  }
+}
+
+.mainSlide_btn_tab {
+  position: absolute;
+  z-index: 11;
+  width: 30%;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mainSlide_btn_tab ul {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.mainSlide_btn_tab_list {
+  height: 15px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.mainSlide_btn_tab_list li {
+  float: left;
+  width: 25%;
+  height: 7px;
+  border-radius: 1.5px;
+  background: rgba(191, 184, 148, 0.5);
+  opacity: 0.8;
+  list-style: none;
+  transition: 0.8s;
+}
+
+.mainSlide_btn_tab_list li.on {
+  background: #bfb894;
+  opacity: 0.8;
+  width: 45%;
+  transition: 0.8s;
+}
+
+/*----ë©”ì¸ ë----*/
+/* new */
+.new {
+  margin: 0px 5%;
+  margin-top: 150px;
+}
+
+.new h1 {
+  text-align: center;
+  padding: 50px 0;
+  background: url('http://pwofficial.co.kr/images/img_mobile_object.png') no-repeat;
+}
+
+.new section {
+  position: relative;
+  margin-bottom: 150px;
+}
+
+.new section> :nth-child(1) {
+  width: 100%;
+  height: 310px;
+}
+
+.new section> :nth-child(2) {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 330px;
+}
+
+.new section div {
+  text-align: left;
+  margin-top: 150px;
+  color: #666;
+}
+
+.new section div h3 {
+  padding: 20px 0;
+  color: #333;
+}
+
+.new section div button {
+  background: none;
+  color: #555;
+  border: 1px solid #999;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  transition: .3s;
+}
+
+.new section div button:hover,
+.new section div button:active {
+  background: #333;
+  color: #fff;
+}
+
+.new> :nth-child(3)> :nth-child(1) {
+  width: 50%;
+}
+
+.new> :nth-child(3)> :nth-child(2) {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 330px;
+}
+
+.new> :nth-child(3) div {
+  text-align: right;
+  margin-top: 100px;
+}
+
+.new> :nth-child(4) {
+  padding-bottom: 250px;
+}
+
+.new> :nth-child(4) div {
+  width: 50%;
+  background: url('http://pwofficial.co.kr/images/img_mobile_object.png') no-repeat;
+  text-align: left;
+  margin: 0;
+  padding-top: 400px;
+}
+
+.new> :nth-child(4)> :nth-child(2) {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(0%, 0%);
+  width: 50%;
+  height: 310px;
+}
+
+.new> :nth-child(4)> :nth-child(3) {
+  clear: both;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 10;
+  width: 330px;
+}
+
+.new> :nth-child(5)> :nth-child(2) {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 10;
+  width: 330px;
+}
+
+.new> :nth-child(5) div {
+  text-align: right;
+  margin-top: 50px;
+}
+
+/* pr */
+.pr {
+  padding: 200px 5%;
+  color: #eee;
+  background: url('https://images.unsplash.com/photo-1426170042593-200f250dfdaf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80') no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.pr h1 {
+  color: #e8dcca;
+}
+
+.pr p, .pr .solid {
+  display: none;
+}
+
+.pr div {
+  position: relative;
+  padding: 25px 0;
+}
+
+.pr iframe {
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.pr button {
+  background: none;
+  border: 1px solid #e8dcca;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-family: 'Noto Serif KR', serif;
+  line-height: 2rem;
+  color: #e8dcca;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.pr button:hover,
+.pr button:active {
+  background: #e8dcca;
+  color: #333;
+}
+
+/* best */
+.best {
+  padding: 0 5%;
+  margin: 150px auto;
+}
+
+.best h1 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.last-slider .single {
+  width: 100%;
+  height: 100%;
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 30px;
+  margin-right: 19px;
+}
+
+.last-slider .single img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.last-slider .single img:hover {
+  transform: rotate(-4deg);
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+  content: '';
+  width: 100%;
+}
+
+.slick-arrow {
+  background-color: transparent;
+  color: transparent;
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  display: block;
+  top: 48%;
+  margin-top: -10px;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 0;
+  z-index: 5;
+  border-top: 3px solid #ccc;
+  border-right: 3px solid #ccc;
+  transition: 0.8s;
+}
+
+.slick-arrow:hover {
+  transition: 0.8s;
+}
+
+.slick-prev {
+  left: 0%;
+  transform: rotate(225deg);
+}
+
+.slick-next {
+  right: 0%;
+  transform: rotate(45deg);
+}
+
+/* herb */
+.herb {
+  padding: 0px 5%;
+  padding-bottom: 150px;
+  text-align: center;
+}
+
+.herb section> :nth-child(1), .herb section> :nth-child(2), .herb section> :nth-child(3) {
+  position: relative;
+}
+
+.herb section> :nth-child(1) h3, .herb section> :nth-child(2) h3, .herb section> :nth-child(3) h3 {
+  letter-spacing: 5px;
+  position: absolute;
+  bottom: -20px;
+  left: 30px;
+}
+
+.herb section> :nth-child(1) p, .herb section> :nth-child(2) p, .herb section> :nth-child(3) p {
+  width: 320px;
+  text-align: right;
+  float: right;
+  margin: 80px 0;
+  font-size: 1rem;
+}
+
+.herb section .herb-img {
+  clear: both;
+  width: 100%;
+  height: 300px;
+}
+
+.herb section> :nth-child(1) .herb-img {
+  background: url('https://www.yunjac.com/images/korean_herb/chapter1.png') no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.herb section> :nth-child(2) .herb-img {
+  background: url('https://www.yunjac.com/images/korean_herb/chapter2.png') no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.herb section> :nth-child(3) .herb-img {
+  background: url('https://www.yunjac.com/images/korean_herb/chapter5.png') no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/* story */
+.story {
+  margin-top: 150px;
+}
+
+.story section div {
+  height: 500px;
+}
+
+.story section div p {
+  padding: 30px 0;
+}
+
+.story section div button {
+  background: none;
+  border: 1px solid #999;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 8px 20px;
+  letter-spacing: 2px;
+  color: #555;
+  transition: .3s;
+}
+
+.story section div button:hover {
+  background: #333;
+  color: #fff;
+}
+
+.story> :nth-child(1) {
+  text-align: center;
+}
+
+.story> :nth-child(2)> :nth-child(1) {
+  background: url('https://images.unsplash.com/photo-1586511725672-7ef36d215212?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1519&q=80') no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.story> :nth-child(2)> :nth-child(2),
+.story> :nth-child(3)> :nth-child(2) {
+  text-align: center;
+  padding: 100px 50px;
+}
+
+.story> :nth-child(3)> :nth-child(1) {
+  background: url('https://www.yunjac.com/images/korean_herb/chapter3.png') no-repeat;
+  background-size: cover;
+  background-position: left center;
+}
+
+.story> :nth-child(3)> :nth-child(3) {
+  display: none;
+}
+
+/* labtop start */
+@media screen and (min-width: 1200px) {
+
+  /* labtop-main */
+  .mainSlide_box {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .mainSlide_panel h3 {
+    font-size: 2.3rem;
+    line-height: 3rem;
+  }
+
+  .mainSlide_panel li {
+    display: none;
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 106%;
+    height: 95vh;
+    z-index: 10;
+    list-style: none;
+  }
+
+  .list02 {
+    background: url('https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F1mPSe%2FbtqTJma71yS%2Fx7HKEH6jr4Vt6V9YQgA0E1%2Fimg.jpg') no-repeat;
+    background-position: top center;
+  }
+
+  .list03 {
+    background-image: url('https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FQjpdg%2FbtqTEMIxko4%2F45bmt8qUWr9BCCOd0bntiK%2Fimg.jpg');
+    background-size: cover;
+    background-position: 50% 0;
+  }
+
+  .mainSlide_panel li .background-scale {
+    position: absolute;
+    width: 108%;
+    height: 108vh;
+    z-index: 11;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+    animation: mainScale 2s 1 ease-in-out;
+  }
+
+  .mainSlide_panel li section {
+    background: rgba(255, 255, 255, 0.4);
+    top: 50px;
+    width: 360px;
+    height: 100vh;
+    padding: 300px 0;
+    text-align: center;
+  }
+
+  .headline_title {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  /* labtop-new */
+  .new {
+    margin: 0px 5%;
+    margin-top: 150px;
+  }
+
+  .new section {
+    margin-bottom: 300px;
+  }
+
+  .new> :nth-child(2)> :nth-child(2) {
+    width: 600px;
+  }
+
+  .new section div h3 {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
+
+  .new> :nth-child(2) div {
+    margin-top: 100px;
+  }
+
+  .new> :nth-child(3) {
+    display: flex;
+    padding-bottom: 100px;
+  }
+
+  .new> :nth-child(3)> :nth-child(2) {
+    width: 600px;
+  }
+
+  .new> :nth-child(3) div {
+    width: 50%;
+    margin-top: 0;
+    margin-left: 250px;
+    text-align: left;
+  }
+
+  .new> :nth-child(4) {
+    display: flex;
+    padding-bottom: 100px;
+  }
+
+  .new> :nth-child(4) div {
+    width: 50%;
+    margin-top: 0;
+    padding-top: 0;
+    margin-right: 250px;
+    text-align: left;
+  }
+
+  .new> :nth-child(4)> :nth-child(2) {
+    width: 50%;
+  }
+
+  .new> :nth-child(4)> :nth-child(3) {
+    top: -20%;
+    width: 600px;
+  }
+
+  .new> :nth-child(5) {
+    padding-top: 400px;
+  }
+
+  .new> :nth-child(5)> :nth-child(2) {
+    width: 600px;
+    top: 0%;
+  }
+
+  .new> :nth-child(5) div {
+    position: absolute;
+    top: 0%;
+    right: 0;
+    transform: translate(0%, -30%);
+  }
+
+  /* labtop-pr */
+  .pr {
+    text-align: center;
+  }
+
+  .pr div {
+    padding: 30px 0;
+  }
+
+  .pr p, .pr .solid {
+    display: block;
+  }
+
+  .pr p {
+    font-size: 1rem;
+  }
+
+
+  .pr section> :first-child,
+  .pr section> :last-child {
+  }
+
+.pr iframe {
+  width: 600px;
+}
+
+
+
+  /* labtop story */
+  .story h3 {
+    font-size: 2.3rem;
+    line-height: 3rem;
+  }
+
+  .story section {
+    display: flex;
+  }
+
+  .story section div {
+    width: 50%;
+    height: 700px;
+  }
+
+  .story> :nth-child(2)> :nth-child(2),
+  .story> :nth-child(3)> :nth-child(2) {
+    padding: 250px 80px;
+  }
+
+  .story> :nth-child(3)> :nth-child(1) {
+    display: none;
+  }
+
+  .story> :nth-child(3)> :nth-child(3) {
+    display: block;
+    background: url('https://www.yunjac.com/images/korean_herb/chapter3.png') no-repeat;
+    background-size: cover;
+    background-position: 0 50%;
+  }
+}

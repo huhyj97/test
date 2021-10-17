@@ -1,0 +1,401 @@
+<!doctype html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+  <title>제품</title>
+  <link rel="stylesheet" href="css/purchase.css">
+  <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.5/ScrollTrigger.min.js"></script>
+
+  <!--폰트어썸-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+
+  <!--aos-->
+  <!-- 스르륵 -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+
+<body>
+
+  <header>
+
+    <div id="nav-container">
+      <div class="bg"></div>
+      <div class="button" tabindex="0">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </div>
+
+      <div id="nav-content" tabindex="0">
+        <div>
+          <img src="images/chatbot.gif">
+          <p>멤버십에 가입하시면<br>더 많은 혜택을 누릴 수 있습니다</p>
+          <button type="button" onclick="location.href='login.html';">로그인</button><br>
+          <button type="button" onclick="location.href='find.html';">찾기</button><br>
+          <button type="button" onclick="location.href='join.html';">회원가입</button>
+        </div>
+
+        <ul>
+          <li onclick="location.href='index.html';">홈<small>➜</small></li>
+          <li onclick="location.href='purchase.html';">제품<small>➜</small></li>
+          <li onclick="location.href='sub.html';">기획전<small>➜</small></li>
+          <li onclick="location.href='qna.html';">Q&A<small>➜</small></li>
+        </ul>
+      </div>
+    </div>
+
+    <img onclick="location.href='index.html';" src="images/logo-black.png">
+
+    <div class="pcheader">
+      <ul>
+        <li onclick="location.href='index.html';">홈</li>
+        <li onclick="location.href='purchase.html';">제품</li>
+        <li onclick="location.href='sub.html';">기획전</li>
+        <li onclick="location.href='qna.html';">Q&A</li>
+        <li onclick="location.href='login.html';">로그인</li>
+        <li onclick="location.href='find.html';">찾기</li>
+        <li onclick="location.href='join.html';">회원가입</li>
+      </ul>
+    </div>
+
+    <div class="header-ic">
+      <i class="fas fa-search"></i>
+      <i class="fas fa-shopping-cart"></i>
+    </div>
+  </header>
+
+
+  <main>
+    <div>
+      <h1>BESPOKE 제품</h1>
+      <div class="search-box">
+        <input type="text" placeholder="BESPOKE 신상품 런칭">
+        <button type="button"><img src="images/search-black.png" /></button>
+      </div>
+
+      <div class="counters">
+        <h3>BESPOKE 큐커 판매량</h3>
+        <div class="container">
+          <div>
+            <i class="fas fa-calendar-minus fa-2x"></i>
+            <div class="counter" data-target="10000">0</div>
+            <h5>하루<br>판매량</h5>
+          </div>
+
+          <div>
+            <i class="fas fa-calendar-alt fa-2x"></i>
+            <div class="counter" data-target="52300">0</div>
+            <h5>누적<br>판매량</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const counters = document.querySelectorAll('.counter');
+      const speed = 200; // The lower the slower
+
+      counters.forEach(counter => {
+        const updateCount = () => {
+          const target = +counter.getAttribute('data-target');
+          const count = +counter.innerText;
+
+          // Lower inc to slow and higher to slow
+          const inc = target / speed;
+
+          // console.log(inc);
+          // console.log(count);
+
+          // Check if target is reached
+          if (count < target) {
+            // Add inc to count and output in counter
+            counter.innerText = count + inc;
+            // Call function every ms
+            setTimeout(updateCount, 1);
+          } else {
+            counter.innerText = target;
+          }
+        };
+
+        updateCount();
+      });
+    </script>
+  </main>
+
+
+  <article class="one">
+    <section>
+      <div class="one-wrap">
+        <div>
+          <div class="one-top-section">
+            <img id="image-container" src="https://images.samsung.com/kdp/goods/2021/07/23/c74b9289-f6ca-4854-bcc8-c0efb54fe808.png?$PD_GALLERY_L_PNG$" alt="">
+          </div>
+
+          <div class="nav">
+            <img onclick="change_img(this)" src="https://images.samsung.com/kdp/goods/2021/07/23/c74b9289-f6ca-4854-bcc8-c0efb54fe808.png?$PD_GALLERY_L_PNG$" alt="">
+            <img onclick="change_img(this)" src="https://images.samsung.com/kdp/goods/2021/07/23/10dcca62-e4a7-412f-98f6-02e49e95db0e.png?$PD_GALLERY_L_PNG$" alt="">
+            <img onclick="change_img(this)" src="https://images.samsung.com/kdp/goods/2021/07/23/eaacb29f-11e1-439f-8c66-632260e47525.png?$PD_GALLERY_L_PNG$" alt="">
+          </div>
+        </div>
+
+        <div class="one-txt">
+          <h2>BESPOKE 큐커 22L</h2>
+          <h4>590,000원</h4>
+          <div class="product-color">
+            <div class="select_wrap">
+              <ul class="default_option">
+                <li>
+                  <div class="option dft">
+                    <div class="select-icon"></div>
+                    <p>[필수] 색상을 선택해주세요</p>
+                  </div>
+                </li>
+              </ul>
+
+              <ul class="select_ul">
+                <li>
+                  <div class="option first">
+                    <div class="select-icon"></div>
+                    <p>글램 썬 옐로우</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="option last">
+                    <div class="select-icon"></div>
+                    <p>글램 베이지</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="option last1">
+                    <div class="select-icon"></div>
+                    <p>글램 핑크</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="option last2">
+                    <div class="select-icon"></div>
+                    <p>글램 화이트</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <small>삼성 멤버 1,180포인트 적립</small>
+            <small>런칭 기념 삼성 멤버십 10만 포인트 추가적립 (~12/31)</small>
+            <button>구매하기</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      //one-image
+      var container = document.getElementById("image-container");
+
+      function change_img(image) {
+
+        container.src = image.src;
+      }
+
+      //one select
+      $(".default_option").click(function() {
+        $(this).parent().toggleClass("active");
+      })
+
+      $(".select_ul li").click(function() {
+        var currentele = $(this).html();
+        $(".default_option li").html(currentele);
+        $(this).parents(".select_wrap").removeClass("active");
+      })
+    </script>
+  </article>
+
+
+
+  <article class="two">
+    <section>
+      <div class="two-wrap">
+        <div>
+          <h5>SmartThings Cooking</h5>
+          <h1>4-in-1<br>다재다능쿡</h1>
+          <p>4개의 상단 그릴과 그릴플레이트로 최대 3가지 식재료를,<br>제품 하단에 내장된 전자레인지로 1가지 재료를<br>동시에 조리 가능합니다.<br><br><br>
+            최대 4가지 재료를 한 번에 조리하여<br>맛있는 한 끼를 완성해 보세요!</p>
+        </div>
+        <img src="images/pur-2.gif">
+      </div>
+    </section>
+  </article>
+
+
+  <article class="three">
+    <h4>셰프가 개발한 큐커레시피로 맛있게</h4>
+    <h2 style="color: #E0BD2F;">셰프쿡</h2>
+    <p>국내 Club de Chef 4명이 직접 만든 큐커 전용 레시피를 만나보세요<br>
+      큐커와 SmartThings Cooking 앱으로 이제 집에서도 쉽게 셰프요리를 즐기실 수 있습니다.</p>
+
+    <section>
+      <div>
+        <div>
+          <p>-15 min-</p>
+          <div class="section-img">
+            <img src="images/pur-3-1.jpg">
+          </div>
+          <h5>허유진 셰프의 <span>쉬림프 샐러드</span></h5>
+          <h6>그릴기능으로 간편하게 식사해결!</h6>
+          <button>RECIPE VIEW</button>
+        </div>
+
+        <div>
+          <p>-30 min-</p>
+          <div class="section-img">
+            <img src="images/pur-3-2.jpg">
+          </div>
+          <h5>전진욱 셰프의 <span>양고기 구이</span></h5>
+          <h6>에어프라이어기능으로 기름없이 담백하게!</h6>
+          <button>RECIPE VIEW</button>
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <p>-10 min-</p>
+          <div class="section-img">
+            <img src="images/pur-3-3.jpg">
+          </div>
+          <h5>장현서 셰프의 <span>베이컨 파니니</span></h5>
+          <h6>토스터기능으로 바쁜아침 풍족하게!</h6>
+          <button>RECIPE VIEW</button>
+        </div>
+
+        <div>
+          <p>-5 min-</p>
+          <div class="section-img">
+            <img src="images/pur-3-4.jpg">
+          </div>
+          <h5>김길준 셰프의 <span>김치만두</span></h5>
+          <h6>레인지기능으로 갓 찐듯 촉촉하게!</h6>
+          <button>RECIPE VIEW</button>
+        </div>
+      </div>
+    </section>
+  </article>
+
+
+  <article class="four">
+    <section>
+      <h3>BESPOKE 큐커 22L 상품평/매뉴얼</h3>
+      <div class="four-table">
+        <input type="checkbox" name="accordion" id="answer01">
+        <label for="answer01">전체상품평 <span>5</span>건<small>+</small></label>
+        <div>
+          <p><span>★★★★★</span>큐커 들여놓고 오븐, 전자레인, 에어프라이어 처분했습니다 최고예요</p>
+          <p><span>★★★★☆</span>편하긴 한데 좀 비싼감이 있긴 하네요 그래도 잘 활용해 볼게요</p>
+          <p><span>★★★★★</span>너무 예뻐요~~집에 두니까 다들 어디서 샀냐 하네요 인테리어 효과 짱입니다!!</p>
+          <p><span>★★★☆☆</span>색상이 잘못 왔어요..ㅡㅡ 핑크로 했는데 웬 노란색이..기능은 좋아요;;</p>
+          <p><span>★★★★★</span>저는 딱히 비싼지 모르겠네요! 4가지 기능이 합쳐 있는데 이 가격이면 완전 만족입니다ㅎㅎ</p>
+        </div>
+
+        <input type="checkbox" name="accordion" id="answer02">
+        <label for="answer02">매뉴얼 확인하기<small>+</small></label>
+        <div>
+          <p>제품명: 멀티오븐<br>제조국가: 중국<br>KC 인증 필 유무 HU071858-21025<br>동일모델의 출시년월: 2021년 7월<br>A/S 책임자와 전화번호
+            삼성전자서비스센터 / 1588-3366<br>품질보증기준: 결함·하자 등에 따른 소비자피해에 대해서는 소비자분쟁해결기준(소비자기본법 제16조)에 따라 보상가능</p>
+        </div>
+
+        <input type="checkbox" name="accordion" id="answer03">
+        <label for="answer03">배송/설치<small>+</small></label>
+        <div>
+          <p>제주도/산간 지역을 제외한 모든 지역은 배송비 무료, 설치비 5000원이 있습니다. 제주도/산간 지역은 배송비가 별도로 들 수 있으니 미리 확인바랍니다.</p>
+        </div>
+      </div>
+
+      <div class="four-info">
+        <div>
+          <img src="images/pur-4-1.png" />
+          <h5>워런티 정보</h5>
+          <p>제품 등록 제공되는 서비스를 확인하세요</p>
+          <button>READ MORE</button>
+        </div>
+
+        <div>
+          <img src="images/pur-4-2.png" />
+          <h5>서비스 센터 찾기</h5>
+          <p>삼성 공식 서비스 센터에서 도움을 받으세요</p>
+          <button>READ MORE</button>
+        </div>
+      </div>
+    </section>
+  </article>
+
+
+
+  <footer>
+
+    <div>
+      <div>
+        <h4>Customer<br>Center</h4>
+        <span>대표번호 : 02-2255-0114 </span><br><br>
+        <span>제품/서비스/멤버십: 1588-3366</span><br><br>
+        <span>구매문의 : 1588-6084</spn>
+      </div>
+
+      <div>
+        <h4>Infor</h4>
+        <a href="#">이용안내</a>
+        <a href="#">이용약관</a>
+        <a href="#">개인정보처리방침</a>
+        <a href="#">구매안전서비스</a>
+      </div>
+
+      <div>
+        <h4>Shop</h4>
+        <a href="#">삼성닷컴 FAQ</a>
+        <a href="#">이메일상담</a>
+        <a href="#">매장 찾기</a>
+        <a href="#">디지털프라자</a>
+      </div>
+
+      <div>
+        <h4>About</h4>
+        <a href="#">기업정보</a>
+        <a href="#">사업정보</a>
+        <a href="#">채용정보</a>
+        <a href="#">공지사항</a>
+      </div>
+    </div>
+
+    <div>
+      <img src="images/footer-1.png" />
+      <img src="images/footer-2.png" />
+      <img src="images/footer-3.png" />
+      <p>
+        <span>삼성전자(주)</span> <span>경기도 수원시 영통구 삼성로 129(매탄동)</span> <span>삼성전자 주식회사 대표이사 : 김기남 </span><br>
+        <span>사업자등록번호 : 124-81-00998</span> <span>통신판매업 신고 : 2000-경기수원-0515</span><br>
+      </p>
+      <small>Copyright © 1995-2021 Samsung. All Rights Reserved.</small>
+    </div>
+
+  </footer>
+
+  <script>
+    //three-table
+    $(".menu-list").find(".accordion-toggle").click(function() {
+    $(this).next().toggleClass("open").slideToggle("fast");
+    $(this).toggleClass("active-tab").find(".menu-link").toggleClass("active");
+
+    $(".menu-list .accordion-content").not($(this).next()).slideUp("fast").removeClass("open");
+    $(".menu-list .accordion-toggle").not(jQuery(this)).removeClass("active-tab").find(".menu-link").removeClass("active");
+    });
+    });
+  </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+  <title>https://codepen.io/seni99/pen/abNJQwX</title>
+  <style type="text/css"></style>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript"></script>
+  </script>
+
+  <style>
+    .box {
+      padding: 10px;
+    }
+
+    /* ------------------------------------------------------- */
+    /* IE */
+    select::-ms-expand {
+      display: none;
+    }
+
+    select {
+      -o-appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+    .selectBox1 * {
+      box-sizing: border-box;
+    }
+
+    .selectBox1 {
+      position: relative;
+      width: 150px;
+      height: 35px;
+      border-radius: 4px;
+      border: 2px solid lightcoral;
+      background: url('https://freepikpsd.com/media/2019/10/down-arrow-icon-png-7-Transparent-Images.png') calc(100% - 7px) center no-repeat;
+      background-size: 20px;
+      cursor: pointer;
+    }
+
+    .selectBox1:after {
+      content: '';
+      display: block;
+      width: 2px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 35px;
+      background: lightcoral;
+    }
+
+    .selectBox1 .label {
+      display: flex;
+      align-items: center;
+      width: inherit;
+      height: inherit;
+      border: 0 none;
+      outline: 0 none;
+      padding-left: 15px;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .selectBox1 .optionList {
+      position: absolute;
+      top: 28px;
+      left: 0;
+      width: 100%;
+      background: lightcoral;
+      color: #fff;
+      list-style-type: none;
+      padding: 0;
+      border-radius: 6px;
+      overflow: hidden;
+      max-height: 0;
+      transition: .3s ease-in;
+    }
+
+    .selectBox1 .optionList::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .selectBox1 .optionList::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .selectBox1 .optionList::-webkit-scrollbar-thumb {
+      background: #303030;
+      border-radius: 45px;
+    }
+
+    .selectBox1 .optionList::-webkit-scrollbar-thumb:hover {
+      background: #303030;
+    }
+
+    .selectBox1.active .optionList {
+      max-height: 500px;
+    }
+
+    .selectBox1 .optionItem {
+      border-bottom: 1px dashed rgb(170, 72, 72);
+      padding: 5px 15px 5px;
+      transition: .1s;
+    }
+
+    .selectBox1 .optionItem:hover {
+      background: rgb(175, 93, 93);
+    }
+
+    .selectBox1 .optionItem:last-child {
+      border-bottom: 0 none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <div class="selectBox1">
+      <button class="label">제품분류</button>
+      <ul class="optionList">
+        <li class="optionItem">냉장고</li>
+        <li class="optionItem">정수기</li>
+        <li class="optionItem">식기세척기</li>
+        <li class="optionItem">오븐</li>
+        <li class="optionItem">에어컨</li>
+        <li class="optionItem">세탁기</li>
+        <li class="optionItem">에어드레서</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    /* 화살표 함수 */
+    /* const label = document.querySelector('.label');
+    const options = document.querySelectorAll('.optionItem');
+    const handleSelect = (item) => {
+      label.parentNode.classList.remove('active');
+      label.innerHTML = item.textContent;
+    }
+
+    options.forEach(option => {
+      option.addEventListener('click', () => handleSelect(option))
+    })
+
+    label.addEventListener('click', () => {
+      if(label.parentNode.classList.contains('active')) {
+        label.parentNode.classList.remove('active');
+      } else {
+        label.parentNode.classList.add('active');
+      }
+    }) */
+
+
+
+
+    const label = document.querySelector('.label');
+    const options = document.querySelectorAll('.optionItem');
+    const handleSelect = function(item) {
+      label.innerHTML = item.textContent;
+      label.parentNode.classList.remove('active');
+    }
+    options.forEach(function(option) {
+      option.addEventListener('click', function() {
+        handleSelect(option)
+      })
+    })
+
+    label.addEventListener('click', function() {
+      if (label.parentNode.classList.contains('active')) {
+        label.parentNode.classList.remove('active');
+      } else {
+        label.parentNode.classList.add('active');
+      }
+    });
+  </script>
+</body>
+
+</html>

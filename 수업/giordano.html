@@ -1,0 +1,1939 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+  <title>GIORDANO</title>
+  <link rel="stylesheet" href="hell-css/style.css">
+  <style type="text/css"></style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript"></script>
+  <script>
+  // header-hamburger-munu
+function show1() {
+  document.getElementById('sidebar').classList.toggle('active');
+
+}
+
+//>>>>>>메인 슬라이드
+$(document).ready(function() {
+  slide();
+});
+
+function slide() {
+  var wid = 0;
+  var now_num = 0;
+  var slide_length = 0;
+  var auto = null;
+  var $dotli = $('.dot>li');
+  var $panel = $('.panel');
+  var $panelLi = $panel.children('li');
+
+  // 변수 초기화
+  function init() {
+    wid = $('.slide').width();
+    now_num = $('.dot>li.on').index();
+    slide_length = $dotli.length;
+  }
+
+  // 이벤트 묶음
+  function slideEvent() {
+
+    // 슬라이드 하단 dot버튼 클릭했을때
+    $dotli.click(function() {
+      now_num = $(this).index();
+      slideMove();
+    });
+
+    // 오토플레이
+    autoPlay();
+
+    // 오토플레이 멈춤
+    autoPlayStop();
+
+    // 오토플레이 재시작
+    autoPlayRestart();
+
+    // 화면크기 재설정 되었을때
+    resize();
+  }
+
+  // 자동실행 함수
+  function autoPlay() {
+    auto = setInterval(function() {
+      nextChkPlay();
+    }, 2500);
+  }
+
+  // 자동실행 멈춤
+  function autoPlayStop() {
+    $panelLi.mouseenter(function() {
+      clearInterval(auto);
+    });
+  }
+
+
+  // 자동실행 멈췄다가 재실행
+  function autoPlayRestart() {
+    $panelLi.mouseleave(function() {
+      auto = setInterval(function() {
+        nextChkPlay();
+      }, 5000);
+    });
+  }
+
+  // 이전 버튼 클릭시 조건 검사후 슬라이드 무브
+  function prevChkPlay() {
+    if (now_num == 0) {
+      now_num = slide_length - 1;
+    } else {
+      now_num--;
+    }
+    slideMove();
+  }
+
+  // 이후 버튼 클릭시 조건 검사후 슬라이드 무브
+  function nextChkPlay() {
+    if (now_num == slide_length - 1) {
+      now_num = 0;
+    } else {
+      now_num++;
+    }
+    slideMove();
+  }
+
+  // 슬라이드 무브
+  function slideMove() {
+    $panel.stop().animate({
+      'margin-left': -wid * now_num
+    });
+    $dotli.removeClass('on');
+    $dotli.eq(now_num).addClass('on');
+  }
+
+  // 화면크기 조정시 화면 재설정
+  function resize() {
+    $(window).resize(function() {
+      init();
+      $panel.css({
+        'margin-left': -wid * now_num
+      });
+    });
+  }
+  init();
+  slideEvent();
+}
+
+
+function show() {
+  document.getElementById('sidebar').classList.toggle('active');
+}
+
+//best product slide
+var slides = document.getElementsByClassName("slide-in");
+var index = 0;
+
+function goLeft() {
+
+    if (index == 0) index = slides.length - 1;
+    else index--;
+
+    slides[0].style.marginLeft = "-" + index * 800 + "px";
+}
+
+function goRight() {
+
+    if (index == slides.length - 1) index = 0;
+    else index++;
+
+    slides[0].style.marginLeft = "-" + index * 800 + "px";
+}
+
+jQuery('#selectBox').change(function() {
+	var state = jQuery('#selectBox option:selected').val();
+
+  if ( state == 'option1' ) {
+		jQuery('.layer1').show();
+	} else {
+		jQuery('.layer1').hide();
+	}
+
+   if ( state == 'option2' ) {
+		jQuery('.layer2').show();
+	} else {
+		jQuery('.layer2').hide();
+	}
+
+   if ( state == 'option3' ) {
+		jQuery('.layer3').show();
+	} else {
+		jQuery('.layer3').hide();
+	}
+
+    if ( state == 'option4' ) {
+		jQuery('.layer4').show();
+	} else {
+		jQuery('.layer4').hide();
+	}
+
+   if ( state == 'option5' ) {
+		jQuery('.layer5').show();
+	} else {
+		jQuery('.layer5').hide();
+	}
+
+  if ( state == 'option6' ) {
+		jQuery('.layer6').show();
+	} else {
+		jQuery('.layer6').hide();
+	}
+
+
+	if ( state == 'option7' ) {
+		jQuery('.layer7').show();
+	} else {
+		jQuery('.layer7').hide();
+	}
+});
+  </script>
+</head>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0px solid silver;
+  outline: none;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+::-webkit-scrollbar {width: 10px; height: 10px; border: 3px solid #fff; }
+::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:increment {display: block; height: 10px; background: url('./images/bg.png') #fff}
+::-webkit-scrollbar-track {background: #efefef; -webkit-border-radius: 10px; border-radius:10px; -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.0)}
+::-webkit-scrollbar-thumb {height: 50px; width: 50px; background: rgba(0,0,0,.2); -webkit-border-radius: 8px; border-radius: 8px; -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.1)}
+
+img {
+  width: 100px;
+}
+
+body {
+  font-size: 0.9rem;
+  letter-spacing: 0.1px;
+}
+
+h1 {
+  font-size: 2.8rem;
+  line-height: 2.8rem;
+  font-weight: bolder;
+  color: #fff;
+}
+
+h2 {
+  font-size: 2.3rem;
+  line-height: 2.3rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  font-weight: bolder;
+  color: #333;
+}
+
+h4 {
+  font-size: 1.3rem;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: #333;
+}
+
+h5 {
+  font-size: 1rem;
+  line-height: 1.4rem;
+  text-transform: uppercase;
+}
+
+h6 {
+  font-size: 0.85rem;
+  color: black;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+}
+
+span {
+  font-size: 0.9rem;
+}
+
+a:link {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  text-transform: uppercase;
+}
+
+a:active {
+  color: white;
+  text-transform: uppercase;
+}
+
+a:hover {
+  color: white;
+  text-transform: uppercase;
+}
+
+small {
+  font-size: 0.7rem;
+  line-height: 0.9rem;
+  color: #999;
+}
+
+li {
+  list-style: none;
+}
+
+ .solid {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 2.5rem;
+    text-align: center;
+    color: #333;
+  }
+
+
+/*~~~~mobile start~~~~*/
+
+/* main */
+main {
+  position: relative;
+  min-width: 360px;
+  background: #e8dcca;
+}
+
+main header {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  z-index: 99;
+  width: 100%;
+  padding: 0 5%;
+  padding-top: 30px;
+  margin: 0 auto;
+}
+
+main header .toggle-btn1 {
+  color: #222;
+  display: inline-block;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+main header> :nth-child(1)> :nth-child(2) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-55%, 20%);
+  width: 140px;
+  cursor: pointer;
+}
+
+main header> :nth-child(1)> :nth-child(3) ul{
+  display: none;
+}
+
+main header> :nth-child(2) img {
+  width: 35px;
+  cursor: pointer;
+}
+
+main header> :nth-child(2)> :nth-child(2){
+  background: #cfb997;
+  padding: 0.3rem;
+  border-radius: 8px;
+}
+
+main header #sidebar {
+  cear: both;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  top: 70px;
+  left: -100vw;
+  transition: .4s;
+  z-index: 99;
+}
+
+main header #sidebar.active {
+  left: 0;
+}
+
+main header #sidebar ul {
+  list-style: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 20px 0;
+  text-decoration: none;
+}
+
+main header #sidebar ul li a{
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2rem 24px;
+}
+
+main header #sidebar ul li a:hover {
+  background: #cfb997;
+}
+
+/* main.slide(배경 자동슬라이드)*/
+main .slide {
+  position: relative;
+  overflow: hidden;
+}
+
+main .panel {
+  width: 300%;
+  height: 800px;
+}
+
+main .panel:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+main .panel>li {
+  width: 33.333%;
+  height: 800px;
+  float: left;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+}
+
+main .panel>li:nth-of-type(1) {
+  background: url('https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FCKup9%2FbtqB8aT80zF%2Fj372BWv2XecYwtXhUSmbEk%2Fimg.jpg');
+  background-size: cover;
+  background-position: 80% 50%;
+  cursor: pointer;
+}
+
+main .panel>li:nth-of-type(2) {
+  background: url('https://m.giordano.co.kr/_data/attach/202103/24/2d362af7edebc055a697f3ddd3b47496.jpg') no-repeat;
+  background-size: cover;
+  background-position: top center;
+  cursor: pointer;
+}
+
+main .panel>li:nth-of-type(3) {
+  background: url('https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbrIBvW%2FbtqB9w3dLB9%2FrcagbzUtWiR2WbN6TZp531%2Fimg.jpg') no-repeat;
+  background-size: cover;
+  background-position: 30%;
+  cursor: pointer;
+}
+
+main .opa {
+  position: relative;
+  background: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100%;
+}
+
+main .opa section {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  color: #fff;
+}
+
+main .opa section h3, main .opa section h4 {
+  color: #fff;
+}
+
+main .opa section h4 {
+  margin: 1rem 0;
+}
+
+main .opa section button {
+  background: none;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 0.2rem 0.5rem;
+  font-size: 1.1rem;
+  color: #fff;
+  cursor: pointer;
+  transition: .3s;
+}
+
+main .opa section button:hover {
+  background: #cfb997;
+}
+
+main .dot:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+main .dot {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translateX(-50%);
+}
+
+main .dot>li {
+  float: left;
+  background: #ebd3b0;
+  width: 50px;
+  height: 12px;
+  border-radius: 50px;
+  margin-right: 8px;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+
+main .dot>li.on {
+  background: #fff;
+  width: 30px;
+  height: 12px;
+}
+
+
+/* best */
+.best {
+  padding: 5rem 3%;
+  text-align: center;
+}
+
+.best small {
+  text-decoration: line-through;
+}
+
+.container {
+  width: 100%;
+  height: ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container img {
+  width: 95%;
+}
+
+.frame {
+  width: 95%;
+  overflow: auto;
+}
+
+.card-list {
+  display: flex;
+  cursor: pointer;
+}
+
+.card {
+  flex-shrink: 0;
+  width: 200px;
+  height: 300px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 40px;
+  transition: 0.7s;
+}
+
+
+/*gender */
+.gender {
+  min-width: 360px;
+  background: #fff;
+  margin: 30px 0px;
+  padding: 0 20px;
+}
+
+.gender> :first-child {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.gender h1 {
+  padding: 10px 20px;
+  text-decoration: underline;
+}
+
+.gender p {
+  margin: 0px 20px;
+  width: 170px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  font-size: 0.85rem;
+  color: #fff;
+  padding: 0.4rem;
+}
+
+.gender button {
+  background: #a39886;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.gender section {
+  background: #fff;
+}
+
+.gender section> :first-child {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-image: url('https://www.giordano.co.kr/_data/attach/202102/19/cb95757a353adee7e2ef93effbf83157.jpg#addimg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.gender section> :first-child button {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+}
+
+.gender section> :last-child {
+  width: 100%;
+}
+
+.gender section> :last-child> :first-child {
+  position: relative;
+  height: 500px;
+  background-image: url('https://www.giordano.co.kr/_data/attach/202104/20/8014f21b8d27217bc7b85afa2a73faff.jpg#addimg');
+  background-size: cover;
+  background-position: 10% 0;
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.gender section> :last-child> :first-child button {
+  position: absolute;
+  top: 95px;
+  right: -94px;
+  width: 250px;
+  height: 60px;
+  transform: rotate(90deg);
+}
+
+.gender section> :last-child> :last-child {
+  position: relative;
+  height: 500px;
+  background-image: url('https://www.giordano.co.kr/_data/attach/202103/10/c281ded91f6eab72a5a74ba4ede3d54b.jpg#addimg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.gender section> :last-child> :last-child h1 {
+  position: absolute;
+  right: 0;
+}
+
+.gender section> :last-child> :last-child p {
+  position: absolute;
+  width: 185px;
+  right: 0;
+  top: 65px;
+}
+
+.gender section> :last-child> :last-child button {
+  position: absolute;
+  top: 90px;
+  left: -90px;
+  width: 240px;
+  height: 60px;
+  transform: rotate(90deg);
+}
+
+
+/* sns */
+.sns {
+  min-width: 360px;
+  margin: 50px 0;
+}
+
+.sns iframe {
+  display: none;
+}
+
+.sns div {
+  width: 100%;
+  height: 350px;
+  text-align: center;
+  padding-top: 70px;
+  border: 5px solid #cfb997;
+}
+
+.sns div h3 {
+  margin: 20px 0;
+  line-height: 2.3rem;
+}
+
+.sns div h5 {
+  color: #cfb997;
+}
+
+.sns div img {
+  width: 40px;
+  cursor: pointer;
+}
+
+/* new */
+
+.new> :nth-child(1){
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.new-flex {
+}
+
+.new-flex h3 {
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.new-flex button {
+  color: #fff;
+  background: none;
+  font-size: 1.5rem;
+  margin-left: 72%;
+  margin-top: 250px;
+  cursor: pointer;
+}
+
+.new-flex div section {
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  width: 100%;
+  height: 350px;
+  transition: .3s;
+}
+
+/* .new-flex div section:hover {
+  background: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  width: 100%;
+  height: 350px;
+} */
+
+.new-flex> :nth-child(1) {
+  width: 100%;
+  background: url('https://www.giordano.co.kr/_data/attach/202103/22/10406353856fb279927d255e0d1b87fc.jpg#addimg');
+  background-size: cover;
+  background-position: top center;
+}
+
+.new-flex> :nth-child(2) {
+  width: 100%;
+  background: url('https://www.giordano.co.kr/_data/attach/202103/16/38c86787104a050ea92df8751d056eb6.jpg#addimg');
+  background-size: cover;
+  background-position: top center;
+}
+
+ .new> :nth-child(3) {
+    min-width: 360px;
+    height: 220px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0.6rem 0;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .new> :nth-child(3) h4 {
+    color: #fff;
+  }
+
+  .new> :nth-child(3) p {
+    width: 300px;
+    margin: 10px auto;
+    color: #eee;
+    font-style: italic;
+  }
+
+  .new> :nth-child(3) button {
+    font-weight: bold;
+    background: #585554;
+    color: #fff;
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+
+/* store */
+.layer2, .layer3, .layer4, .layer5, .layer6, .layer7{ display: none; }
+
+.store {
+  background: #585554;
+  text-align: center;
+  margin-top: 150px;
+  padding: 150px 5px;
+}
+
+.store h3 {
+  color: #eee;
+  padding-bottom: 15px;
+}
+
+.store select {
+  border: 2px solid #a19b99;
+}
+
+.store table {
+  background: #585554;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 50px auto;
+  margin-bottom: 0;
+}
+
+.store table td {
+  color: #eee;
+  border: 4px solid #a19b99;
+  width: 170px;
+  height: 100px;
+  word-break:break-all;
+  table-layout: fixed;
+  cursor: pointer;
+  transition: .15s;
+}
+
+.store table td:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* footer */
+footer {
+  background: #222;
+  color: #fff;
+  padding: 30px 20px;
+  padding-bottom: 100px;
+}
+
+footer> :nth-child(1) div {
+  margin-bottom: 30px;
+}
+
+footer> :nth-child(1) div h3 {
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+footer> :nth-child(1) div h4 {
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+footer> :nth-child(1) div a {
+  color: #999;
+  display: block;
+  margin-top: 20px;
+}
+
+footer> :nth-child(2) {
+  margin-top: 30px;
+}
+
+footer> :nth-child(2) img {
+  width: 30px;
+  cursor: pointer;
+}
+
+footer> :nth-child(2) p {
+  margin: 15px 0;
+}
+
+footer> :nth-child(2) span {
+  margin-right: 15px;
+}
+
+
+/*~~~~labtop start~~~~*/
+@media screen and (min-width: 1000px) {
+
+  /* labtop main */
+ main header .toggle-btn1 {
+  display: none;
+}
+
+   main header> :nth-child(1) {
+  display: flex;
+}
+
+  main header> :nth-child(1)> :nth-child(2) {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, 30%);
+  width: 160px;
+}
+
+main header> :nth-child(1)> :nth-child(3) ul{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  display: flex;
+}
+
+main header> :nth-child(1)> :nth-child(3) ul li {
+  color: #222;
+  font-size: 0.95rem;
+  margin: 0 1.5rem;
+  line-height: 2.5rem;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+  main header> :nth-child(1)> :nth-child(3) ul li:hover {
+  transform: translateY(-10%);
+  border-bottom: 1px solid #222;
+}
+
+  main .opa section {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 800px;
+  color: #fff;
+}
+
+ main .opa section h3{
+  font-size: 2.4rem;
+  line-height: 3rem;
+}
+
+main .opa section h4 {
+  font-size: 1.5rem;
+  margin: 2rem 0;
+}
+
+
+ main .panel>li:nth-of-type(1) {
+  background: url('https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FCKup9%2FbtqB8aT80zF%2Fj372BWv2XecYwtXhUSmbEk%2Fimg.jpg') no-repeat;
+  background-size: cover;
+  background-position: 20%;
+  cursor: pointer;
+}
+
+main .panel>li:nth-of-type(2) {
+  background: url('https://m.giordano.co.kr/_data/attach/202103/24/2d362af7edebc055a697f3ddd3b47496.jpg') no-repeat;
+  background-size: 40%;
+  background-position: 80%;
+  cursor: pointer;
+}
+
+main .panel>li:nth-of-type(3) {
+  background: url('https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbrIBvW%2FbtqB9w3dLB9%2FrcagbzUtWiR2WbN6TZp531%2Fimg.jpg') no-repeat;
+  background-size: 70%;
+  background-position: 80%;
+  cursor: pointer;
+}
+
+  /* labtop best */
+
+  .best {
+    width: 1000px;
+    margin: 100px auto;
+    text-align: center;
+  }
+
+  .best h2 {
+    margin-bottom: 2rem;
+  }
+
+.prodList {
+  width: 100%;
+  margin: 0 auto;
+}
+
+  .container {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .container img {
+    width: 90%;
+  }
+
+  .frame {
+    width: 100%;
+    overflow: auto;
+  }
+
+  .card-list {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .card {
+    text-align: center;
+    flex-shrink: 0;
+    width: 240px;
+    height: 350px;
+    border: 0px solid #d5d5d5;
+    border-radius: 0px;
+    margin-bottom: 40px;
+  }
+
+  .card h5 {
+    margin-top: 0.3rem;
+  }
+
+
+  /* labtop-gender */
+.gender {
+  width: 1000px;
+  margin: 120px auto;
+  padding: 0px 0;
+}
+
+.gender section {
+    height: 500px;
+    display: flex;
+    background: #fff;
+  }
+
+.gender section h1 {
+  padding: 10px 20px;
+  text-decoration: underline;
+}
+
+.gender section> :first-child {
+  width: 40%;
+  height: 500px;
+  background-image: url('https://www.giordano.co.kr/_data/attach/202102/19/cb95757a353adee7e2ef93effbf83157.jpg#addimg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+  transition: 0.4s;
+}
+
+ .gender section> :first-child:hover {
+ transform: translateY(-5%);
+}
+
+.gender section> :last-child {
+  width: 60%;
+}
+
+.gender section> :last-child> :first-child {
+  height: 250px;
+  background-image: url('https://www.giordano.co.kr/_data/attach/202104/20/8014f21b8d27217bc7b85afa2a73faff.jpg#addimg');
+  background-size: cover;
+  background-position: 0 5%;
+  background-repeat: no-repeat;
+  margin-bottom: 10px;
+  transition: 0.4s;
+}
+
+ .gender section> :last-child> :first-child:hover {
+ transform: translateX(5%);
+}
+
+.gender section> :last-child> :last-child {
+  height: 240px;
+  background-image: url('https://www.giordano.co.kr/_data/attach/202103/10/c281ded91f6eab72a5a74ba4ede3d54b.jpg#addimg');
+  background-size: cover;
+  background-position: 0 8%;
+  background-repeat: no-repeat;
+  transition: 0.4s;
+}
+
+.gender section> :last-child> :last-child:hover {
+ transform: translateY(10%);
+}
+
+/* labtop-sns */
+  .sns {
+  display: flex;
+  margin: 200px 0;
+}
+
+ .sns iframe {
+  display: block;
+}
+
+.sns div {
+  width: 50%;
+  height: 350px;
+  text-align: center;
+  padding-top: 80px;
+  border: 0
+}
+
+ /* labtop-new */
+
+  .new {
+    position: relative;
+    width: 1000px;
+    margin: 100px auto;
+  }
+  .new-flex {
+  display: flex;
+}
+
+  .new-flex> :nth-child(1) {
+  width: 50%;
+  background: url('https://www.giordano.co.kr/_data/attach/202103/09/64608f024a0cd8dce0404f018fc9ae72.jpg#addimg');
+  background-size: cover;
+  background-position: top center;
+}
+
+.new-flex> :nth-child(2) {
+  width: 50%;
+  background: url('https://www.giordano.co.kr/_data/attach/202103/11/46a1e31d7233651e1400bfbdc5f9fab4.jpg#addimg');
+  background-size: cover;
+  background-position: top center;
+}
+
+  .new> :nth-child(3) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    width: 350px;
+    height: 220px;
+    text-align: center;
+    padding: 0.6rem 0;
+    background: rgba(0, 0, 0, 0.25);
+    transition: 0.4s;
+  }
+
+    .new> :nth-child(3):hover {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .new> :nth-child(3) h4 {
+    color: #fff;
+  }
+
+  .new> :nth-child(3) p {
+    width: 300px;
+    margin: 10px auto;
+    color: #eee;
+    font-style: italic;
+  }
+
+  .new> :nth-child(3) button {
+    font-weight: bold;
+    background: #585554;
+    color: #fff;
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+    .new> :nth-child(3) button:hover {
+    background: #eee;
+    color: #333;
+  }
+
+/* labtop-store */
+ .store {
+  background: #585554;
+  text-align: center;
+  margin-top: 200px;
+  padding: 150px 0px;
+}
+
+.store table {
+  background: #585554;
+  width: 1000px;
+  border-collapse: collapse;
+  margin: 50px auto;
+  margin-bottom: 0;
+}
+
+.store table td {
+  color: #eee;
+  border: 4px solid #a19b99;
+  width: 170px;
+  height: 100px;
+  word-break:break-all;
+  table-layout: fixed;
+  cursor: pointer;
+  transition: .15s;
+}
+
+.store table td:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+/* labtop-footer */
+  footer {
+    padding: 80px 0px;
+    padding-bottom: 100px;
+  }
+
+  footer section {
+    width: 1000px;
+    margin: 0 auto;
+  }
+
+  footer> :nth-child(1) {
+    display: flex;
+  }
+
+  footer> :nth-child(1) div {
+    width: 220px;
+    margin-right: 50px;
+  }
+}
+</style>
+
+<body>
+
+
+  <main>
+
+
+    <header>
+
+
+      <div>
+        <div class="toggle-btn1" onclick="show1()">☰</div>
+
+        <img src="https://www.giordano.co.kr/_skin/giordano_20210708_1/img/logo/logo.png">
+
+        <nav>
+          <ul>
+            <li>best15</li>
+            <li>men</li>
+            <li>women</li>
+            <li>g-motion</li>
+            <li>junior</li>
+          </ul>
+        </nav>
+
+        <nav id="sidebar">
+          <ul>
+            <li><a href="#">new arrivals <span>▾</span></a></li><br>
+            <li><a href="#">* 단독특가 ★<span>▾</span></a></li>
+            <li><a href="#">* 균일가 sale<span>▾</span></a></li>
+            <li><a href="#">* 1+1 event<span>▾</span></a></li>
+            <li><a href="#">* 주니어 핫썸머특가<span>▾</span></a></li><br>
+            <li><a href="#">best 15<span>▾</span></a></li>
+            <li><a href="#">men<span>▾</span></a></li>
+            <li><a href="#">women<span>▾</span></a></li>
+            <li><a href="#">g-motion<span>▾</span></a></li>
+            <li><a href="#">junior<span>▾</span></a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div>
+        <img src="https://img.icons8.com/ios/50/ffffff/search--v1.png" />
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/buy--v1.png" />
+      </div>
+
+
+    </header>
+
+
+
+    <article class="slide">
+
+
+      <ul class="panel">
+        <li>
+          <div class="opa">
+            <section>
+              <h3> NEW 21 F/W<br>캐시미어 블렌드 립 클루넥 가디건</h3>
+              <h4>뉴트럴 톤 컬러에 고급자개단추를 사용하여<br>디테일마저 고급스러운,</h4>
+              <button>more ⇁</button>
+            </section>
+          </div>
+        </li>
+
+        <li>
+          <div class="opa">
+            <section>
+              <h3>Summer<br>Essentiols</h3>
+              <h4>기본에 충실한 Heavy cotten T-shirts</h4>
+              <button>more ⇁</button>
+            </section>
+          </div>
+        </li>
+
+        <li>
+          <div class="opa">
+            <section>
+              <h3>21 S/S Clearnce Sale</h3>
+              <h4>SUMMER 전품목 해당<br>최대 50%까지</h4>
+            </section>
+          </div>
+        </li>
+      </ul>
+
+      <ul class="dot">
+        <li class="on"></li>
+        <li></li>
+        <li></li>
+      </ul>
+
+
+    </article>
+
+
+  </main>
+
+
+
+  <article class="best">
+
+    <div class="prodList">
+      <h3>Best Products</h3>
+      <h5>지금 가장 사랑받는 아이템</h5>
+      <span class="solid">—</span>
+
+      <div class="container">
+        <div class="frame">
+          <div class="card-list">
+            <div class="card"><img src="https://www.giordano.co.kr/_data/attach/202103/25/ff5e59f4942c318938bca46e1a229850.jpg#addim">
+              <h5>New 폴로넥 티셔츠(Unisex)</h5>
+              <span>9,900원</span><small>16,800원</small>
+            </div>
+            <div class="card"><img src="https://www.giordano.co.kr/_data/attach/202103/30/0e0297bd2724a9c6b5eb508f15d179f9.jpg#addimg">
+              <h5>NEW 헨리 헤비코튼 크루넥 반팔 티셔츠</h5>
+              <span>8,000원</span><small>12,800원</small>
+            </div>
+            <div class="card"><img src="https://www.giordano.co.kr/_data/attach/202106/17/785ec0764236f07871a5768e6eaa1528.JPG#addimg">
+              <h5>NEW 전지현 슬림핏 슬랙스</h5>
+              <span>29,000원</span><small>39,800원</small>
+            </div>
+            <div class="card"><img src="https://www.giordano.co.kr/_data/attach/202003/16/cdfdf6cd077fb8bbd80ebd3d5bdbe797.jpg#addimg">
+              <h5>전지현 크루넥 슬럽 티셔츠</h5>
+              <span>5,000원</span><small>9,800원</small>
+            </div>
+            <div class="card"><img src="https://www.giordano.co.kr/_data/attach/202107/09/2cca49334350ce22ea34cb1fbe39e6da.jpg">
+              <h5>NEW 14GG 반팔 폴로 스웨터</h5>
+              <span>44,800원</span><small>9,800원</small>
+            </div>
+            <div class="card"><img src="https://www.giordano.co.kr/_data/attach/202104/23/a54add2c082f8057ac2e8ddd05edc7ec.jpg#addimg">
+              <h5>NEW 헨리 린넨100베이직셔츠</h5>
+              <span>59,800원</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+  </article>
+
+
+
+  <article class="gender">
+
+    <div>
+      <h3>Shop All</h3>
+      <h5>모든 세대를 아우르는 편안함, GIORDANO</h5>
+      <span class="solid">—</span>
+    </div>
+
+    <section>
+      <!--first child-->
+      <div>
+        <h1>Women</h1>
+        <p>#안정감 #편안함 #아름다움</p>
+        <button>+ More</button>
+      </div>
+
+      <!--last child-->
+
+      <div>
+        <div>
+          <h1>Men</h1>
+          <p>#활동적 #기능적 #멋스러움</p>
+          <button>+ More</button>
+        </div>
+
+        <div>
+          <h1>Junior</h1>
+          <p>#트렌디 #상큼함 #애슬레저룩</p>
+          <button>+ More</button>
+        </div>
+      </div>
+    </section>
+  </article>
+
+
+
+  <article class="sns">
+
+    <iframe width="50%" height="350" src="https://www.youtube.com/embed/0Oapo_O2sZ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+
+    <div>
+      <h5>GIORDANO Live</h5>
+      <h3>지오다노의 신상품을<br>미리 만나보세요.</h3>
+      <a href="https://www.instagram.com/giordanokr/?hl=ko"><img src="https://img.icons8.com/ios/100/000000/instagram-new--v1.png" /></a>
+      <a href="https://www.youtube.com/channel/UCfTR0WQ3DGogXwy-mSvRniA"><img src="https://img.icons8.com/ios-filled/100/000000/youtube-play.png" /></a>
+    </div>
+
+
+  </article>
+
+
+
+  <article class="new">
+
+
+    <div>
+      <h3>New Arraivals</h3>
+      <span class="solid">—</span>
+    </div>
+
+    <div class="new-flex">
+      <div>
+        <section>
+          <div>
+          </div>
+        </section>
+      </div>
+
+      <div>
+        <section>
+          <div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div>
+      <h4>G-MOTION COLLECTION</h4>
+      <p>입는 사람의 가치관이나 생각,<br>새로운 시대의 숨결을 담은 옷.<br>우리가 생각하는 라이프웨어입니다.<br><br>2021년 여름, 새로운 라이프 스타일을 담은<br>컬렉션을 만나보세요.<br></p>
+      <button>라인업 만나보기 ></button>
+    </div>
+
+
+  </article>
+
+
+
+
+  <article class="store">
+
+
+    <h3>GIORDANO STORE</h3>
+
+    <label for="store-find">지역별 찾기</label>
+    <select id="selectBox" name="selectBox">
+      <option value="option1" selected>서울</option>
+      <option value="option2">경기/인천</option>
+      <option value="option3">강원</option>
+      <option value="option4">충청</option>
+      <option value="option5">전라</option>
+      <option value="option6">경상</option>
+      <option value="option7">부산</option>
+    </select>
+
+    <div class="layer1">
+      <table>
+        <tr>
+          <td>
+            IFC MALL
+          </td>
+          <td>
+            W-MALL
+          </td>
+          <td>
+            가든현대
+          </td>
+          <td>
+            강남뉴코아
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            강남롯데(백)
+          </td>
+          <td>
+            강남신세계
+          </td>
+          <td>
+            강남신세계 팝업
+          </td>
+          <td>
+            강남역(직)
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            강변(직)
+          </td>
+          <td>
+            강서NC
+          </td>
+          <td>
+            구로마리오
+          </td>
+          <td>
+            김포공항 롯데몰
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            노원롯데(백)
+          </td>
+          <td>
+            동대문현대아울렛
+          </td>
+          <td>
+            디큐브시티현대
+          </td>
+          <td>
+            ⋯더보기
+          </td>
+        </tr>
+
+
+      </table>
+    </div>
+
+    <div class="layer2">
+      <table>
+        <tr>
+          <td>
+            경기신세계(백)
+          </td>
+          <td>
+            고양롯데아울렛
+          </td>
+          <td>
+            고잔NC
+          </td>
+          <td>
+            광교갤러리아
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            광교롯데아울렛
+          </td>
+          <td>
+            광명롯데아울렛
+          </td>
+          <td>
+            구리롯데(백)
+          </td>
+          <td>
+            기흥AK몰
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            기흥롯데아울렛
+          </td>
+          <td>
+            동수원뉴코아
+          </td>
+          <td>
+            부천 스타필드
+          </td>
+          <td>
+            분당 AK
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            분당롯데(백)
+          </td>
+          <td>
+            산본뉴코아
+          </td>
+          <td>
+            송도현대아울렛
+          </td>
+          <td>
+            ⋯더보기
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="layer3">
+      <table>
+        <tr>
+          <td>
+            원주AK프라자
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="layer4">
+      <table>
+        <tr>
+          <td>
+            대전Say(백)
+          </td>
+          <td>
+            대전갤러리아(백)
+          </td>
+          <td>
+            대전롯데(백)
+          </td>
+          <td>
+            대전스타일마켓
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            대전현대아울렛
+          </td>
+          <td>
+            신세계아라리오점
+          </td>
+          <td>
+            자루아산아울렛
+          </td>
+          <td>
+            천안갤러리아(백)
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            천안모다점
+          </td>
+          <td>
+            청주
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="layer5">
+      <table>
+        <tr>
+          <td>
+            광주수완롯데아울렛
+          </td>
+          <td>
+            광주신세계2점
+          </td>
+          <td>
+            광주월드컵롯데
+          </td>
+          <td>
+            남악롯데아울렛
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            목포점
+          </td>
+          <td>
+            여수점
+          </td>
+          <td>
+            전주
+          </td>
+          <td>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="layer6">
+      <table>
+        <tr>
+          <td>
+            김천구미모다아울렛
+          </td>
+          <td>
+            김해롯데아울렛
+          </td>
+          <td>
+            김해신세계
+          </td>
+          <td>
+            김해아이스퀘어
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            대구모다점
+          </td>
+          <td>
+            대구상인롯데(백)
+          </td>
+          <td>
+            대구신세계
+          </td>
+          <td>
+            대구현대
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            대구현대시티아울렛
+          </td>
+          <td>
+            동성로(직)
+          </td>
+          <td>
+            마산신세계(백)
+          </td>
+          <td>
+            업스퀘어(직)
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            울산동구현대(백)
+          </td>
+          <td>
+            울산롯데(백)
+          </td>
+          <td>
+            울산현대
+          </td>
+          <td>
+            ⋯더보기
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="layer7">
+      <table>
+        <tr>
+          <td>
+            광복롯데
+          </td>
+          <td>
+            동부산롯데몰
+          </td>
+          <td>
+            부산프리미엄 아울렛
+          </td>
+          <td>
+            부산현대(백)
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            서면NC
+          </td>
+          <td>
+            서면롯데(백)
+          </td>
+          <td>
+            센텀시티롯데점
+          </td>
+          <td>
+            센텀신세계2점
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+  </article>
+
+
+
+  <footer>
+
+
+    <section>
+      <div>
+        <h4>Customer center</h4>
+        <h3>080-934-3000</h3>
+        <p>코로나 19 영향으로 전화상담을 일시적으로 중단합니다.</p>
+      </div>
+
+      <div>
+        <h4>Infor</h4>
+        <a href="#">이용안내</a>
+        <a href="#">이용약관</a>
+        <a href="#">개인정보처리방침</a>
+        <a href="#">구매안전서비스</a>
+      </div>
+
+      <div>
+        <h4>shop</h4>
+        <a href="#">1:1문의</a>
+        <a href="#">FAQ</a>
+        <a href="#">쇼핑가이드</a>
+        <a href="#">이벤트</a>
+      </div>
+
+      <div>
+        <h4>About</h4>
+        <a href="#">회사소개</a>
+        <a href="#">매장안내</a>
+        <a href="#">단체주문</a>
+        <a href="#">공지사항</a>
+      </div>
+    </section>
+
+    <section>
+      <img src="https://img.icons8.com/ios-glyphs/30/ffffff/facebook-new.png" />
+      <img src="https://img.icons8.com/material-outlined/48/ffffff/instagram-new--v1.png" />
+      <img src="https://img.icons8.com/material-rounded/48/ffffff/youtube-play.png" />
+      <p>
+        <span>㈜지오다노</span> <span>서울특별시 서초구 강남대로65길 1(서초동) 효봉빌딩</span> <span> FAX 02-534-2994</span> <span>대표자 한준석</span> <span>개인정보보호책임자 김명희</span><br><span>support@giordano.co.kr</span><br>
+        <span>사업자등록번호 116-81-47798</span> <span>통신판매업신고 2004-서울서초-04585 에스크로서비스 가입 확인</span><br>
+      </p>
+      <small>COPYRIGHT(C) 2018 GIORDANO KOREA LTD. ALL RIGHTS RESERVED. designed & managed by WISA.</small>
+    </section>
+
+
+  </footer>
+
+
+</body>
+
+
+</html>

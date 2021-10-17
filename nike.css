@@ -1,0 +1,268 @@
+/* default */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0px solid silver;
+}
+
+img {
+  width: 100px;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1rem;
+  letter-spacing: 0.1px;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 4rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  margin-top: 0.5rem;
+}
+
+h4 {
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+}
+
+h5 {
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+}
+
+a:link {color: #000; text-decoration: none;}
+a:visited {color: #000;}
+a:hover {color: #000;}
+a:active {color: #666;}
+
+small {
+  color: #666;
+  font-weight: bold;
+}
+
+/* start */
+
+.nike-text {
+  width: 420px;
+  margin: 0 auto;
+}
+
+.nike-text> :first-child {
+  padding: 1rem 2rem;
+  display: inline-block;
+}
+
+.nike-text> :last-child {
+  display: inline-block;
+  float: right;
+  padding: 1rem;
+}
+
+.shoes {
+  clear: both;
+  width: 420px;
+  margin: 0 auto 2rem auto;
+}
+
+.shoes img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.size {
+  width: 420px;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.size> :nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding-bottom: 1rem;
+}
+
+.size> :nth-child(2) {
+  text-align: justify;
+}
+
+.size> :nth-child(2) button {
+  width: 60px;
+  height: 50px;
+  margin: 0.4rem 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.size> :nth-child(2) button:hover {
+  border: 1px solid #000;
+}
+
+.size> :nth-child(3) {
+  padding: 1rem 0 1.5rem 0;
+  cursor: pointer;
+}
+
+.size> :nth-child(4) {
+  display: flex;
+  justify-content: space-between;
+}
+
+.size> :nth-child(4) div {
+  width: 170px;
+  height: 60px;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 3.5rem;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.size> :nth-child(4)> :nth-child(1) {
+  background: #fff;
+}
+
+.size> :nth-child(4)> :nth-child(2) {
+  background: #000;
+  opacity: 1.0;
+}
+
+.size> :nth-child(4)> :nth-child(2):hover {
+  opacity: 0.7;
+}
+
+.size> :nth-child(4)> :nth-child(2) a:link {
+  color: #fff;
+}
+
+.pickup {
+  width: 420px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+.pickup> :first-child {
+  padding: 1rem 0;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 2%;
+  cursor: pointer;
+}
+
+.pickup> :last-child {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  padding: 1rem 0;
+  margin: 0 auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.pickup> :last-child button {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.comfort {
+  width: 420px;
+  margin: 0 auto;
+  padding: 1rem 2rem 1.2rem 2rem;
+}
+
+.comfort> :first-child {
+  text-align: justify;
+}
+
+.comfort> :first-child p {
+  font-size: 0.8rem;
+}
+
+.comfort> :last-child {
+  padding: 1.5rem 0;
+}
+
+.comfort> :last-child div {
+  font-size: 0.8rem;
+}
+
+.comfort> :last-child button {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.feedback {
+  width: 420px;
+  margin: 0 auto;
+  border-top: 1px solid #ddd;
+}
+
+.feedback table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  cursor: pointer;
+}
+
+.feedback th, td {
+  padding: 1.3rem ;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.8rem;
+}
+
+.feedback th {
+  text-align: left;
+}
+
+.feedback td {
+  text-align: right;
+}
+
+.feedback span {
+  cursor: pointer;
+}
+
+.customer {
+  width: 420px;
+  padding: 2rem 0 5rem 0;
+  margin: 0 auto;
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.customer div {
+  padding: 0 2rem;
+  cursor: pointer;
+}

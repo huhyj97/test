@@ -1,0 +1,382 @@
+/* default */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0px solid silver;
+  outline: none;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1rem;
+  letter-spacing: 0.1px;
+}
+
+h1, h2, h3, h4 {
+  color: #fff;
+}
+
+h5 {
+  color: #444;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+
+h5 {
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+small {
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+  color: #999;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  width: 300px;
+  margin: 3rem 0;
+  padding: 0.8rem 0;
+  font-size: 1rem;
+  background: none;
+  color: #fff;
+  border: 2px solid #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  font-weight: bold;
+  background: #fff;
+  color: #000;
+}
+
+/* mobile start */
+main {
+  min-width: 360px;
+  display: block;
+  background: url('https://images.ctfassets.net/8cd2csgvqd3m/1JngcfQ2pOaNVDi04KeslG/25b2900e6b5804c931e177b4ecd431c4/TTA_focus.jpg?q=90&fm=webp&w=1440&h=810&fit=fill')no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 700px;
+}
+
+main> :first-child {
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+main header {
+  position: relative;
+  padding: 2rem 30px;
+}
+
+main header> :nth-child(2) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+}
+
+main header section {
+  display: flex;
+  justify-content: space-between;
+}
+
+main header section img {
+  width: 32px;
+  cursor: pointer;
+}
+
+main header section div>:nth-child(1), main header section div>:nth-child(2) {
+  display: none;
+}
+
+main nav {
+  display: none;
+}
+
+main> :first-child> :nth-child(3) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  width: 80%;
+  text-align: center;
+}
+
+main> :first-child> :nth-child(3) h1, .forte section div h1 {
+  font-size: 2.3rem;
+  margin-bottom: 2rem;
+}
+
+.forte div section {
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  width: 100%;
+  height: 700px;
+}
+
+.forte section {
+  height: 100%;
+}
+
+.forte> :nth-child(1) {
+  background: url('https://images.ctfassets.net/8cd2csgvqd3m/2KYpNX9BUwk5phzmafvL9P/72cb109dffb44cc7342acb4a1e178cb8/Contrast_Edge.jpg?q=90&fm=webp&w=1440&h=810&fit=fill')no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+.forte section div {
+  padding: 0 20px;
+  text-align: center;
+}
+
+.forte> :first-child, .forte> :last-child {
+  position: relative;
+}
+
+.forte> :first-child div, .forte> :last-child div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.forte> :nth-child(2) {
+  background: url('https://images.ctfassets.net/8cd2csgvqd3m/5tFGGWej1HJELz9i28Kjab/043a312214de9d415c31c479c161383e/Natale_1.jpg?q=90&fm=webp&w=1656&h=931&fit=fill')no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+.pd {
+  margin: 30px 30px;
+}
+
+.pd section {
+  position: relative;
+  background: #f7f8f9;
+  width: 100%;
+  height: 450px;
+  margin-bottom: 2rem;
+}
+
+.pd section img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+}
+
+.pd section h3, .pd section h5 {
+  color: #444;
+  padding: 1rem;
+}
+
+.pd section h5 {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.pd section h5:hover {
+  transform: rotate(-5deg);
+}
+
+.join {
+  text-align: center;
+  padding: 5rem 30px;
+}
+
+.join img {
+  width: 100px;
+}
+
+.join h5 {
+  margin: 2rem 0;
+}
+
+.join p {
+  font-size: 1.1rem;
+}
+
+.join button {
+  background: none;
+  border: 2px solid #000;
+  color: #000;
+}
+
+.join button:hover {
+  background: #000;
+  color: #fff;
+}
+
+footer {
+  background: #f7f8f9;
+  padding: 50px 30px;
+  padding-bottom: 100px;
+}
+
+footer> :nth-child(1) {
+  width: 30px;
+}
+
+.ff> :nth-child(1), .ff> :nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ff> :nth-child(1)> :last-child {
+  margin-right: 2.6rem;
+}
+
+.ff> :nth-child(3) {
+  text-align: center;
+}
+
+.ff> :nth-child(3) section img {
+  width: 30px;
+  margin-right: 0.3rem;
+}
+
+.ff section {
+  margin: 1rem 0;
+}
+
+.ff section div {
+  margin-bottom: 3rem;
+}
+
+footer h5 {
+  margin-bottom: 1rem;
+}
+
+footer span {
+  border-bottom: 2px solid #444;
+}
+
+footer select {
+  background: none;
+}
+
+footer nav ul li {
+  padding: 0.3rem 0;
+  cursor: pointer;
+}
+
+footer p {
+  cursor: pointer;
+}
+
+footer> :nth-child(3) {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* labtop start */
+@media screen and (min-width: 1000px) {
+  main header section div {
+    display: flex;
+  }
+
+  main header section img {
+    margin: 0 0.5rem;
+  }
+
+  main header section div>:nth-child(1), main header section div>:nth-child(2) {
+    display: block;
+  }
+
+  main nav {
+    display: block;
+  }
+
+  main nav ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  main nav ul li {
+    font-size: 1rem;
+    line-height: 2rem;
+    padding: 0 1rem;
+    margin: 0 3rem;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+  main nav ul li:hover {
+    transform: translateY(-20%);
+    border-bottom: 1px solid #fff;
+  }
+
+  main> :nth-child(3) h1, .forte h1 {
+    font-size: 3rem;
+  }
+
+  .pd {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .pd section {
+    width: 30%;
+    height: 450px;
+    margin-bottom: 0;
+  }
+
+  .ff {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .ff> :nth-child(1), .ff> :nth-child(2) {
+    width: 33%;
+  }
+
+  .ff> :nth-child(3) {
+    text-align: left;
+    margin-right: 3rem;
+  }
+}

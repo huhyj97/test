@@ -1,0 +1,443 @@
+<!doctype html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+  <title>회원가입</title>
+  <link rel="stylesheet" href="css/join.css">
+  <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.5/ScrollTrigger.min.js"></script>
+
+  <!--폰트어썸-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+
+  <!--aos-->
+  <!-- 스르륵 -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+
+<body>
+  <header>
+
+    <div id="nav-container">
+      <div class="bg"></div>
+      <div class="button" tabindex="0">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </div>
+
+      <div id="nav-content" tabindex="0">
+        <div>
+          <img src="images/chatbot.gif">
+          <p>멤버십에 가입하시면<br>더 많은 혜택을 누릴 수 있습니다</p>
+          <button type="button" onclick="location.href='login.html';">로그인</button><br>
+          <button type="button" onclick="location.href='find.html';">찾기</button><br>
+          <button type="button" onclick="location.href='join.html';">회원가입</button>
+        </div>
+
+        <ul>
+          <li onclick="location.href='index.html';">홈<small>➜</small></li>
+          <li onclick="location.href='purchase.html';">제품<small>➜</small></li>
+          <li onclick="location.href='sub.html';">기획전<small>➜</small></li>
+          <li onclick="location.href='qna.html';">Q&A<small>➜</small></li>
+        </ul>
+      </div>
+    </div>
+
+    <img onclick="location.href='index.html';"src="images/logo-black.png">
+
+    <div class="pcheader">
+      <ul>
+        <li onclick="location.href='index.html';">홈</li>
+        <li onclick="location.href='purchase.html';">제품</li>
+        <li onclick="location.href='sub.html';">기획전</li>
+        <li onclick="location.href='qna.html';">Q&A</li>
+        <li onclick="location.href='login.html';">로그인</li>
+        <li onclick="location.href='find.html';">찾기</li>
+        <li onclick="location.href='join.html';">회원가입</li>
+      </ul>
+    </div>
+
+    <div class="header-ic">
+      <i class="fas fa-search"></i>
+      <i class="fas fa-shopping-cart"></i>
+    </div>
+  </header>
+
+
+  <main>
+    <article class="join">
+      <h2>삼성 멤버십 가입</h2>
+      <div class="tabs">
+        <input id="tab1" type="radio" name="tab-item" checked>
+        <label class="tab-item" for="tab1">가입</label>
+        <input id="tab2" type="radio" name="tab-item">
+        <label class="tab-item" for="tab2">약관동의</label>
+        <input id="tab3" type="radio" name="tab-item">
+        <label class="tab-item" for="tab3">정보입력</label>
+        <input id="tab4" type="radio" name="tab-item">
+        <label class="tab-item" for="tab4">가입완료</label>
+
+        <div class="tab-content" id="tab1-content">
+          <div>
+            <h3>회원가입을 환영합니다.</h3>
+            <img src="images/chatbot.gif">
+            <p>회원으로 가입하시면 다양한 혜택과<br>서비스를 이용하실 수 있습니다.</p>
+          </div>
+
+          <button>가입하기(14세 이상)</button>
+
+          <div>
+            <div>
+              <p><img src="images/naver.png"> Naver로 가입</p>
+            </div>
+
+            <div>
+              <p><img
+                  src="images/kakao.jpg">
+                Kakao로 가입</p>
+            </div>
+
+            <div>
+              <p><img src="images/facebook.png"> Facebook으로 가입</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="tab2-content">
+          <div><input type="checkbox" value="agree"> 전체동의</div>
+
+          <div>
+            <h4>필수 동의항목</h4>
+            <div>
+              <p class="accodion-header">
+                <label>
+                  <bold>[필수]</bold>&nbsp;회원 이용 약관
+                  <input type="checkbox">
+                </label>
+              </p>
+
+              <div class="accodion-content">
+                <textarea name="name">
+     삼성 서비스 약관
+
+     환영합니다.
+
+
+     삼성 서비스를 이용해 주셔서 고맙습니다.
+
+     삼성전자 주식회사(계열회사 포함, 이하 "삼성")는 여러분들이 삼성의 제품을 쉽고 편하게 이용할 수 있도록 다양한 기능, 앱, 서비스(이하 "서비스")를 제공합니다. 이 약관에는 삼성 서비스 이용에 필요한 중요한 내용이 담겨 있습니다.
+
+     약관 동의 및 수정
+
+     삼성 계정을 만들거나, 서비스를 다운로드하거나, 서비스를 사용하는 것은 본 약관에 동의한 것과 같으니 서비스를 이용하기 전에 약관을 자세히 읽어보세요. 본 약관에 동의하면, 삼성에서는 사용자를 다음과 같이 생각합니다.
+
+    1. 거주 국가에서 법률상 미성년자가 아니거나,
+
+    2. 부모 또는 법정대리인에 의해 적법한 권한을 받은 사람으로서, 거주 국가에 적용되는 준거법에 의해 서비스 이용이 금지되지 않은 사람. 미성년 이용자의 법정대리인은 (i) 미성년자의 서비스 이용을 감독해야 하고, (ii) 미성년자의 서비스 이용과 관련된 모든 위험과 책임을 부담하며, (iii) 미성년자에 의해 제출된 모든 정보의 정확성과 진실성을 보장해야 합니다.
+
+                </textarea>
+              </div>
+            </div>
+
+            <div>
+              <p class="accodion-header">
+                <label>
+                  <bold>[필수]</bold>&nbsp;개인정보 수집 및 이용 동의
+                  <input type="checkbox">
+                </label>
+              </p>
+
+              <div class="accodion-content">
+                <textarea name="name">
+     삼성 서비스 약관
+
+     환영합니다.
+
+
+     삼성 서비스를 이용해 주셔서 고맙습니다.
+
+     삼성전자 주식회사(계열회사 포함, 이하 "삼성")는 여러분들이 삼성의 제품을 쉽고 편하게 이용할 수 있도록 다양한 기능, 앱, 서비스(이하 "서비스")를 제공합니다. 이 약관에는 삼성 서비스 이용에 필요한 중요한 내용이 담겨 있습니다.
+
+     약관 동의 및 수정
+
+     삼성 계정을 만들거나, 서비스를 다운로드하거나, 서비스를 사용하는 것은 본 약관에 동의한 것과 같으니 서비스를 이용하기 전에 약관을 자세히 읽어보세요. 본 약관에 동의하면, 삼성에서는 사용자를 다음과 같이 생각합니다.
+
+    1. 거주 국가에서 법률상 미성년자가 아니거나,
+
+    2. 부모 또는 법정대리인에 의해 적법한 권한을 받은 사람으로서, 거주 국가에 적용되는 준거법에 의해 서비스 이용이 금지되지 않은 사람. 미성년 이용자의 법정대리인은 (i) 미성년자의 서비스 이용을 감독해야 하고, (ii) 미성년자의 서비스 이용과 관련된 모든 위험과 책임을 부담하며, (iii) 미성년자에 의해 제출된 모든 정보의 정확성과 진실성을 보장해야 합니다.
+                </textarea>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4>선택 동의항목</h4>
+            <div>
+              <p class="accodion-header">
+                <label>
+                  <strong>[선택]</strong>&nbsp;마케팅 수신 동의
+                  <input type="checkbox">
+                </label>
+              </p>
+
+              <div class="accodion-content">
+                <textarea name="name">
+     삼성 서비스 약관
+
+     환영합니다.
+
+
+     삼성 서비스를 이용해 주셔서 고맙습니다.
+
+     삼성전자 주식회사(계열회사 포함, 이하 "삼성")는 여러분들이 삼성의 제품을 쉽고 편하게 이용할 수 있도록 다양한 기능, 앱, 서비스(이하 "서비스")를 제공합니다. 이 약관에는 삼성 서비스 이용에 필요한 중요한 내용이 담겨 있습니다.
+
+     약관 동의 및 수정
+
+     삼성 계정을 만들거나, 서비스를 다운로드하거나, 서비스를 사용하는 것은 본 약관에 동의한 것과 같으니 서비스를 이용하기 전에 약관을 자세히 읽어보세요. 본 약관에 동의하면, 삼성에서는 사용자를 다음과 같이 생각합니다.
+
+    1. 거주 국가에서 법률상 미성년자가 아니거나,
+
+    2. 부모 또는 법정대리인에 의해 적법한 권한을 받은 사람으로서, 거주 국가에 적용되는 준거법에 의해 서비스 이용이 금지되지 않은 사람. 미성년 이용자의 법정대리인은 (i) 미성년자의 서비스 이용을 감독해야 하고, (ii) 미성년자의 서비스 이용과 관련된 모든 위험과 책임을 부담하며, (iii) 미성년자에 의해 제출된 모든 정보의 정확성과 진실성을 보장해야 합니다.
+
+                </textarea>
+              </div>
+            </div>
+          </div>
+
+          <p><small>※ 선택항목에 비동의하셔도 정상적인 이용이 가능합니다</small><br>거래정보·결제/교환/환불 등과 관련된 내용은 거래안전을 위하여 수신동의 여부와 관계없이 발송됩니다</p>
+          <div><button>동의하고 회원가입</button></div>
+        </div>
+
+        <div class="tab-content" id="tab3-content">
+          <div>
+            <label for="name">이름</label><br>
+            <input type="text" placeholder="이름" id="name">
+          </div>
+
+          <div>
+            <label for="password">비밀번호</label><br>
+            <input type="password" placeholder="비밀번호" id="pwd">
+          </div>
+
+          <div>
+            <label for="password">비밀번호 확인</label><br>
+            <input type="password" placeholder="비밀번호 확인" id="pwd">
+          </div>
+
+          <div id="date">
+            <label for="date">생년월일</label><br>
+            <span>
+              <input type="text" placeholder="년">
+              <select>
+                <option checked disabled>월</option>
+                <option>1월</option>
+                <option>2월</option>
+                <option>3월</option>
+                <option>4월</option>
+                <option>5월</option>
+                <option>6월</option>
+                <option>7월</option>
+                <option>8월</option>
+                <option>9월</option>
+                <option>10월</option>
+                <option>11월</option>
+                <option>12월</option>
+              </select>
+              <input type="text" placeholder="일">
+            </span>
+          </div>
+
+          <div>
+            <label for="phone">휴대전화</label><br>
+            <input type="tel" placeholder="-없이 입력" id="tel-number">
+          </div>
+
+          <div id="address">
+            <label for="address">주소</label><br>
+            <span><input type="text" placeholder="ex)문래동 강서타워, 선유로 82" id="address"><button>검색</button></input></span><br>
+            <input type="text" placeholder="나머지 주소 입력">
+          </div>
+
+          <div>
+            <button>다음단계 진행</button>
+          </div>
+        </div>
+
+        <div class="tab-content" id="tab4-content">
+          <img src="images/join-done.jpg">
+          <h3>허유진님, 반갑습니다.</h3>
+          <h5>새로워진 삼성멤버십혜택을<br>확인해보세요</h5>
+
+          <button>홈으로 가기</button><br>
+          <button>멤버십혜택안내</button>
+        </div>
+    </article>
+  </main>
+
+
+
+  <footer>
+
+    <div>
+      <div>
+        <h4>Customer<br>Center</h4>
+        <span>대표번호 : 02-2255-0114 </span><br><br>
+        <span>제품/서비스/멤버십: 1588-3366</span><br><br>
+        <span>구매문의 : 1588-6084</spn>
+      </div>
+
+      <div>
+        <h4>Infor</h4>
+        <a href="#">이용안내</a>
+        <a href="#">이용약관</a>
+        <a href="#">개인정보처리방침</a>
+        <a href="#">구매안전서비스</a>
+      </div>
+
+      <div>
+        <h4>Shop</h4>
+        <a href="#">삼성닷컴 FAQ</a>
+        <a href="#">이메일상담</a>
+        <a href="#">매장 찾기</a>
+        <a href="#">디지털프라자</a>
+      </div>
+
+      <div>
+        <h4>About</h4>
+        <a href="#">기업정보</a>
+        <a href="#">사업정보</a>
+        <a href="#">채용정보</a>
+        <a href="#">공지사항</a>
+      </div>
+    </div>
+
+    <div>
+      <img src="images/footer-1.png" />
+      <img src="images/footer-2.png" />
+      <img src="images/footer-3.png" />
+      <p>
+        <span>삼성전자(주)</span> <span>경기도 수원시 영통구 삼성로 129(매탄동)</span> <span>삼성전자 주식회사 대표이사 : 김기남 </span><br>
+        <span>사업자등록번호 : 124-81-00998</span> <span>통신판매업 신고 : 2000-경기수원-0515</span><br>
+      </p>
+      <small>Copyright © 1995-2021 Samsung. All Rights Reserved.</small>
+    </div>
+
+  </footer>
+
+</body>
+
+<script>
+  $(document).ready(function() {
+
+    var current_fs, next_fs, previous_fs; //fieldsets
+    var opacity;
+    var current = 1;
+    var steps = $("fieldset").length;
+
+    setProgressBar(current);
+
+    $(".next").click(function() {
+
+      current_fs = $(this).parent();
+      next_fs = $(this).parent().next();
+
+      //Add Class Active
+      $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+      //show the next fieldset
+      next_fs.show();
+      //hide the current fieldset with style
+      current_fs.animate({
+        opacity: 0
+      }, {
+        step: function(now) {
+          // for making fielset appear animation
+          opacity = 1 - now;
+
+          current_fs.css({
+            'display': 'none',
+            'position': 'relative'
+          });
+          next_fs.css({
+            'opacity': opacity
+          });
+        },
+        duration: 500
+      });
+      setProgressBar(++current);
+    });
+
+    $(".previous").click(function() {
+
+      current_fs = $(this).parent();
+      previous_fs = $(this).parent().prev();
+
+      //Remove class active
+      $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+      //show the previous fieldset
+      previous_fs.show();
+
+      //hide the current fieldset with style
+      current_fs.animate({
+        opacity: 0
+      }, {
+        step: function(now) {
+          // for making fielset appear animation
+          opacity = 1 - now;
+
+          current_fs.css({
+            'display': 'none',
+            'position': 'relative'
+          });
+          previous_fs.css({
+            'opacity': opacity
+          });
+        },
+        duration: 500
+      });
+      setProgressBar(--current);
+    });
+
+    function setProgressBar(curStep) {
+      var percent = parseFloat(100 / steps) * curStep;
+      percent = percent.toFixed();
+      $(".progress-bar")
+        .css("width", percent + "%")
+    }
+
+    $(".submit").click(function() {
+      return false;
+    })
+
+    //아코디언
+    $(document).ready(function() {
+
+      $('.accodion-header').toggleClass('inactive-header');
+
+      $('.accodion-header').click(function() {
+        if ($(this).is('.inactive-header')) {
+          $('.active-header').toggleClass('active-header').toggleClass('inactive-header').next().slideToggle().toggleClass('open-content');
+          $(this).toggleClass('active-header').toggleClass('inactive-header');
+          $(this).next().slideToggle().toggleClass('open-content');
+        } else {
+          $(this).toggleClass('active-header').toggleClass('inactive-header');
+          $(this).next().slideToggle().toggleClass('open-content');
+        }
+      });
+
+      return false;
+
+    });
+  });
+</script>
+
+</html>

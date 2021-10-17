@@ -1,0 +1,565 @@
+/* default */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0px solid silver;
+  outline: none;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 0.9rem;
+  color: #222;
+  line-height: 1rem;
+  letter-spacing: 0.1px;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+
+h5 {
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+small {
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+  color: #999;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* mobile start */
+header {
+  min-width: 360px;
+  padding: 20px 30px;
+  background: #f7f8f9;
+  display: flex;
+}
+
+header div img {
+  width: 30px;
+  cursor: pointer;
+}
+
+header> :nth-child(2) {
+  width: 120px;
+  height: 45px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+header nav {
+  display: none;
+}
+
+header form {
+  display: none;
+}
+
+main {
+  position: relative;
+  height: 680px;
+  background: #f7f8f9;
+  padding: 3rem 0;
+}
+
+main> :nth-child(1) {
+  text-align: center;
+}
+
+main> :nth-child(1) img {
+  width: 400px;
+}
+
+main> :nth-child(1) button {
+  background: #444;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border: 2px solid #444;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+main> :nth-child(1) button:hover {
+  background: none;
+  color: #444;
+}
+
+main> :nth-child(2) {
+  display: none;
+}
+
+main> :nth-child(3) {
+  text-align: center;
+}
+
+main> :nth-child(3) img {
+  width: 15px;
+  margin: 1rem 1rem;
+  cursor: pointer;
+}
+
+.pd {
+  position: relative;
+  min-width: 360px;
+  margin: 4rem auto;
+}
+
+.pd section> :first-child {
+  display: flex;
+  justify-content: space-around;
+}
+
+.pd section> :first-child div {
+  text-align: center;
+  cursor: pointer;
+}
+
+.pd section> :first-child div img {
+  width: 80px;
+  margin-bottom: 10px;
+  filter: grayscale(1.0);
+  transition: 0.2s;
+}
+
+.pd section> :first-child div img:hover {
+  transform: scale(1.1);
+}
+
+.pd section> :last-child {
+  display: none;
+}
+
+.pd> :last-child {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.pd> :last-child img {
+  width: 15px;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+.giving {
+  position: relative;
+  background: url('https:\2f\2fresource.logitech.com\2fw_1800,h_1800,c_limit,q_auto,f_auto,dpr_1.0\2f d_transparent.gif\2f content\2f dam\2flogitech\2f en\2fhomepage\2fglobal-giving-desktop.png?v=1') no-repeat;
+  background-position: left center;
+  background-size: cover;
+  height: 800px;
+  text-align: center;
+}
+
+.giving> :nth-child(1) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+}
+
+.giving> :nth-child(1) img {
+  width: 100px;
+  height: 100px;
+}
+
+.giving> :nth-child(1) h2 {
+  font-size: 2rem;
+}
+
+.giving> :nth-child(1) h2 {
+  margin: 2rem 0;
+}
+
+.giving> :nth-child(1) p {
+  font-size: 1rem;
+  line-height: 1.3rem;
+  font-weight: bold;
+}
+
+.giving> :nth-child(1) div {
+  margin: 2rem 0;
+}
+
+.giving> :nth-child(1) div button {
+  padding: 1rem 1.5rem;
+  margin: .3rem;
+  border: 2px solid #444;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.giving> :nth-child(1) div> :nth-child(1) {
+  background: #444;
+  color: #fff;
+}
+
+.giving> :nth-child(1) div> :nth-child(1):hover {
+  background: none;
+  color: #444;
+}
+
+.giving> :nth-child(1) div> :nth-child(2) {
+  background: none;
+}
+
+.giving> :nth-child(1) div> :nth-child(2):hover {
+  background: #fff;
+}
+
+.giving> :nth-child(2) {
+  display: none;
+}
+
+.giving> :nth-child(3) {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.giving> :nth-child(3) img {
+  width: 15px;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+.what {
+  min-width: 360px;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.what div {
+  position: relative;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.what h4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+footer {
+  background: #252a2c;
+  color: #fff;
+  padding: 100px 50px;
+}
+
+footer> :nth-child(1) {
+  border-bottom: 1px solid #fff;
+  padding-bottom: 2rem;
+}
+
+footer> :nth-child(1) div {
+  display: flex;
+}
+
+footer ul {
+  margin-right: 5rem;
+  width: 200px;
+  text-align: left;
+}
+
+footer ul li {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+footer ul li:hover {
+  text-decoration: underline;
+}
+
+footer> :nth-child(2) {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+footer> :nth-child(2)> :nth-child(1) img {
+  width: 25px;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+footer> :nth-child(2)> :nth-child(2)> :nth-child(1) input {
+  width: 300px;
+  padding: 0.5rem 0.8rem;
+  height: 50px;
+  margin-top: 2rem;
+}
+
+footer> :nth-child(2)> :nth-child(2)> :nth-child(1) button {
+  width: 50px;
+  height: 50px;
+  background: #afcc00;
+  cursor: pointer;
+}
+
+footer> :nth-child(2)> :nth-child(2)> :nth-child(2) input {
+  margin-top: 1rem;
+}
+
+footer> :nth-child(2)> :nth-child(2)> :nth-child(2) span {
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+footer> :nth-child(3) {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+
+/* labtop start */
+@media screen and (min-width: 1000px) {
+  header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+  }
+
+  header div {
+    display: none;
+  }
+
+  header> :nth-child(2) {
+    width: 120px;
+    height: 45px;
+    margin: 0;
+  }
+
+  header nav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+  }
+
+  header nav ul {
+    display: flex;
+  }
+
+  header nav ul li {
+    margin: 0 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  header form {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  header form input {
+    background: none;
+    border-bottom: 2px solid #000;
+    font-size: 0.9rem;
+  }
+
+  main {
+    position: relative;
+  }
+
+  main> :nth-child(1) {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  main> :nth-child(1)> :nth-child(1) {
+    text-align: left;
+    margin: 8rem 0;
+    margin-left: 3rem;
+  }
+
+  main> :nth-child(1) img {
+    width: 600px;
+  }
+
+  main> :nth-child(2) {
+    display: block;
+    cursor: pointer;
+  }
+
+  main> :nth-child(2)> :nth-child(1) {
+    position: absolute;
+    top: 260px;
+    left: 30px;
+    transition: 0.3s;
+  }
+
+  main> :nth-child(2)> :nth-child(1):hover, .giving> :nth-child(2)> :nth-child(1):hover {
+    transform: translateX(-20%);
+  }
+
+  main> :nth-child(2)> :nth-child(2) {
+    position: absolute;
+    top: 260px;
+    right: 30px;
+    transition: 0.3s;
+  }
+
+  main> :nth-child(2)> :nth-child(2):hover, .giving> :nth-child(2)> :nth-child(2):hover {
+    transform: translateX(20%);
+  }
+
+  main> :nth-child(3) img {
+    margin: 2rem 1rem;
+  }
+
+  .pd {
+    width: 1000px;
+  }
+
+  .pd section> :first-child div img {
+    width: 120px;
+  }
+
+  .pd section> :last-child {
+    display: block;
+    cursor: pointer;
+  }
+
+  .pd section> :last-child img {
+    width: 40px;
+  }
+
+  .pd section> :last-child> :nth-child(1) {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+  }
+
+  .pd section> :last-child> :nth-child(2) {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+  }
+
+  .giving> :nth-child(1) {
+    width: 50%;
+  }
+
+  .giving> :nth-child(1) img {
+    width: 240px;
+    height: 240px;
+  }
+
+  .giving> :nth-child(1) h2 {
+    font-size: 2.5rem;
+  }
+
+  .giving> :nth-child(2) {
+    display: block;
+  }
+
+  .giving> :nth-child(2)> :nth-child(1) {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .giving> :nth-child(2)> :nth-child(2) {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .what {
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .what div {
+    width: 230px;
+    margin: 0;
+  }
+
+  .what div img {
+    width: 100%;
+  }
+
+  footer {
+    padding: 100px 80px;
+  }
+
+  footer> :nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer> :nth-child(1) div {
+    display: flex;
+  }
+
+  footer> :nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer> :nth-child(2)> :nth-child(2)> :nth-child(1) input {
+    width: 400px;
+    margin: 0;
+  }
+
+  footer> :nth-child(2) {
+    text-align: left;
+    padding: 3rem 0;
+  }
+
+  footer> :nth-child(3) p {
+    margin: 1rem 0;
+  }
+}

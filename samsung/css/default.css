@@ -1,0 +1,325 @@
+/* default */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff2') format('woff2'), url('https://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff') format('woff');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0px solid silver;
+  outline: none;
+}
+
+body {
+  font-family: 'LotteMartDream';
+  font-size: 1rem;
+  letter-spacing: 0.1px;
+  color: #333;
+}
+
+header,
+footer {
+  font-family: 'Noto Sans KR', serif;
+}
+
+img {
+  width: 100px;
+}
+
+h1 {
+  font-size: 3.8rem;
+  line-height: 4rem;
+  padding-bottom: 50px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+}
+
+h5 {
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+}
+
+h6 {
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+p {
+  padding: 10px 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: #333;
+}
+
+a:visited {
+  color: #333;
+}
+
+small {
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+}
+
+li {
+  list-style: none;
+}
+
+[data-trigger] {
+  opacity: 0;
+  position: relative;
+  top: 50px;
+  transition: 1.5s;
+}
+
+[data-trigger].visible {
+  opacity: 1;
+  top: 0;
+}
+
+/* start */
+
+/* header */
+
+header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px 5%;
+  transition: .2s;
+}
+
+header img {
+  width: 100px;
+  height: 16px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+/* 햄버거 메뉴 */
+#nav-container {
+  pointer-events: none;
+  z-index: 100;
+}
+
+#nav-container .bg {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: .3s;
+  background: #000;
+}
+
+#nav-container:focus-within .bg {
+  visibility: visible;
+  opacity: .6;
+}
+
+#nav-container * {
+  visibility: visible;
+}
+
+.button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+  -webkit-appearance: none;
+  border: 0;
+  background: transparent;
+  border-radius: 0;
+  height: 20px;
+  width: 25px;
+  margin-top: 5px;
+  pointer-events: auto;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+.icon-bar {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #222;
+  transition: .3s;
+}
+
+.icon-bar+.icon-bar {
+  margin-top: 5px;
+}
+
+#nav-container:focus-within .button {
+  pointer-events: none;
+}
+
+#nav-container:focus-within .icon-bar:nth-of-type(1) {
+  transform: translate3d(0, 8px, 0) rotate(45deg);
+}
+
+#nav-container:focus-within .icon-bar:nth-of-type(2) {
+  opacity: 0;
+}
+
+#nav-container:focus-within .icon-bar:nth-of-type(3) {
+  transform: translate3d(0, -8px, 0) rotate(-45deg);
+}
+
+#nav-content {
+  width: 90%;
+  max-width: 380px;
+  position: absolute;
+  top: 55px;
+  left: 0;
+  height: 100vh;
+  background: #fff;
+  box-shadow: rgba(100, 100, 100, 0.2) 6px 2px 10px;
+  pointer-events: auto;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  transform: translateX(-100%);
+  transition: transform .3s;
+  will-change: transform;
+  contain: paint;
+}
+
+#nav-content div {
+  text-align: center;
+  padding: 10px 1.8rem;
+  border-bottom: 3px solid #ddd;
+  color: #333;
+}
+
+#nav-content div p {
+  padding: 10px 0;
+}
+
+#nav-content div img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+#nav-content div button {
+  background: #eee;
+  width: 220px;
+  padding: 10px 0;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 50px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+#nav-content div button:hover,
+#nav-content div button:active {
+  background: #ddd;
+}
+
+#nav-content ul {
+  display: flex;
+  flex-direction: column;
+}
+
+#nav-content li {
+  padding: 1rem 30px;
+  border-bottom: 1px solid #eee;
+  list-style: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #333;
+  transition: .3s;
+}
+
+#nav-content li:hover,
+#nav-content li:active {
+  background: rgba(85, 153, 255, 0.4);
+}
+
+#nav-content li small {
+  float: right;
+  padding-top: 5px;
+}
+
+#nav-container:focus-within #nav-content {
+  transform: none;
+}
+
+.pcheader {
+  display: none;
+}
+
+.header-ic {
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #333;
+}
+
+
+
+
+@media screen and (min-width: 1200px) {
+
+  /* labtop-header */
+  header {
+    padding: 20px 5%;
+  }
+
+  #nav-container {
+    display: none;
+  }
+
+  .pcheader {
+    display: block;
+  }
+
+  .pcheader ul {
+    display: flex;
+  }
+
+  .pcheader ul li {
+    display: inline-block;
+    padding: 0 1rem;
+    cursor: pointer;
+  }
+
+  .pcheader ul li::after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px #333;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+  }
+
+  .pcheader ul li:hover:after {
+    transform: scaleX(1.2);
+  }
+}

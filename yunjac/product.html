@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+  <title>yunjac</title>
+  <link rel="stylesheet" href="css/product.css">
+  <link rel="stylesheet" href="css/default.css">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.5/ScrollTrigger.min.js"></script>
+
+  <!--폰트어썸-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+
+  <!--메인 슬라이드-->
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+
+  <!--NEW 효과-->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <!--베스트 슬라이드-->
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css'>
+  <link rel='stylesheet' href='https://mreq.github.io/slick-lightbox/dist/slick-lightbox.css'>
+
+  <!-- 스르륵 -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <article id="header">
+      <section>
+        <nav>
+          <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+              <li onclick="location.href='sub.html';">BRAND</li>
+              <li onclick="location.href='product.html';">PRODUCT</li>
+              <li onclick="location.href='qna.html';">Q&A</li>
+              <div class="solid">—</div>
+              <a href="login.html"><i class="fas fa-user-circle"></i> LOGIN</a>
+              <a href="join.html"><i class="fas fa-user-plus"></i> JOIN</a>
+              <a href="order.html"><i class="fas fa-shopping-cart"></i> ORDER</a>
+            </ul>
+          </div>
+        </nav>
+
+        <div onclick="window.location.href='index.html';">
+          <h2>YUNJAC</h2>
+        </div>
+
+        <div class="cl-effect-1" id="cl-effect-1">
+          <ul>
+            <li onclick="location.href='sub.html';">brand</li>
+            <li onclick="location.href='product.html';">product</li>
+            <li onclick="location.href='qna.html';">q&a</li>
+            <li onclick="location.href='login.html';">login</li>
+            <li onclick="location.href='join.html';">join</li>
+            <li onclick="location.href='order.html';">order</li>
+          </ul>
+        </div>
+
+        <div class="header-ic">
+          <i class="fas fa-search"></i>
+        </div>
+      </section>
+    </article>
+  </header>
+
+
+  <main>
+    <article>
+      <section>
+        <h1>Product</h1>
+      </section>
+    </article>
+  </main>
+
+
+  <article class="product">
+    <section>
+      <div class="product-img">
+        <img src="https://www.yunjac.com/public/2020/09/28/10/12/34/78a5bb8d-b333-4cca-b962-10c87ef4ed92.png">
+      </div>
+
+      <div class="product-info">
+        <div>
+          <h2>자목숙 안티에이징 토너</h2>
+          <p>홀 플랜트 이펙트(Whole Plant Effect, 전초)의
+            <br>가득한 생장 요소와 풍부한 영양으로
+            <br>강인하고 견고한 피부를 만드는
+            <br>'필수' 앰플 세럼.
+          </p>
+
+          <h4>60,000원</h4>
+        </div>
+
+
+        <div>
+          <div>
+            <h5>사용감</h5>
+            <p>촉촉한, 밀키한, 매끄러운</p>
+          </div>
+
+          <div>
+            <h5>기능</h5>
+            <p>주름개선, 탄력개선, 안티에이징</p>
+          </div>
+
+          <div>
+            <h5>주요 성분</h5>
+            <p>자목숙, 작약, 쑥</p>
+          </div>
+
+          <div>
+            <p>사이즈</p>
+            <input type="radio" name="" value=""> 150ml</input>
+          </div>
+
+          <div>
+            <button type="submit" name="button">장바구니</button>
+            <button type="submit" name="button">바로구매</button>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+  </article>
+
+
+  <article class="two">
+    <h3>식물의 강인한 힘으로<br>보다 탄력 있는 피부</h3>
+    <p>'모든 식물의 아버지(Alfalfa)’라고 불리는 자목숙은<br>
+풍부한 고유의 성분으로 탁월한 효과를 지녔다고 알려져<br>
+예로부터 널리 사용 되었습니다.<br>
+살아 있는 조직인 피부에 새로운 활력과 영양을 공급하여<br>
+보다 생기 있는 피부를 선사합니다.</p>
+  </article>
+
+
+
+  <article class="best">
+    <div>
+      <h2>함께하면 좋은 제품</h2>
+      <div class="last-slider">
+        <div class="single">
+          <img data-lazy="https://www.yunjac.com/public/batch/prods/111200013.png" alt="Imagem Placeholder">
+          <h5>자목숙 크림</h5>
+          <p>KRW 130,000 </p>
+        </div>
+        <div class="single">
+          <img data-lazy="https://www.yunjac.com/public/2020/09/28/10/24/49/5e40b0b3-e798-4baa-88ed-dda1d15efba2.png" alt="Imagem Placeholder">
+          <h5>자목숙 에센스</h5>
+          <p>KRW 130,000 </p>
+        </div>
+        <div class="single">
+          <img data-lazy="https://www.yunjac.com/public/2018/10/22/23/40/7/f1ec4395-7bb3-4e2d-9cc1-068132c77b8e.png" alt="Imagem Placeholder">
+          <h5>자목숙 퍼밍 마스크</h5>
+          <p>KRW 85,000 </p>
+        </div>
+        <div class="single">
+          <img data-lazy="https://www.yunjac.com/public/batch/prods/111200006.png" alt="Imagem Placeholder">
+          <h5>전초 컨센트레이트</h5>
+          <p>KRW 115,000 </p>
+        </div>
+        <div class="single">
+          <img data-lazy="https://www.yunjac.com/public/batch/prods/111200021.png" alt="Imagem Placeholder">
+          <h5>전초 컨센트레이트</h5>
+          <p>KRW 115,000 </p>
+        </div>
+        <div class="single">
+          <img data-lazy="https://www.yunjac.com/public/batch/prods/111200005.png" alt="Imagem Placeholder">
+          <h5>전초 컨센트레이트</h5>
+          <p>KRW 115,000 </p>
+        </div>
+        <div class="single">
+          <img data-lazy="https://www.yunjac.com/public/2019/09/26/11/1/1/e2e5e56d-1b4b-48c8-8873-e7e87aeb657a.png" alt="Imagem Placeholder">
+          <h5>전초 컨센트레이트</h5>
+          <p>KRW 115,000 </p>
+        </div>
+        <div class="single">
+          <img data-lazy="https://www.yunjac.com/public/2019/04/1/18/26/10/a7b83f3d-26e3-4f84-a7c2-80d94fe633be.png" alt="Imagem Placeholder">
+          <h5>전초 컨센트레이트</h5>
+          <p>KRW 115,000 </p>
+        </div>
+      </div>
+    </div>
+    <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'></script>
+    <script src='https://mreq.github.io/slick-lightbox/dist/slick-lightbox.js'></script>
+    <script id="rendered-js">
+      $(document).ready(function() {
+        $('.last-slider').slick({
+          infinite: true,
+          slidesToShow: 3,
+          lazyLoad: 'ondemand',
+          autoplay: true,
+          autoplaySpeed: 1500,
+          arrows: true,
+          centerMode: true,
+          centerPadding: '40px',
+          responsive: [
+
+            {
+              breakpoint: 800,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                infinite: true,
+                centerPadding: '10px'
+              }
+            },
+
+
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                centerPadding: '0px'
+              }
+            }
+          ]
+        });
+
+
+        $('.last-slider').slickLightbox({
+          itemSelector: 'a',
+          navigateByKeyboard: true
+        });
+
+      });
+      //# sourceURL=pen.js
+    </script>
+  </article>
+
+
+  <footer>
+    <h1>Contact<br>Yunjac.</h1>
+    <input type="search" placeholder="지역검색"></input>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.7520550164145!2d126.97880021480296!3d37.56090503220922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2f1587c7819%3A0xd74d3707fbcde464!2z7Iug7IS46rOE67Cx7ZmU7KCQIOuzuOygkA!5e0!3m2!1sko!2skr!4v1628578228833!5m2!1sko!2skr"
+      width="auto" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <div>
+      <li>이용안내</li>
+      <li>이용약관</li>
+      <li>구매안전서비스</li>
+    </div>
+
+    <ul>
+      <span>(주)신세계인터내셔날</span><br><br>
+      <span>대표이사: 장재영, 이길한, 손문국</span><br><br>
+      <span>주소 : 서울특별시 강남구 도산대로 449 (청담동)</span><br><br>
+      <span>대표전화 : 1644-4490</span><br><br>
+      <span>㈜신세계인터내셔날은 연작을 제외한 개별 판매자가 입점하여 등록한 상품에 대해서는 통신판매중개자로서 통신판매의 당사자가 아닙니다. 따라서 ㈜신세계인터내셔날을 제외한 개별 판매자가 입점하여 등록한 상품에 대한 상품정보 및 광고, 상품주문, 배송, 환불에 관한 책임은 각 입점 판매자가 부담하고 ㈜신세계인터내셔날은 책임을 지지 않습니다. 본 사이트의 컨텐츠는 저작권법의 보호를 받는 바 무단 전재, 복사, 배포 등을
+        금합니다.</span><br><br>
+      <span>© 2018 SHINSEGAE INTERNATIONAL. ALL RIGHTS RESERVED</span><br><br>
+    </ul>
+  </footer>
+
+
+
+
+
+
+  <script>
+    /*pc헤더 픽스*/
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("header").style.top = "0";
+      } else {
+        document.getElementById("header").style.top = "-80px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+
+
+    //메인 슬라이드//
+
+    $(document).ready(function() {
+      var i = $(".mainSlide_btn_tab_list .on").index();
+      var len = $(".mainSlide_btn_tab_list li").length;
+
+      $(".mainSlide_panel li").eq(0).children(".title_headline").addClass("on");
+
+      $(".mainSlide_btn_perv").click(function() {
+        if (i == 0) {
+          i = len - 1;
+        } else {
+          i = i - 1;
+        }
+        clearInterval(auto);
+        Slide();
+      });
+      $(".mainSlide_btn_next").click(function() {
+        if (i == len - 1) {
+          i = 0;
+        } else {
+          i = i + 1;
+        }
+        clearInterval(auto);
+        Slide();
+
+      });
+      var play_btn = true;
+      $(".mainSlide_btn_tab_list li").click(function() {
+        i = $(this).index();
+        Slide();
+        if (play_btn) {
+          clearInterval(auto);
+          auto = setInterval(function() {
+
+            if (i == len - 1) {
+              i = 0;
+            } else {
+              i = i + 1;
+            }
+            Slide();
+          }, 6500);
+        };
+      });
+
+      $(".stop").click(function() {
+        $(".stop").css("display", "none");
+        $(".play").css("display", "block");
+        play_btn = false;
+        clearInterval(auto);
+
+      });
+      $(".play").click(function() {
+        $(".play").css("display", "none");
+        $(".stop").css("display", "block");
+        play_btn = true;
+        clearInterval(auto);
+        auto = setInterval(function() {
+
+          if (i == len - 1) {
+            i = 0;
+          } else {
+            i = i + 1;
+          }
+          Slide();
+        }, 6000);
+      });
+      $(".mainSlide_btn_perv").mouseenter(function() {
+        clearInterval(auto);
+      });
+      $(".mainSlide_btn_next").mouseenter(function() {
+        clearInterval(auto);
+      });
+
+      $(".mainSlide_btn_tab_list li").mouseenter(function() {
+        //clearInterval(auto);
+      });
+
+      function Slide() {
+        $(".mainSlide_btn_tab_list li").removeClass("on");
+        $(".mainSlide_btn_tab_list li").eq(i).addClass("on");
+
+        $(".mainSlide_panel li").stop().fadeOut(800);
+        $(".mainSlide_panel li").eq(i).stop().fadeIn(800);
+
+        $(".title_headline").removeClass("on");
+
+        $(".mainSlide_panel li").eq(i).children(".title_headline").addClass("on");
+      }
+
+      var auto = setInterval(function() {
+        if (i == len - 1) {
+          i = 0;
+        } else {
+          i = i + 1;
+        }
+        Slide();
+      }, 6000);
+
+    });
+
+    const trigger = new ScrollTrigger.default({
+      trigger: {
+        once: true,
+        offset: {
+          element: {
+            x: 0,
+            y: 0.5
+          },
+        }
+      }
+    });
+    trigger.add('[data-trigger]')
+
+
+    AOS.init({
+      easing: 'ease-out-back',
+      duration: 1000
+    });
+  </script>
+
+
+</body>
+
+</html>

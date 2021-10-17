@@ -1,0 +1,155 @@
+/* hd */
+
+.hd {
+  background: url('https://www.weharang.com/assets/img/sub/img_sub0503_02.png') no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 450px;
+  text-align: center;
+  color: #fff;
+}
+
+.hd h1 {
+  padding: 80px 0;
+  padding-bottom: 50px;
+}
+
+.hd div {
+  position: relative;
+  margin: 20px 5%;
+}
+
+.hd div input {
+  width: 100%;
+  padding: 1.5rem 1rem;
+  border: 5px solid #fff;
+  border-radius: 10px;
+  background: none;
+  color: #eee;
+  font-size: 1rem;
+}
+
+.hd div input::placeholder {
+  color: #eee;
+}
+
+.hd div button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  cursor: pointer;
+}
+
+.hd div img {
+  width: 40px;
+  background: #fff;
+  border-radius: 50%;
+  padding: 0.3rem;
+}
+
+/* category */
+
+.category table {
+  width: 100%;
+  border-top: 8px solid #eee;
+  border-bottom: 8px solid #eee;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.category table td {
+  width: 33%;
+  font-size: 1rem;
+  color: #333333;
+  padding: 30px 0;
+  border: 1.5px solid #eee;
+  cursor: pointer;
+}
+
+.category table td:hover {
+  color: #5599ff;
+  font-weight: bold;
+}
+
+/* faq-title */
+.faq-title {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 50px 5%;
+}
+
+.faq-title span {
+  color: #5599ff;
+}
+
+.faq_que {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  padding: 27px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-bottom: 1px solid #dddddd;
+}
+
+.faq_que::before {
+  display: inline-block;
+  content: 'Q.';
+  font-size: 14px;
+  color: #333;
+  margin-right: 5px;
+}
+
+.faq_que.on>span {
+  font-weight: bold;
+  color: #333;
+}
+
+.faq_anw {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: none;
+  overflow: hidden;
+  font-size: 15px;
+  background-color: #333;
+  padding: 27px 20px;
+  color: #ddd;
+  line-height: 20px;
+}
+
+.faq_anw::before {
+  display: inline-block;
+  content: 'A.';
+  font-size: 15px;
+  color: #ddd;
+  margin-left: 5px;
+}
+
+/* solution */
+.solution {
+  background: #ddd;
+  padding: 120px 0;
+  margin-top: 50px;
+  text-align: center;
+}
+
+/*~~~labtop start~~~*/
+@media screen and (min-width: 1200px) {
+  .hd div {
+    width: 1200px;
+    margin: 20px auto;
+  }
+
+  .category {
+    background: #ddd;
+    padding: 50px 0;
+  }
+
+  .category table {
+    width: 1200px;
+    background: #fff;
+    margin: 0 auto;
+  }
+}

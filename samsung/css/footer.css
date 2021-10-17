@@ -1,0 +1,75 @@
+/* footer */
+footer {
+  min-width: 420px;
+  background: #2e3c50;
+  padding: 80px 5%;
+  padding-bottom: 100px;
+  color: #eee;
+}
+
+footer> :first-child div {
+  margin-bottom: 30px;
+}
+
+footer> :first-child div h4 {
+  margin-bottom: 30px;
+  color: #e8dac7;
+}
+
+footer> :first-child div a {
+  color: #999;
+  display: block;
+  margin-top: 20px;
+}
+
+footer> :first-child div a:hover {
+  color: #ddd;
+}
+
+footer> :first-child div span {
+  color: #999;
+}
+
+footer> :last-child {
+  padding-top: 60px;
+  padding-right: 18%;
+}
+
+footer> :last-child img {
+  width: 30px;
+  cursor: pointer;
+}
+
+footer> :last-child span {
+  line-height: 2rem;
+  display: block;
+}
+
+@media screen and (min-width: 1200px) {
+/* labtop-footer */
+footer {
+  padding: 120px 0px;
+  padding-bottom: 150px;
+}
+
+footer> :first-child,
+footer> :last-child {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+footer> :first-child {
+  display: flex;
+}
+
+footer> :first-child div {
+  width: 220px;
+  margin-right: 50px;
+}
+
+footer> :last-child span {
+  line-height: 2rem;
+  display: inline;
+  margin-right: 20px;
+}
+}

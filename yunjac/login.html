@@ -1,0 +1,199 @@
+<!doctype html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+  <title>로그인</title>
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/default.css">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.5/ScrollTrigger.min.js"></script>
+
+  <!--폰트어썸-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+
+  <!--aos-->
+  <!-- 스르륵 -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+
+<body>
+  <header>
+    <article id="header">
+      <section>
+        <nav>
+          <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+              <li onclick="location.href='sub.html';">BRAND</li>
+              <li onclick="location.href='product.html';">PRODUCT</li>
+              <li onclick="location.href='qna.html';">Q&A</li>
+              <div class="solid">—</div>
+              <a href="login.html"><i class="fas fa-user-circle"></i> LOGIN</a>
+              <a href="join.html"><i class="fas fa-user-plus"></i> JOIN</a>
+              <a href="order.html"><i class="fas fa-shopping-cart"></i> ORDER</a>
+            </ul>
+          </div>
+        </nav>
+
+        <div onclick="window.location.href='index.html';">
+          <h2>YUNJAC</h2>
+        </div>
+
+        <div class="cl-effect-1" id="cl-effect-1">
+          <ul>
+            <li onclick="location.href='sub.html';">brand</li>
+            <li onclick="location.href='product.html';">product</li>
+            <li onclick="location.href='qna.html';">q&a</li>
+            <li onclick="location.href='login.html';">login</li>
+            <li onclick="location.href='join.html';">join</li>
+            <li onclick="location.href='order.html';">order</li>
+          </ul>
+        </div>
+
+        <div class="header-ic">
+          <i class="fas fa-search"></i>
+        </div>
+      </section>
+    </article>
+  </header>
+
+
+  <main>
+    <article class="login">
+      <section class="login-wrap">
+        <h2>YUNJAC LOGIN</h2>
+        <div class="tabs">
+          <input id="member" type="radio" name="tab-item" checked>
+          <label class="tab-item" for="member">회원</label>
+          <input id="non-member" type="radio" name="tab-item">
+          <label class="tab-item" for="non-member">비회원(주문조회)</label>
+
+          <div class="tab-content" id="member-content">
+            <div>
+              <div>
+                <input type="text" placeholder="이메일 주소 또는 전화번호">
+              </div>
+
+              <div>
+                <input type="password" placeholder="비밀번호">
+              </div>
+            </div>
+
+            <button>로그인</button>
+
+            <div>
+              <div><input type="checkbox" value="id"> 아이디저장</div>
+              <span> | </span>
+              <div>아이디/비밀번호 찾기</div>
+              <span> | </span>
+              <div>회원가입</div>
+            </div>
+
+            <div>
+              <div>
+                <p><img src="images/naver.png"> Naver로 로그인</p>
+              </div>
+
+              <div>
+                <p><img src="images/kakao.jpg">
+                  Kakao로 로그인</p>
+              </div>
+
+              <div>
+                <p><img src="images/facebook.png"> Facebook으로 로그인</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-content" id="non-member-content">
+            <div>
+              <div>
+                <input type="text" placeholder="주문번호를 입력하세요">
+              </div>
+
+              <div>
+                <input type="password" placeholder="주문비밀번호를 입력하세요">
+              </div>
+            </div>
+
+            <button>주문번호 조회하기</button>
+
+            <div>
+              <p>*회원가입을 하면 더 많은 혜택을 누릴 수 있습니다.</p>
+              <button>회원 가입하기</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+
+
+  <footer>
+    <h1>Contact<br>Yunjac.</h1>
+    <input type="search" placeholder="지역검색"></input>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.7520550164145!2d126.97880021480296!3d37.56090503220922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2f1587c7819%3A0xd74d3707fbcde464!2z7Iug7IS46rOE67Cx7ZmU7KCQIOuzuOygkA!5e0!3m2!1sko!2skr!4v1628578228833!5m2!1sko!2skr"
+      width="auto" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <div>
+      <li>이용안내</li>
+      <li>이용약관</li>
+      <li>구매안전서비스</li>
+    </div>
+
+    <ul>
+      <span>(주)신세계인터내셔날</span><br><br>
+      <span>대표이사: 장재영, 이길한, 손문국</span><br><br>
+      <span>주소 : 서울특별시 강남구 도산대로 449 (청담동)</span><br><br>
+      <span>대표전화 : 1644-4490</span><br><br>
+      <span>㈜신세계인터내셔날은 연작을 제외한 개별 판매자가 입점하여 등록한 상품에 대해서는 통신판매중개자로서 통신판매의 당사자가 아닙니다. 따라서 ㈜신세계인터내셔날을 제외한 개별 판매자가 입점하여 등록한 상품에 대한 상품정보 및 광고, 상품주문, 배송, 환불에 관한 책임은 각 입점 판매자가 부담하고 ㈜신세계인터내셔날은 책임을 지지 않습니다. 본 사이트의 컨텐츠는 저작권법의 보호를 받는 바 무단 전재, 복사, 배포 등을
+        금합니다.</span><br><br>
+      <span>© 2018 SHINSEGAE INTERNATIONAL. ALL RIGHTS RESERVED</span><br><br>
+    </ul>
+  </footer>
+
+  <script>
+    /*pc헤더 픽스*/
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("header").style.top = "0";
+      } else {
+        document.getElementById("header").style.top = "-80px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+
+    const trigger = new ScrollTrigger.default({
+      trigger: {
+        once: true,
+        offset: {
+          element: {
+            x: 0,
+            y: 0.5
+          },
+        }
+      }
+    });
+    trigger.add('[data-trigger]')
+
+
+    AOS.init({
+      easing: 'ease-out-back',
+      duration: 1000
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,211 @@
+<!doctype html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+  <title>찾기</title>
+  <link rel="stylesheet" href="css/find.css">
+  <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.5/ScrollTrigger.min.js"></script>
+
+  <!--폰트어썸-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+
+  <!--aos-->
+  <!-- 스르륵 -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+
+<body>
+  <header>
+
+    <div id="nav-container">
+      <div class="bg"></div>
+      <div class="button" tabindex="0">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </div>
+
+      <div id="nav-content" tabindex="0">
+        <div>
+          <img src="images/chatbot.gif">
+          <p>멤버십에 가입하시면<br>더 많은 혜택을 누릴 수 있습니다</p>
+          <button type="button" onclick="location.href='login.html';">로그인</button><br>
+          <button type="button" onclick="location.href='find.html';">찾기</button><br>
+          <button type="button" onclick="location.href='join.html';">회원가입</button>
+        </div>
+
+        <ul>
+          <li onclick="location.href='index.html';">홈<small>➜</small></li>
+          <li onclick="location.href='purchase.html';">제품<small>➜</small></li>
+          <li onclick="location.href='sub.html';">기획전<small>➜</small></li>
+          <li onclick="location.href='qna.html';">Q&A<small>➜</small></li>
+        </ul>
+      </div>
+    </div>
+
+    <img onclick="location.href='index.html';"src="images/logo-black.png">
+
+    <div class="pcheader">
+      <ul>
+        <li onclick="location.href='index.html';">홈</li>
+        <li onclick="location.href='purchase.html';">제품</li>
+        <li onclick="location.href='sub.html';">기획전</li>
+        <li onclick="location.href='qna.html';">Q&A</li>
+        <li onclick="location.href='login.html';">로그인</li>
+        <li onclick="location.href='find.html';">찾기</li>
+        <li onclick="location.href='join.html';">회원가입</li>
+      </ul>
+    </div>
+
+    <div class="header-ic">
+      <i class="fas fa-search"></i>
+      <i class="fas fa-shopping-cart"></i>
+    </div>
+  </header>
+
+  <main>
+    <article class="find">
+      <h2>삼성 계정 찾기</h2>
+      <div class="tabs">
+        <input id="find-id" type="radio" name="tab-item" checked>
+        <label class="tab-item" for="find-id">아이디찾기</label>
+        <input id="find-pw" type="radio" name="tab-item">
+        <label class="tab-item" for="find-pw">비밀번호 찾기</label>
+
+        <div class="tab-content" id="find-id-content">
+          <div><input type="text" placeholder="이름"></div>
+
+          <div>
+            <select size="1">
+              <option value="lg">LG U+</option>
+              <option value="sk">SKT</option>
+              <option vaue="kt">KT</option>
+            </select>
+
+            <select size="1">
+              <option value="010">010</option>
+              <option value="016">011</option>
+              <option vaue="017">016</option>
+            </select>
+
+            <input type="text" size="4">
+            <input type="text" size="4">
+          </div>
+
+          <button>인증번호 전송</button>
+        </div>
+
+        <div class="tab-content" id="find-pw-content">
+          <div>
+            <p>·비밀번호는 분실 시 찾아드릴 수 없는 정보입니다.</p>
+            <p>·본인확인을 통해 비밀번호를 재설정 하실 수 있습니다.</p>
+          </div>
+
+          <div>
+            <div><input type="text" placeholder="이름"></div>
+
+            <div>
+              <input type="text" placeholder="이메일">@
+              <input type="text" placeholder="naver.com">
+
+              <select size="1">
+                <option value="self" select>직접입력</option>
+                <option value="naver">naver.com</option>
+                <option value="daum">hanmail.com</option>
+                <option value="nate">nate.com</option>
+                <option value="google">gmail.com</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <select size="1">
+              <option value="lg">LG U+</option>
+              <option value="sk">SKT</option>
+              <option vaue="kt">KT</option>
+            </select>
+
+            <select size="1">
+              <option value="010">010</option>
+              <option value="016">011</option>
+              <option vaue="017">016</option>
+            </select>
+
+            <input type="text" size="4">
+            <input type="text" size="4">
+          </div>
+
+          <div>
+            <div>인증번호전송</div>
+            <label><input type="checkbox" value="mail"> e-mail로 보내기</label>
+            <label><input type="checkbox" value="mail"> 휴대전화로 보내기</label>
+            </label>
+          </div>
+
+          <button>비밀번호 찾기(인증번호 전송)</button>
+        </div>
+      </div>
+    </article>
+  </main>
+
+
+
+  <footer>
+
+    <div>
+      <div>
+        <h4>Customer<br>Center</h4>
+        <span>대표번호 : 02-2255-0114 </span><br><br>
+        <span>제품/서비스/멤버십: 1588-3366</span><br><br>
+        <span>구매문의 : 1588-6084</spn>
+      </div>
+
+      <div>
+        <h4>Infor</h4>
+        <a href="#">이용안내</a>
+        <a href="#">이용약관</a>
+        <a href="#">개인정보처리방침</a>
+        <a href="#">구매안전서비스</a>
+      </div>
+
+      <div>
+        <h4>Shop</h4>
+        <a href="#">삼성닷컴 FAQ</a>
+        <a href="#">이메일상담</a>
+        <a href="#">매장 찾기</a>
+        <a href="#">디지털프라자</a>
+      </div>
+
+      <div>
+        <h4>About</h4>
+        <a href="#">기업정보</a>
+        <a href="#">사업정보</a>
+        <a href="#">채용정보</a>
+        <a href="#">공지사항</a>
+      </div>
+    </div>
+
+    <div>
+      <img src="images/footer-1.png" />
+      <img src="images/footer-2.png" />
+      <img src="images/footer-3.png" />
+      <p>
+        <span>삼성전자(주)</span> <span>경기도 수원시 영통구 삼성로 129(매탄동)</span> <span>삼성전자 주식회사 대표이사 : 김기남 </span><br>
+        <span>사업자등록번호 : 124-81-00998</span> <span>통신판매업 신고 : 2000-경기수원-0515</span><br>
+      </p>
+      <small>Copyright © 1995-2021 Samsung. All Rights Reserved.</small>
+    </div>
+
+  </footer>
+
+</body>
+
+</html>

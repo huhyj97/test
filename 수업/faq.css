@@ -1,0 +1,272 @@
+/* default */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0px solid silver;
+  outline: none;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 0.9rem;
+  color: #999;
+  line-height: 1rem;
+  letter-spacing: 0.1px;
+}
+
+h1, h2, h3 {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #444;
+}
+
+h4, h5 {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #444;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 4.5rem;
+  color: white;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+}
+
+h5 {
+  font-size: 0.9rem;
+  line-height: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  border: 1px solid #ccc;
+  color: #444;
+  background: white;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* start */
+.hd {
+  position: relative;
+  width: 100%;
+  margin: 2rem 0;
+  padding: 1rem 2rem;
+}
+
+.hd> :nth-child(1) {
+  float: left;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hd h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  clear: both;
+}
+
+.hd> :nth-child(3) {
+  float: right;
+  width: 30px;
+  cursor: pointer;
+}
+
+.search {
+  background: #ff7f00;
+  padding: 1rem 1.5rem;
+}
+
+.search input {
+  width: 100%;
+  padding: 1.5rem 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.category table {
+  width: 100%;
+  border-top: 8px solid #eee;
+  border-bottom: 8px solid #eee;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.category table td {
+  width: 33%;
+  font-size: 1rem;
+  color: #333333;
+  padding: 1.5rem 0;
+  border: 1.5px solid #eee;
+  cursor: pointer;
+}
+
+.category table td:hover {
+  color: #ff7f00;
+  font-weight: bold;
+}
+
+.often {
+  padding: 1.5rem 0rem;
+}
+
+.often h4 {
+  padding: 0 1rem;
+  padding-bottom: 2rem;
+  color: #999;
+}
+
+.often span {
+  color: #666;
+}
+
+.often table {
+  width: 100%;
+  border-collapse: collapse;
+  border-bottom: 8px solid #eee;
+  text-align: left;
+}
+
+.often table td {
+  font-size: 1rem;
+  color: #333333;
+  padding: 1.5rem 1rem;
+  border-bottom: 1.5px solid #eee;
+  cursor: pointer;
+}
+
+.often table td:hover {
+  color: #ff7f00;
+  font-weight: bold;
+}
+
+.solution {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.solution> :nth-child(3) {
+  color: #0abab5;
+  cursor: pointer;
+}
+
+.ft {
+  background: #eee;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.ft h4 {
+  text-decoration: underline;
+  margin-bottom: 1rem;
+  color: #666;
+  cursor: pointer;
+}
+
+.ft> :nth-child(3) {
+  text-decoration: none;
+}
+
+.answer {
+  margin-top: 5rem;
+  padding: 1rem 0;
+}
+
+.tit {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.ct {
+  padding: 2rem 1.5rem;
+}
+
+.ct div {
+  margin: 3rem 0;
+}
+
+.ct div p {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  padding: 1rem 0;
+}
+
+.yon {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border-top: 1px solid #eee;
+  border-bottom: 8px solid #eee;
+}
+
+.yon div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.yon button {
+  width: 48%;
+  padding: 0.8rem 0;
+  margin-top: 1.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.yon button:hover {
+  background: #ff7f00;
+  color: #fff;
+}
+
+.answer> :nth-child(5) table {
+  border-bottom: none;
+}
+
+.ct-full {
+  padding: 1rem 0;
+  border-bottom: 150px solid #eee;
+  text-align: center;
+}
+
+.ct-full h3 {
+  text-decoration: underline;
+  color: #999;
+  cursor: pointer;
+}
+
+.ct-full span {
+  color: #666;
+}

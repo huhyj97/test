@@ -1,0 +1,423 @@
+/* default */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0px solid silver;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  width: 100px;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1rem;
+  letter-spacing: 0.1px;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 4rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  margin-bottom: 0.6rem;
+}
+
+h5 {
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+}
+
+a:link {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:visited {
+  color:
+}
+
+a:hover {
+  color:
+}
+
+a:active {
+  color:
+}
+
+small {
+  color: #666;
+  font-weight: bold;
+}
+
+/* start */
+
+header {
+  position: relative;
+  background: #000;
+  width: 1000px;
+  height: 100px;
+  padding: 2rem 0;
+  margin: 0 auto;
+}
+
+/* 헤더 고정을 위한 임시구간*/
+
+/* div header {
+  position: fixed;
+  z-index: 999;
+  min-width: 1000px;
+  left: 13%;
+} */
+
+/*헤더 고정을 위한 임시구간 */
+
+header> :nth-child(1) {
+  position: absolute;
+  left: 2%;
+  top: 40%;
+  width: 90px;
+  cursor: pointer;
+}
+
+header> :nth-child(2) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  text-align: center;
+}
+
+header> :nth-child(2) div {
+  line-height: 3rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+header> :nth-child(3) {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translate(-30%, -50%);
+  display: flex;
+  justify-content: space-between;
+}
+
+header> :nth-child(3) img {
+  width: 50px;
+  margin: 0 30% 0 0;
+  cursor: pointer;
+}
+
+main {
+  height: 580px;
+  background: url('https://lush.co.kr/data/editor/board/article/200220_article_renaissance2_102950.jpg')no-repeat;
+  background-size: cover;
+  background-position: top left;
+}
+
+main section {
+  position: absolute;
+  width: 1000px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -30%);
+  color: #fff;
+}
+
+main section> :nth-child(1) {
+  font-size: 3rem;
+  line-height: 4rem;
+  font-weight: bold;
+}
+
+main section> :nth-child(2) {
+  font-size: 1rem;
+  line-height: 3rem;
+}
+
+main section button {
+  width: 150px;
+  height: 50px;
+  font-size: 1rem;
+  line-height: 1rem;
+  padding: 1rem 1rem;
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid #ccc;
+  color: #fff;
+  cursor: pointer;
+}
+
+aside {
+  position: fixed;
+  right: 3%;
+  top: 50%;
+  z-index: 999;
+}
+
+aside img {
+  width: 60px;
+}
+
+.secent-text {
+  width: 1000px;
+  padding: 2rem 0;
+  margin: 0 auto;
+}
+
+.secent {
+  position: relative;
+  width: 1000px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.secent section {
+  width: 250px;
+  text-align: center;
+  cursor: pointer;
+  float: left;
+}
+
+.secent section img {
+  width: 250px;
+}
+
+.secent section p {
+  padding: 1rem 0;
+}
+
+.secent> :nth-child(2) {
+  position: absolute;
+  bottom: 2%;
+  left: 34%;
+}
+
+.secent> :nth-child(2) img {
+  width: 12px;
+  cursor: pointer;
+  margin: 0 0.2rem;
+}
+
+.secent> :nth-child(3) {
+  position: absolute;
+  width: 250px;
+  float: right;
+  top: 50%;
+  right: 0%;
+  transform: translate(0, -65%);
+}
+
+.secent> :nth-child(3) img {
+  width: 250px;
+}
+
+.banner {
+  height: 600px;
+  background-image: url('https://lush.co.kr/data/skin/front/howling/img/banner/18daab6259cf5f0f32b3e3c5ded64b77_16827.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  margin: 3rem 0 0 0;
+}
+
+.banner> :first-child {
+  width: 40%;
+  height: 600px;
+  background-image: url('https://lush.co.kr/data/skin/front/howling/img/banner/18daab6259cf5f0f32b3e3c5ded64b77_16827.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.banner> :last-child {
+  width: 60%;
+}
+
+.banner> :last-child> :first-child {
+  height: 300px;
+  background-image: url('https://lush.co.kr/data/skin/front/howling/img/banner/11bef39c7e4d42f9cccec806823a8160_97623.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.banner> :last-child>:last-child {
+  display: flex;
+  justify-content: space-between;
+  height: 300px;
+}
+
+.banner> :last-child> :last-child> :first-child {
+  width: 50%;
+  height: 300px;
+  background-image: url('https://lush.co.kr/data/skin/front/howling/img/banner/d910c0829eb5a399ae0255ec8e1f887d_42397.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.banner> :last-child> :last-child> :last-child {
+  width: 50%;
+  height: 300px;
+  background-image: url('https://lush.co.kr/data/skin/front/howling/img/banner/c1367952dc7704e561795641ebfcab6c_90259.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.spa {
+  position: relative;
+  width: 1000px;
+  height: 600px;
+  margin: 5rem auto;
+}
+
+.spa> :nth-child(1) {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+}
+
+.spa> :nth-child(2) {
+  position: absolute;
+  top: 10%;
+  right: 8%;
+}
+
+.spa> :nth-child(1)> :nth-child(2) {
+  font-size: 1rem;
+  padding: 2rem 0 0 0;
+  line-height: 1.3rem;
+}
+
+.spa> :nth-child(2) img {
+  width: 380px;
+  height: 480px;
+}
+
+.logo {
+  height: 150px;
+  background: #ededef;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  position: relative;
+  width: 1000px;
+  height: 380px;
+  padding: 0 3rem 5rem 3rem;
+  background: #000;
+  color: #fff;
+  margin: 0 auto;
+}
+
+footer> :first-child {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+}
+
+footer> :first-child> :nth-child(1) img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+footer> :first-child> :nth-child(2) {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  padding: 2rem 0;
+}
+
+footer> :first-child> :nth-child(3) {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+
+footer> :first-child> :nth-child(4) img {
+  width: 30px;
+  padding: 1.3rem 0;
+}
+
+footer> :last-child {
+  position: absolute;
+  top: 10%;
+  left: 30%;
+}
+
+footer> :last-child> :nth-child(1) {
+  padding: 0 0 4rem 0;
+  display: flex;
+  text-align: center;
+}
+
+footer> :last-child> :nth-child(1) div {
+  line-height: 1rem;
+  padding: 0 2rem 0 0;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+footer> :last-child> :nth-child(2) input {
+  width: 400px;
+  height: 30px;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+}
+
+footer> :last-child> :nth-child(2) button {
+  width: 100px;
+  height: 30px;
+  line-height: 1rem;
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+footer> :last-child> :nth-child(3) {
+  padding: 1rem 0;
+}
+
+footer> :last-child> :nth-child(3) button {
+  background: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+footer> :last-child> :nth-child(4) {
+  padding: 1.5rem 0;
+}

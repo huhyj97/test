@@ -1,0 +1,439 @@
+<!doctype html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+  <title>nike</title>
+  <link rel="stylesheet" href="nike.css">
+  <style type="text/css"></style>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript"></script>
+</head>
+
+<style>
+
+/* default */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0px solid silver;
+}
+
+img {
+  width: 100px;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1rem;
+  letter-spacing: 0.1px;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 4rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  margin-top: 0.5rem;
+}
+
+h4 {
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+}
+
+h5 {
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+}
+
+a:link {color: #000; text-decoration: none;}
+a:visited {color: #000;}
+a:hover {color: #000;}
+a:active {color: #666;}
+
+small {
+  color: #666;
+  font-weight: bold;
+}
+
+/* start */
+
+.nike-text {
+  width: 420px;
+  margin: 0 auto;
+}
+
+.nike-text> :first-child {
+  padding: 1rem 2rem;
+  display: inline-block;
+}
+
+.nike-text> :last-child {
+  display: inline-block;
+  float: right;
+  padding: 1rem;
+}
+
+.shoes {
+  clear: both;
+  width: 420px;
+  margin: 0 auto 2rem auto;
+}
+
+.shoes img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.size {
+  width: 420px;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.size> :nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding-bottom: 1rem;
+}
+
+.size> :nth-child(2) {
+  text-align: justify;
+}
+
+.size> :nth-child(2) button {
+  width: 60px;
+  height: 50px;
+  margin: 0.4rem 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.size> :nth-child(2) button:hover {
+  border: 1px solid #000;
+}
+
+.size> :nth-child(3) {
+  padding: 1rem 0 1.5rem 0;
+  cursor: pointer;
+}
+
+.size> :nth-child(4) {
+  display: flex;
+  justify-content: space-between;
+}
+
+.size> :nth-child(4) div {
+  width: 170px;
+  height: 60px;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 3.5rem;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.size> :nth-child(4)> :nth-child(1) {
+  background: #fff;
+}
+
+.size> :nth-child(4)> :nth-child(2) {
+  background: #000;
+  opacity: 1.0;
+}
+
+.size> :nth-child(4)> :nth-child(2):hover {
+  opacity: 0.7;
+}
+
+.size> :nth-child(4)> :nth-child(2) a:link {
+  color: #fff;
+}
+
+.pickup {
+  width: 420px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+.pickup> :first-child {
+  padding: 1rem 0;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 2%;
+  cursor: pointer;
+}
+
+.pickup> :last-child {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  padding: 1rem 0;
+  margin: 0 auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.pickup> :last-child button {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.comfort {
+  width: 420px;
+  margin: 0 auto;
+  padding: 1rem 2rem 1.2rem 2rem;
+}
+
+.comfort> :first-child {
+  text-align: justify;
+}
+
+.comfort> :first-child p {
+  font-size: 0.8rem;
+}
+
+.comfort> :last-child {
+  padding: 1.5rem 0;
+}
+
+.comfort> :last-child div {
+  font-size: 0.8rem;
+}
+
+.comfort> :last-child button {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.feedback {
+  width: 420px;
+  margin: 0 auto;
+  border-top: 1px solid #ddd;
+}
+
+.feedback table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  cursor: pointer;
+}
+
+.feedback th, td {
+  padding: 1.3rem ;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.8rem;
+}
+
+.feedback th {
+  text-align: left;
+}
+
+.feedback td {
+  text-align: right;
+}
+
+.feedback span {
+  cursor: pointer;
+}
+
+.customer {
+  width: 420px;
+  padding: 2rem 0 5rem 0;
+  margin: 0 auto;
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.customer div {
+  padding: 0 2rem;
+  cursor: pointer;
+}
+
+
+</style>
+
+<body>
+
+
+
+  <article class="nike-text">
+
+
+    <div>
+      <h4>남성신발 라이프 스타일</h4>
+      <h3>나이키 크레이터<br>REMIXA</h3>
+    </div>
+
+    <div>
+      <h4>79,000원</h4>
+    </div>
+
+
+  </article>
+
+
+
+  <article class="shoes">
+
+
+    <img src="https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DC6916-001/206c3f0b-23ff-4681-8226-c49fd386fa3c_primary.jpg?gallery">
+    <img src="https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DC6916-001/d5e372a8-ec0b-4f89-9c1b-a2d8adea1c93_2.jpg?gallery">
+    <img src="https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DC6916-001/7a2b6e76-6f1e-4056-ae40-1d300ce93a28_3.jpg?gallery">
+    <img src="https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DC6916-001/67f75dd9-d0af-476e-bb1d-8f1f360a7733_4.jpg?gallery">
+    <img src="https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DC6916-001/b34b7fc9-d5cc-45f7-9f2e-7a24c97be63c_5.jpg?gallery">
+    <img src="https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DC6916-001/37d40565-76c0-490c-9603-c75b79be606e_6.jpg?gallery">
+    <img src="https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DC6916-001/74bd5a71-ee01-47f9-8cc4-30b37ea008f2_7.jpg?gallery">
+    <img src="https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/DC6916-001/54e2cde3-e947-4905-a002-7ad2ab2c9e15_8.jpg?gallery">
+
+
+  </article>
+
+
+
+  <article class="size">
+
+
+    <section>
+      <h4>사이즈 선택</h4>
+      <small>사이즈 가이드</small>
+    </section>
+
+    <section>
+      <button>250</button>
+      <button>255</button>
+      <button>260</button>
+      <button>265</button>
+      <button>270</button>
+      <button>275</button>
+      <button>280</button>
+      <button>285</button>
+      <button>290</button>
+      <button>295</button>
+      <button>300</button>
+    </section>
+
+    <section>
+      <h4>수량&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;—&nbsp;&nbsp;&nbsp;&nbsp;＋</h4>
+    </section>
+
+    <section>
+      <div><a href="#">장바구니</a></div>
+      <div><a href="#">바로구매</a></div>
+    </section>
+
+
+  </article>
+
+
+
+  <article class="pickup">
+
+
+    <div>☑ 배송보다 빠른, 매장픽업 서비스</div>
+
+    <div>
+      <p>지금 주문하고, 매장에서 바로 픽업하세요.</p>
+      <button>자세히 보기</button>
+    </div>
+
+
+  </article>
+
+
+
+  <article class="comfort">
+
+
+    <section>
+      <h5>획기적인 편안함.</h5>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>오늘날의 세상에는 선택해야 하는 것이 많습니다. 그러나 나이키 크레이터 리믹사와 함께라면 고민할 이유가 없습니다. 무게 기준으로 20% 이상 재생 소재를 사용하여 제작된 이 제품은 재생 소재를 결합한 신선한 디자인과 미래지향적인 디테일이 조화를 이룹니다. 놀랄 만큼 푹신한 크레이터 폼 중창은 구름 위를 걷는 듯한 느낌을 주며 캔버스와 인조 가죽 갑피는 상황에 맞게 다양한 옷과 어울립니다.</p>
+    </section>
+
+    <section>
+      <div>· 현재 컬러 : 그레이 포그/블랙/샴브레이 블루/라이트 본</div>
+      <div>· 스타일 : DC6916-001</div>
+      <button>더 보기</button>
+    </section>
+
+
+  </article>
+
+
+
+  <article class="feedback">
+
+
+    <table>
+
+      <tr>
+        <th width="252px">리뷰(1)</th>
+        <td>★ ★ ★ ★ ★ <span>▾</span></td>
+      </tr>
+
+      <tr>
+        <th>배송</th>
+        <td>일반배송/오늘도착 <span>▾</span></td>
+      </tr>
+
+      <tr>
+        <th>반품/AS</th>
+        <td>온라인 접수/매장 접수 <span>▾</span></td>
+      </tr>
+
+    </table>
+
+
+  </article>
+
+
+
+  <article class="customer">
+
+    <div onclick="location.href ='#'">주문배송</div>
+    <div onclick="location.href ='#'">매장안내</div>
+    <div onclick="location.href ='#'">고객센터</div>
+
+  </article>
+
+
+
+
+</body>
+
+</html>
